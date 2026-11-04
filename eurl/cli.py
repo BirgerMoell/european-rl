@@ -62,7 +62,8 @@ def main(argv=None) -> int:
                     row = {"id": f"{a.env}:{a.split}:{language}:{seed}",
                            "messages": [{"role": "user", "content": env.public_prompt()}],
                            "ground_truth": json.dumps(env.ground_truth(), ensure_ascii=False),
-                           "dataset": "eurl_typed", "language": language, "locale": env._task.locale,
+                           "dataset": "eurl_typed" if env.interaction == "typed_answer" else "eurl_tool",
+                           "language": language, "locale": env._task.locale,
                            "level": env._task.meta.get("level")}
                     f.write(json.dumps(row, ensure_ascii=False) + "\n")
                     rows += 1
