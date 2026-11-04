@@ -90,3 +90,19 @@ def test_contract_qualification():
     report = validate_tools("meeting_reschedule", cases=20)
     assert report["status"] == "passed"
     assert max(report["probe_mean_reward"].values()) <= 0.3
+
+
+def test_solver_trajectories_are_rewarded_and_renderable():
+    """Warm-start SFT data: every recorded trajectory reaches reward 1.0 and is a valid tool chat."""
+    from environments.meeting_reschedule.solver import solve
+    env = MeetingReschedule()
+    for language in env.languages[::5]:
+        for seed in range(6):
+            env.reset(seed, "train", language)
+            messages, result = solve(env)
+            assert result["reward"] == 1.0, (language, seed, result["info"])
+            assert messages[0]["role"] == "user" and messages[-1]["role"] == "assistant"
+            for m in messages[1:-1]:
+                assert m["role"] in ("assistant", "tool")
+                if m["role"] == "assistant":
+                    assert m["tool_calls"] and all(isinstance(c["function"]["arguments"], dict) for c in m["tool_calls"])

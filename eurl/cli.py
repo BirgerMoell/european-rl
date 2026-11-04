@@ -28,6 +28,12 @@ def main(argv=None) -> int:
     c.add_argument("env")
     c.add_argument("--cases", type=int)
     c.add_argument("--out")
+    tr = sub.add_parser("trajectories", help="warm-start SFT chats from an environment's tools-only solver")
+    tr.add_argument("env")
+    tr.add_argument("--split", default="train")
+    tr.add_argument("--count", type=int, required=True, help="tasks per language")
+    tr.add_argument("--language", nargs="*")
+    tr.add_argument("--out", required=True)
     e = sub.add_parser("export")
     e.add_argument("env")
     e.add_argument("--split", default="train")
@@ -51,6 +57,25 @@ def main(argv=None) -> int:
         report = qualify(a.env, a.cases)
         report = save_report(a.out, {"environment": a.env, **report}) if a.out else report
         print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+    if a.cmd == "trajectories":
+        import importlib
+        env = load(a.env)
+        solver = importlib.import_module(f"environments.{a.env}.solver")
+        kept = dropped = 0
+        with open(a.out, "w", encoding="utf-8") as f:
+            for language in a.language or env.languages:
+                for seed in range(a.count):
+                    obs = env.reset(seed, a.split, language)
+                    messages, result = solver.solve(env)
+                    if result["reward"] != 1.0:
+                        dropped += 1
+                        continue
+                    f.write(json.dumps({"id": f"{a.env}:{a.split}:{language}:{seed}", "messages": messages,
+                                        "tools": obs["tools"], "language": language, "source": f"european-rl/{a.env}",
+                                        "meta": env._task.meta}, ensure_ascii=False, default=str) + "\n")
+                    kept += 1
+        print(f"kept {kept}, dropped {dropped} (reward < 1) -> {a.out}", file=sys.stderr)
         return 0
     if a.cmd == "export":
         env = load(a.env)
