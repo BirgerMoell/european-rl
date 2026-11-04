@@ -40,5 +40,6 @@ LOCALE = Locale(
                 "Zieliński", "Szymański", "Woźniak", "Dąbrowski", "Kozłowski"),
     cities=("Kraków", "Gdańsk", "Poznań", "Wrocław", "Łódź", "Lublin", "Katowice", "Warszawa"),
     price_scale=4,
+    date_style="DD.MM.YYYY",
     office_hours=("08:00", "16:00"), lunch=("12:00", "12:30"),
 )

@@ -48,6 +48,7 @@ class Locale:
     weekend: Tuple[int, ...] = (5, 6)
     vat_verified: bool = False
     eu_member: bool = True
+    date_style: str = "YYYY-MM-DD"        # how dates are written locally: D/DD, M/MM, YYYY with separators
     price_scale: int = 1                  # rough euro-to-local factor for synthetic prices (the world is synthetic)
     notes: List[str] = field(default_factory=list)
 
@@ -76,3 +77,13 @@ def load(country: str) -> Locale:
 
 def all_packs() -> List[Locale]:
     return [load(code) for code in PACKS]
+
+
+def format_date(d, style: str) -> str:
+    """Render a date in a local style such as "DD.MM.YYYY", "D.M.YYYY", "DD/MM/YYYY" or "YYYY-MM-DD"."""
+    import re
+    out = style.replace("YYYY", f"{d.year:04d}")
+    out = re.sub(r"\bDD\b", f"{d.day:02d}", out)
+    out = re.sub(r"\bMM\b", f"{d.month:02d}", out)
+    out = re.sub(r"\bD\b", str(d.day), out)
+    return re.sub(r"\bM\b", str(d.month), out)

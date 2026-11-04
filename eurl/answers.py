@@ -101,6 +101,8 @@ def parse_time(text: Optional[str]) -> Optional[str]:
 
 
 def score_answer(spec: dict, text: str) -> dict:
+    if spec["type"] == "constraints":  # free text (no ANSWER line), scored by rule checks
+        return score_constraints(spec, text)
     answer = final_answer(text)
     if answer is None:
         return {"reward": 0.0, "score": 0.0, "parsed": None, "reason": "no ANSWER line"}
@@ -185,3 +187,46 @@ def render_reference(spec: dict, money_format: Optional[MoneyFormat] = None) -> 
     if kind == "strings":
         return f"{ANSWER_KEY}: " + json.dumps(spec["value"], ensure_ascii=False)
     raise ValueError(kind)
+
+
+# --- free-text constraints (instruction following) ----------------------------------------------------------------
+# {"type": "constraints", "checks": [{"kind": ..., ...}, ...]}; reward 1.0 only when every check passes (strict, as in
+# IFEval's strict accuracy); `score` is the fraction passed. Text is the reply after any think block.
+
+def _words(text: str) -> list:
+    return re.findall(r"\w+(?:[-'’]\w+)*", text)
+
+
+def check(c: dict, text: str) -> bool:
+    kind = c["kind"]
+    if kind == "contains":
+        return c["value"] in text
+    if kind == "not_contains_word":
+        return not any(re.search(rf"(?<!\w){re.escape(w)}(?!\w)", text, re.I) for w in c["words"])
+    if kind == "contains_any_word":
+        return any(re.search(rf"(?<!\w){re.escape(w)}(?!\w)", text, flags=0 if c.get("case") else re.I)
+                   for w in c["words"])
+    if kind == "word_range":
+        n = len(_words(text))
+        return c["min"] <= n <= c["max"]
+    if kind == "first_line_starts":
+        first = text.strip().splitlines()[0] if text.strip() else ""
+        return first.strip().lstrip("*# ").startswith(c["value"])
+    if kind == "ends_with_any":
+        lines = [l.strip() for l in text.strip().splitlines() if l.strip()]
+        tail = " ".join(lines[-3:]) if lines else ""
+        return any(norm(v) in norm(tail) for v in c["values"])
+    if kind == "bullets":
+        n = len(re.findall(r"(?m)^\s*[-*•]\s+\S", text))
+        return n == c["count"]
+    raise ValueError(f"unknown check: {kind}")
+
+
+def score_constraints(spec: dict, text: str) -> dict:
+    body = strip_reasoning(text if isinstance(text, str) else "").strip()
+    if not body:
+        return {"reward": 0.0, "score": 0.0, "parsed": None, "reason": "empty"}
+    results = [check(c, body) for c in spec["checks"]]
+    score = sum(results) / len(results)
+    return {"reward": float(all(results)), "score": score, "parsed": None,
+            "reason": "constraints", "passed": results}

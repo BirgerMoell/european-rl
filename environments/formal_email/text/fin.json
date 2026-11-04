@@ -1,0 +1,57 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Kirjoita sähköposti vastaanottajalle {name} yrityksessä {company} ({city}). {topic} Kirjoitat henkilön {sender} puolesta.\nVaatimukset:\n{requirements}\nKirjoita vain sähköposti.",
+  "Laadi seuraava sähköposti henkilön {sender} puolesta. Vastaanottaja: {name}, {company}, {city}. {topic}\nSähköpostin on täytettävä nämä vaatimukset:\n{requirements}\nVastaa pelkällä sähköpostin tekstillä."
+ ],
+ "topics": {
+  "payment_reminder": "Se on ystävällinen muistutus siitä, että {amount} suuruinen lasku erääntyi {date}.",
+  "order_confirmation": "Se vahvistaa {amount} arvoisen tilauksen, jonka toimitus on {date}.",
+  "meeting_confirmation": "Se vahvistaa tapaamisen {date} {amount} arvoisen sopimuksen käsittelemiseksi."
+ },
+ "req": {
+  "subject": "Ensimmäinen rivi on aiherivi ja alkaa sanalla ”{label}”.",
+  "closing": "Lopeta tavallisella tervehdyksellä, kuten {examples}, ja sen jälkeen lähettäjän nimellä.",
+  "amount": "Kirjoita summa vastaanottajan paikallisessa rahamuodossa.",
+  "date": "Kirjoita päivämäärä vastaanottajan paikallisessa päivämäärämuodossa.",
+  "name": "Puhuttele vastaanottajaa koko nimellä, kirjoitettuna täsmälleen annetulla tavalla.",
+  "no_english": "Älä käytä englanninkielisiä sanoja.",
+  "words": "Sähköpostissa on {min}–{max} sanaa.",
+  "bullets": "Sisällytä täsmälleen {n} luettelokohtaa (rivit, jotka alkavat merkillä ”- ”)."
+ },
+ "subject_label": "Aihe:",
+ "closings": [
+  "Ystävällisin terveisin",
+  "Parhain terveisin",
+  "Terveisin"
+ ],
+ "formal": null,
+ "ref_subject": {
+  "payment_reminder": "Muistutus avoimesta laskusta",
+  "order_confirmation": "Tilausvahvistus",
+  "meeting_confirmation": "Tapaamisen vahvistus"
+ },
+ "ref_body": {
+  "payment_reminder": "muistutamme ystävällisesti, että {amount} suuruinen summa erääntyi {date}.",
+  "order_confirmation": "vahvistamme {amount} arvoisen tilauksenne; toimitus on suunniteltu päivälle {date}.",
+  "meeting_confirmation": "vahvistamme tapaamisemme {date} {amount} arvoisesta sopimuksesta."
+ },
+ "ref_greeting": "Hyvä {name},",
+ "ref_bullets": [
+  "viitenumero löytyy liitteenä olevasta asiakirjasta",
+  "asiakaspalvelumme palvelee arkipäivisin",
+  "kaikki hinnat sisältävät voimassa olevat verot",
+  "säilytäthän tämän viestin"
+ ],
+ "ref_filler": [
+  "Kiitämme hyvästä yhteistyöstä viime kuukausien aikana.",
+  "Jos jokin on epäselvää, otattehan meihin yhteyttä milloin tahansa.",
+  "Toimistomme on avoinna maanantaista perjantaihin tavallisina aukioloaikoina.",
+  "Vastaamme mielellämme kaikkiin yksityiskohtia koskeviin kysymyksiin.",
+  "Kopio asiaankuuluvista asiakirjoista on tallennettu järjestelmäämme.",
+  "Odotamme innolla yhteistyön jatkumista tulevana vuonna.",
+  "Jos asia on jo hoidettu, voitte jättää tämän viestin huomiotta.",
+  "Kiitos jo etukäteen huomiostanne."
+ ],
+ "word_factor": 0.65
+}

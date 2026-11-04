@@ -3,7 +3,7 @@
 Formatting follows each locale pack's conventions ("1 234,50 kr", "1.234,50 €", "1 234,50 zł"). Parsing accepts
 any common European rendering of ONE amount, with or without currency, because the checked skill is the amount,
 not the typography. A separator followed by exactly three digits is a thousands separator; decimals have at most
-two digits. A text with several amounts does not parse (listing candidates never pays).
+two digits, so 1,117.67 and 1.117,67 both read as 1117.67. A text with several amounts does not parse (listing candidates never pays).
 """
 from __future__ import annotations
 
@@ -39,7 +39,7 @@ _CURRENCY = re.compile(
     r"(?i)(€|\beur(?:o|os)?\b|\bsek\b|\bkr\b|\bkronor\b|\bkroner\b|\bkrónur\b|\bnok\b|\bdkk\b|\bisk\b|zł|\bpln\b"
     r"|\bczk\b|kč|\bhuf\b|\bft\b|\bron\b|\blei\b|\bbgn\b|лв\.?|\bchf\b|\bgbp\b|£|\btry\b|₺|\buah\b|₴|грн\.?"
     r"|\bgel\b|₾|\brsd\b|дин\.?|\bdin\b|\bmkd\b|ден\.?|\ball\b|\blek[eë]?\b|\bbam\b|\bkm\b|:-)")
-_AMOUNT = re.compile(r"-?\d{1,3}(?:[   .'’]\d{3})+(?:[,.]\d{1,2})?|-?\d+(?:[,.]\d{1,2})?")
+_AMOUNT = re.compile(r"-?\d{1,3}(?:[   .,'’]\d{3})+(?:[,.]\d{1,2})?|-?\d+(?:[,.]\d{1,2})?")
 
 
 def parse_money(text: Optional[str], minor_digits: int = 2) -> Optional[int]:
@@ -52,10 +52,10 @@ def parse_money(text: Optional[str], minor_digits: int = 2) -> Optional[int]:
     token = found[0]
     negative = token.startswith("-")
     token = token.lstrip("-")
-    m = re.fullmatch(r"(\d{1,3}(?:[   .'’]\d{3})+|\d+)(?:[,.](\d{1,2}))?", token)
+    m = re.fullmatch(r"(\d{1,3}(?:[   .,'’]\d{3})+|\d+)(?:[,.](\d{1,2}))?", token)
     if not m:
         return None
-    whole = re.sub(r"[   .'’]", "", m.group(1))
+    whole = re.sub(r"[   .,'’]", "", m.group(1))
     frac = (m.group(2) or "0").ljust(minor_digits, "0")[:minor_digits] if minor_digits else ""
     value = int(whole) * 10 ** minor_digits + (int(frac) if frac else 0)
     return -value if negative else value

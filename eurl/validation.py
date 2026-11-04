@@ -86,7 +86,9 @@ def validate_typed(environment_id: str, cases: int = 100, languages=None) -> dic
                 if env._task.language != language:
                     raise ValueError(f"task language {env._task.language} != requested {language}")
                 ref = env.reference_completion()
-                for completion in (ref, "Let me work it out.\n\n" + ref, f"<think>draft\n{ANSWER_KEY}: 0</think>\n" + ref):
+                variants = env.reference_variants(ref) if hasattr(env, "reference_variants") else \
+                    (ref, "Let me work it out.\n\n" + ref, f"<think>draft\n{ANSWER_KEY}: 0</think>\n" + ref)
+                for completion in variants:
                     env.reset(seed, split, language)
                     if env.step(completion)["reward"] != 1.0:
                         raise ValueError(f"reference not rewarded ({language}, seed {seed}, {split}): {completion[-200:]}")

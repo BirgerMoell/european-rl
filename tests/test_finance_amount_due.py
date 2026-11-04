@@ -16,14 +16,14 @@ def _pct(text):
     return round(float(text.replace(",", ".")) * 100)
 
 
-def _sentence_amount(prompt, template):
+def _sentence_amount(prompt, template, digits=2):
     """The amount between the template's text before and after {amount} (works for any locale format)."""
     before, after = template.split("{amount}")
     m = re.search(re.escape(before) + r"(.+?)" + (re.escape(after[:8]) if after else r"$"), prompt, re.M)
-    return parse_money(m.group(1)) if m else None
+    return parse_money(m.group(1), digits) if m else None
 
 
-def solve(prompt: str, lang: str):
+def solve(prompt: str, lang: str, digits: int = 2):
     t = text(lang)
     if t["missing_price"] in prompt:
         return "abstain"
@@ -56,17 +56,17 @@ def solve(prompt: str, lang: str):
             if category not in rates:
                 return "abstain"
             bp = rates[category]
-        gross = int(qty) * parse_money(price)
+        gross = int(qty) * parse_money(price, digits)
         net = gross - round_half_up(gross * discount, 100)
         total += net + (0 if reverse_charge else round_half_up(net * bp, 10000))
-    credit = _sentence_amount(prompt, t["credit"]) or 0
+    credit = _sentence_amount(prompt, t["credit"], digits) or 0
     if credit:
         standard = rates.get("standard")
         total -= credit + (0 if reverse_charge else round_half_up(credit * standard, 10000))
-    paid = _sentence_amount(prompt, t["paid"]) or 0
+    paid = _sentence_amount(prompt, t["paid"], digits) or 0
     total -= paid
-    if t["round"].split("{unit}")[0].strip() in prompt:
-        total = round_half_up(total, 100) * 100
+    if t["round"].split("{unit}")[0].strip() in prompt and digits:
+        total = round_half_up(total, 10 ** digits) * 10 ** digits
     return total
 
 
@@ -76,18 +76,22 @@ def test_independent_solver_agrees(lang):
     for seed in range(150):
         env.reset(seed, "dev", lang)
         expected = "abstain" if env._task.spec["type"] == "abstain" else env._task.spec["value"]
-        assert solve(env.public_prompt(), lang) == expected, (lang, seed, env._task.meta)
+        from eurl.locales import load as load_locale
+        digits = load_locale(env._task.locale).money.minor_digits  # visible in the prompt's amounts
+        assert solve(env.public_prompt(), lang, digits) == expected, (lang, seed, env._task.meta)
 
 
 def test_levels_and_locales_are_covered():
-    env = FinanceAmountDue()
-    seen = set()
-    for seed in range(400):
-        env.reset(seed, "train")
-        seen.add((env._task.meta["level"], env._task.locale))
-    assert {lvl for lvl, _ in seen} == {1, 2, 3, 4, 5}
+    from environments.finance_amount_due.environment import locales_for
     from eurl.locales import PACKS
-    assert {loc for _, loc in seen} == {p.upper() for p in PACKS}
+    env = FinanceAmountDue()
+    levels = set()
+    for seed in range(200):
+        env.reset(seed, "train")
+        levels.add(env._task.meta["level"])
+    assert levels == {1, 2, 3, 4, 5}
+    reachable = {c for lang in env.languages for c in locales_for(lang)}
+    assert reachable == {p.upper() for p in PACKS}
 
 
 def test_contract_qualification():

@@ -37,6 +37,7 @@ LOCALE = Locale(
     last_names=("Martin", "Bernard", "Dubois", "Thomas", "Robert", "Richard", "Petit", "Durand", "Leroy",
                 "Moreau", "Simon", "Laurent"),
     cities=("Lyon", "Nantes", "Lille", "Bordeaux", "Toulouse", "Rennes", "Strasbourg", "Paris"),
+    date_style="DD/MM/YYYY",
     office_hours=("09:00", "18:00"), lunch=("12:00", "14:00"),
     notes=["Holidays are the metropolitan set (without Alsace-Moselle's extra days)."],
 )

@@ -1,0 +1,56 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Skriv ett mejl till {name} på {company} ({city}). {topic} Du skriver för {sender}.\nKrav:\n{requirements}\nSkriv bara mejlet.",
+  "Skriv följande mejl för {sender}s räkning. Mottagare: {name}, {company}, {city}. {topic}\nMejlet måste uppfylla dessa krav:\n{requirements}\nSvara endast med mejlets text."
+ ],
+ "topics": {
+  "payment_reminder": "Det är en vänlig påminnelse om att en faktura på {amount} förföll till betalning {date}.",
+  "order_confirmation": "Det bekräftar en beställning värd {amount} med leverans {date}.",
+  "meeting_confirmation": "Det bekräftar ett möte {date} om ett avtal värt {amount}."
+ },
+ "req": {
+  "subject": "Första raden är ämnesraden och börjar med ”{label}”.",
+  "closing": "Avsluta med en vanlig hälsningsfras som {examples}, följd av avsändarens namn.",
+  "amount": "Skriv beloppet i mottagarens lokala penningformat.",
+  "date": "Skriv datumet i mottagarens lokala datumformat.",
+  "name": "Tilltala mottagaren med fullständigt namn, stavat exakt som angivet.",
+  "no_english": "Använd inga engelska ord.",
+  "words": "Mejlet har mellan {min} och {max} ord.",
+  "bullets": "Ta med exakt {n} punkter i en punktlista (rader som börjar med ”- ”)."
+ },
+ "subject_label": "Ämne:",
+ "closings": [
+  "Med vänliga hälsningar",
+  "Vänliga hälsningar",
+  "Med vänlig hälsning"
+ ],
+ "formal": null,
+ "ref_subject": {
+  "payment_reminder": "Påminnelse om obetald faktura",
+  "order_confirmation": "Bekräftelse av beställning",
+  "meeting_confirmation": "Bekräftelse av vårt möte"
+ },
+ "ref_body": {
+  "payment_reminder": "vi vill vänligen påminna om att beloppet {amount} förföll till betalning {date}.",
+  "order_confirmation": "härmed bekräftar vi din beställning på {amount}; leveransen är planerad till {date}.",
+  "meeting_confirmation": "härmed bekräftar vi vårt möte {date} om avtalet värt {amount}."
+ },
+ "ref_greeting": "Hej {name},",
+ "ref_bullets": [
+  "referensnumret finns i det bifogade dokumentet",
+  "vår kundtjänst nås på vardagar",
+  "alla priser inkluderar gällande skatter",
+  "spara gärna detta meddelande"
+ ],
+ "ref_filler": [
+  "Vi tackar för det goda samarbetet under de senaste månaderna.",
+  "Om något är oklart är du välkommen att kontakta oss när som helst.",
+  "Vårt kontor har öppet måndag till fredag under vanliga kontorstider.",
+  "Vi svarar gärna på alla frågor om detaljerna.",
+  "En kopia av de aktuella handlingarna finns sparad i vårt system.",
+  "Vi ser fram emot att fortsätta samarbetet under det kommande året.",
+  "Om ärendet redan är ordnat kan du bortse från detta meddelande.",
+  "Tack på förhand för din uppmärksamhet."
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Napisz e-mail do {name} w firmie {company} ({city}). {topic} Piszesz w imieniu {sender}.\nWymagania:\n{requirements}\nNapisz tylko e-mail.",
+  "Proszę przygotować następujący e-mail w imieniu {sender}. Odbiorca: {name}, {company}, {city}. {topic}\nE-mail musi spełniać te wymagania:\n{requirements}\nOdpowiedz wyłącznie tekstem e-maila."
+ ],
+ "topics": {
+  "payment_reminder": "Jest to uprzejme przypomnienie, że faktura na kwotę {amount} była płatna {date}.",
+  "order_confirmation": "Potwierdza zamówienie o wartości {amount} z dostawą {date}.",
+  "meeting_confirmation": "Potwierdza spotkanie {date} w sprawie umowy o wartości {amount}."
+ },
+ "req": {
+  "subject": "Pierwszy wiersz to temat i zaczyna się od „{label}”.",
+  "closing": "Zakończ typową formułą grzecznościową, np. {examples}, a po niej imieniem i nazwiskiem nadawcy.",
+  "formal": "Zwracaj się do odbiorcy w formie grzecznościowej (Pan/Pani/Państwo).",
+  "amount": "Zapisz kwotę w lokalnym formacie pieniężnym odbiorcy.",
+  "date": "Zapisz datę w lokalnym formacie daty odbiorcy.",
+  "name": "Zwróć się do odbiorcy pełnym imieniem i nazwiskiem, zapisanym dokładnie jak podano.",
+  "no_english": "Nie używaj żadnych angielskich słów.",
+  "words": "E-mail ma od {min} do {max} słów.",
+  "bullets": "Umieść dokładnie {n} punkty wypunktowania (wiersze zaczynające się od „- ”)."
+ },
+ "subject_label": "Temat:",
+ "closings": [
+  "Z poważaniem",
+  "Z wyrazami szacunku",
+  "Pozdrawiam"
+ ],
+ "formal": {
+  "formal": [
+   "Pan",
+   "Pani",
+   "Państwo",
+   "Pana",
+   "Panią",
+   "Państwa",
+   "Panu",
+   "Państwu"
+  ],
+  "informal": [
+   "ty",
+   "ciebie",
+   "cię",
+   "tobie",
+   "twój",
+   "twoja",
+   "twoje",
+   "twojego",
+   "twojej"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Przypomnienie o otwartej fakturze",
+  "order_confirmation": "Potwierdzenie zamówienia",
+  "meeting_confirmation": "Potwierdzenie spotkania"
+ },
+ "ref_body": {
+  "payment_reminder": "uprzejmie przypominamy Państwu, że kwota {amount} była płatna {date}.",
+  "order_confirmation": "niniejszym potwierdzamy Państwa zamówienie na kwotę {amount}; dostawa planowana jest na {date}.",
+  "meeting_confirmation": "niniejszym potwierdzamy nasze spotkanie {date} w sprawie umowy o wartości {amount}."
+ },
+ "ref_greeting": "Szanowni Państwo, {name},",
+ "ref_bullets": [
+  "numer referencyjny znajduje się w załączonym dokumencie",
+  "nasze biuro obsługi klienta jest czynne w dni robocze",
+  "wszystkie ceny zawierają obowiązujące podatki",
+  "prosimy o zachowanie tej wiadomości"
+ ],
+ "ref_filler": [
+  "Dziękujemy Państwu za dobrą współpracę w ostatnich miesiącach.",
+  "W razie wątpliwości prosimy o kontakt w dowolnym momencie.",
+  "Nasze biuro jest czynne od poniedziałku do piątku w zwykłych godzinach pracy.",
+  "Chętnie odpowiemy na wszystkie pytania dotyczące szczegółów.",
+  "Kopia odpowiednich dokumentów została zapisana w naszym systemie.",
+  "Cieszymy się na dalszą współpracę w nadchodzącym roku.",
+  "Jeśli sprawa została już załatwiona, prosimy potraktować tę wiadomość jako nieaktualną.",
+  "Z góry dziękujemy za uwagę."
+ ],
+ "word_factor": 0.8
+}

@@ -1,0 +1,71 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Rédigez un e-mail à {name} chez {company} ({city}). {topic} Vous écrivez au nom de {sender}.\nExigences :\n{requirements}\nN'écrivez que l'e-mail.",
+  "Veuillez rédiger l'e-mail suivant pour le compte de {sender}. Destinataire : {name}, {company}, {city}. {topic}\nL'e-mail doit respecter ces exigences :\n{requirements}\nRépondez uniquement avec le texte de l'e-mail."
+ ],
+ "topics": {
+  "payment_reminder": "Il s'agit d'un rappel aimable qu'une facture de {amount} était due le {date}.",
+  "order_confirmation": "Il confirme une commande d'un montant de {amount}, livrée le {date}.",
+  "meeting_confirmation": "Il confirme un rendez-vous le {date} pour discuter d'un contrat de {amount}."
+ },
+ "req": {
+  "subject": "La première ligne est l'objet et commence par « {label} ».",
+  "closing": "Terminez par une formule de politesse usuelle comme {examples}, suivie du nom de l'expéditeur.",
+  "formal": "Vouvoyez le destinataire tout au long de l'e-mail.",
+  "amount": "Écrivez le montant dans le format monétaire local du destinataire.",
+  "date": "Écrivez la date dans le format de date local du destinataire.",
+  "name": "Adressez-vous au destinataire par son nom complet, orthographié exactement comme indiqué.",
+  "no_english": "N'utilisez aucun mot anglais.",
+  "words": "L'e-mail compte entre {min} et {max} mots.",
+  "bullets": "Incluez exactement {n} puces (lignes commençant par « - »)."
+ },
+ "subject_label": "Objet",
+ "closings": [
+  "Cordialement",
+  "Bien cordialement",
+  "Veuillez agréer"
+ ],
+ "formal": {
+  "formal": [
+   "vous",
+   "votre",
+   "vos"
+  ],
+  "informal": [
+   "tu",
+   "toi",
+   "ton",
+   "ta",
+   "tes",
+   "te"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": " : rappel concernant votre facture",
+  "order_confirmation": " : confirmation de votre commande",
+  "meeting_confirmation": " : confirmation de notre rendez-vous"
+ },
+ "ref_body": {
+  "payment_reminder": "nous vous rappelons aimablement que le montant de {amount} était dû le {date}.",
+  "order_confirmation": "nous vous confirmons votre commande de {amount} ; la livraison est prévue le {date}.",
+  "meeting_confirmation": "nous vous confirmons notre rendez-vous du {date} au sujet du contrat de {amount}."
+ },
+ "ref_greeting": "Madame, Monsieur {name},",
+ "ref_bullets": [
+  "le numéro de référence figure sur le document joint",
+  "notre service client est joignable en semaine",
+  "tous les prix incluent les taxes applicables",
+  "veuillez conserver ce message"
+ ],
+ "ref_filler": [
+  "Nous vous remercions de votre collaboration au cours des derniers mois.",
+  "Si un point n'est pas clair, n'hésitez pas à nous contacter.",
+  "Notre bureau est ouvert du lundi au vendredi aux heures habituelles.",
+  "Nous répondrons volontiers à toutes vos questions sur les détails.",
+  "Une copie des documents concernés est conservée dans notre système.",
+  "Nous nous réjouissons de poursuivre notre collaboration l'année prochaine.",
+  "Si vous avez déjà réglé cette question, veuillez ne pas tenir compte de ce message.",
+  "Nous vous remercions par avance de votre attention."
+ ]
+}

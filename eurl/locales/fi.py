@@ -43,5 +43,6 @@ LOCALE = Locale(
     last_names=("Korhonen", "Virtanen", "Mäkinen", "Nieminen", "Mäkelä", "Hämäläinen", "Laine", "Heikkinen",
                 "Koskinen", "Järvinen", "Lehtonen", "Saarinen"),
     cities=("Tampere", "Turku", "Oulu", "Jyväskylä", "Kuopio", "Lahti", "Vaasa", "Helsinki"),
+    date_style="D.M.YYYY",
     office_hours=("08:00", "16:00"), lunch=("11:00", "12:00"),
 )

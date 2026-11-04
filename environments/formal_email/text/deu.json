@@ -1,0 +1,80 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Schreiben Sie eine E-Mail an {name} bei {company} ({city}). {topic} Sie schreiben im Namen von {sender}.\nAnforderungen:\n{requirements}\nGeben Sie nur die E-Mail aus.",
+  "Bitte verfassen Sie im Auftrag von {sender} folgende E-Mail. Empfänger: {name}, {company}, {city}. {topic}\nDie E-Mail muss diese Anforderungen erfüllen:\n{requirements}\nAntworten Sie nur mit dem Text der E-Mail."
+ ],
+ "topics": {
+  "payment_reminder": "Es ist eine freundliche Erinnerung, dass eine Rechnung über {amount} am {date} fällig war.",
+  "order_confirmation": "Sie bestätigt eine Bestellung im Wert von {amount}, Lieferung am {date}.",
+  "meeting_confirmation": "Sie bestätigt einen Termin am {date}, um einen Vertrag im Wert von {amount} zu besprechen."
+ },
+ "req": {
+  "subject": "Die erste Zeile ist der Betreff und beginnt mit „{label}“.",
+  "closing": "Schließen Sie mit einer üblichen Grußformel wie {examples}, gefolgt vom Namen des Absenders.",
+  "formal": "Verwenden Sie durchgehend die Höflichkeitsform (Sie).",
+  "amount": "Schreiben Sie den Betrag im örtlichen Geldformat des Empfängers.",
+  "date": "Schreiben Sie das Datum im örtlichen Datumsformat des Empfängers.",
+  "name": "Sprechen Sie den Empfänger mit vollem Namen an, genau so geschrieben wie angegeben.",
+  "no_english": "Verwenden Sie keine englischen Wörter.",
+  "words": "Die E-Mail hat zwischen {min} und {max} Wörter.",
+  "bullets": "Fügen Sie genau {n} Aufzählungspunkte ein (Zeilen, die mit „- “ beginnen)."
+ },
+ "subject_label": "Betreff:",
+ "closings": [
+  "Mit freundlichen Grüßen",
+  "Freundliche Grüße",
+  "Viele Grüße"
+ ],
+ "formal": {
+  "formal": [
+   "Sie",
+   "Ihnen",
+   "Ihr",
+   "Ihre",
+   "Ihrer",
+   "Ihrem",
+   "Ihren"
+  ],
+  "informal": [
+   "du",
+   "dich",
+   "dir",
+   "dein",
+   "deine",
+   "deinen",
+   "deinem",
+   "deiner",
+   "euch",
+   "euer",
+   "eure"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Erinnerung an Ihre offene Rechnung",
+  "order_confirmation": "Bestätigung Ihrer Bestellung",
+  "meeting_confirmation": "Bestätigung unseres Termins"
+ },
+ "ref_body": {
+  "payment_reminder": "wir möchten Sie freundlich daran erinnern, dass der Betrag von {amount} am {date} fällig war.",
+  "order_confirmation": "hiermit bestätigen wir Ihnen Ihre Bestellung über {amount}; die Lieferung ist für den {date} geplant.",
+  "meeting_confirmation": "hiermit bestätigen wir Ihnen unseren Termin am {date} zum Vertrag im Wert von {amount}."
+ },
+ "ref_greeting": "Sehr geehrte/r {name},",
+ "ref_bullets": [
+  "die Referenznummer finden Sie im beigefügten Dokument",
+  "unser Kundenservice ist werktags erreichbar",
+  "alle Preise verstehen sich inklusive der geltenden Steuern",
+  "bitte bewahren Sie diese Nachricht auf"
+ ],
+ "ref_filler": [
+  "Wir danken Ihnen für die gute Zusammenarbeit in den vergangenen Monaten.",
+  "Falls etwas unklar ist, wenden Sie sich gern jederzeit an uns.",
+  "Unser Büro ist von Montag bis Freitag zu den üblichen Geschäftszeiten geöffnet.",
+  "Gern beantworten wir Ihnen alle Fragen zu den Einzelheiten.",
+  "Eine Kopie der betreffenden Unterlagen ist in unserem System hinterlegt.",
+  "Wir freuen uns darauf, die Zusammenarbeit im kommenden Jahr fortzusetzen.",
+  "Sollten Sie die Angelegenheit bereits erledigt haben, betrachten Sie diese Nachricht bitte als gegenstandslos.",
+  "Vielen Dank im Voraus für Ihre Aufmerksamkeit."
+ ]
+}

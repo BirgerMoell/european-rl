@@ -44,6 +44,7 @@ LOCALE = Locale(
     last_names=("Müller", "Schmidt", "Schneider", "Fischer", "Weber", "Meyer", "Wagner", "Becker", "Hoffmann",
                 "Schäfer", "Koch", "Richter"),
     cities=("Hamburg", "Bremen", "Hannover", "Kiel", "Berlin", "Leipzig", "Dortmund", "Essen"),
+    date_style="DD.MM.YYYY",
     office_hours=("09:00", "17:00"), lunch=("12:30", "13:30"),
     notes=["Holidays are the nationwide set; regional holidays are named explicitly in tasks that need them."],
 )

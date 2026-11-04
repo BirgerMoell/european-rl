@@ -1,0 +1,57 @@
+{
+ "_review": "author",
+ "instruction": [
+  "Write an e-mail to {name} at {company} ({city}). {topic} You are writing as {sender}.\nRequirements:\n{requirements}\nWrite only the e-mail.",
+  "Please draft the following e-mail on behalf of {sender}. Recipient: {name}, {company}, {city}. {topic}\nThe e-mail must meet these requirements:\n{requirements}\nReply with the e-mail text only."
+ ],
+ "topics": {
+  "payment_reminder": "It is a friendly reminder that an invoice of {amount} was due on {date}.",
+  "order_confirmation": "It confirms an order worth {amount}, to be delivered on {date}.",
+  "meeting_confirmation": "It confirms a meeting on {date} to discuss a contract worth {amount}."
+ },
+ "req": {
+  "subject": "The first line is the subject, starting with \"{label}\".",
+  "closing": "End with a standard closing such as {examples}, followed by the sender's name.",
+  "formal": "Use the formal form of address throughout.",
+  "amount": "Write the amount in the recipient's local money format.",
+  "date": "Write the date in the recipient's local date format.",
+  "name": "Address the recipient by full name, spelled exactly as given.",
+  "no_english": "Do not use any English words.",
+  "words": "The e-mail has between {min} and {max} words.",
+  "bullets": "Include exactly {n} bullet points (lines starting with \"- \")."
+ },
+ "subject_label": "Subject:",
+ "closings": [
+  "Kind regards",
+  "Best regards",
+  "Yours sincerely"
+ ],
+ "formal": null,
+ "ref_subject": {
+  "payment_reminder": "Reminder about your open invoice",
+  "order_confirmation": "Confirmation of your order",
+  "meeting_confirmation": "Confirmation of our meeting"
+ },
+ "ref_body": {
+  "payment_reminder": "This is a friendly reminder that the amount of {amount} was due on {date}.",
+  "order_confirmation": "We hereby confirm your order of {amount}; delivery is planned for {date}.",
+  "meeting_confirmation": "We hereby confirm our meeting on {date} about the contract worth {amount}."
+ },
+ "ref_greeting": "Dear {name},",
+ "ref_bullets": [
+  "the reference number is on the attached document",
+  "our customer service is available on weekdays",
+  "all prices include the applicable taxes",
+  "please keep this message for your records"
+ ],
+ "ref_filler": [
+  "We appreciate the good cooperation over the past months.",
+  "If anything is unclear, do not hesitate to contact us.",
+  "Our office is open from Monday to Friday during normal business hours.",
+  "We will gladly answer any questions you may have about the details.",
+  "A copy of the relevant documents has been stored in our system.",
+  "We look forward to continuing our collaboration in the coming year.",
+  "Should you have already taken care of this matter, please disregard this message.",
+  "Thank you in advance for your attention to this matter."
+ ]
+}
