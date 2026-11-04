@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Hoeveel is {p} % van {amount}?",
+ "add_vat": "Een dienst kost {amount} exclusief btw. De btw bedraagt {p} %. Wat is de prijs inclusief btw?",
+ "line": "- {qty} × {price}",
+ "line_total": "Een factuur bevat de volgende regels (aantal × stuksprijs):\n{lines}\nWat is het totaalbedrag van de factuur?",
+ "remove_vat": "Een prijs van {amount} is inclusief {p} % btw. Wat is de prijs exclusief btw?",
+ "discount_chain": "Op een catalogusprijs van {amount} wordt eerst {p1} % korting gegeven en daarna nog eens {p2} % korting op de verlaagde prijs. Wat is de eindprijs?",
+ "convert": "Reken {src} {cur} om naar {local} tegen een wisselkoers van {rate} {local} per 1 {cur}.",
+ "convert_then_vat": "Een leverancier factureert {src} {cur} exclusief btw. Reken het bedrag om naar {local} tegen {rate} {local} per 1 {cur} (rond het omgerekende bedrag af op de kleinste munteenheid) en tel er vervolgens {p} % btw bij op. Wat is het totaal in {local}?",
+ "split": "Een rekening van {amount} wordt verdeeld over {n} personen. Iedereen betaalt hetzelfde bedrag in hele kleinste munteenheden (naar beneden afgerond), en de eerste persoon betaalt daarnaast wat er overblijft, zodat de delen precies optellen tot het totaal. Hoeveel betaalt de eerste persoon?",
+ "interest": "Over een lening van {amount} wordt een enkelvoudige rente van {r} % per jaar berekend. Hoeveel rente loopt er op in {months} maanden (rente = hoofdsom × rentevoet × maanden / 12)?",
+ "margin_price": "Een product kost {cost}. De verkoopprijs moet een brutomarge opleveren van {m} % van de verkoopprijs. Wat is de verkoopprijs?",
+ "discount_then_vat": "Op een nettoprijs van {amount} wordt {d} % korting gegeven; rond de verlaagde prijs af op de kleinste munteenheid en tel er vervolgens {p} % btw bij op. Wat is de eindprijs?",
+ "rounding": "Geef het exacte bedrag in de lokale valuta, commercieel afgerond (helft naar boven) op de kleinste munteenheid."
+}

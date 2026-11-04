@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Hve mikið er {p} % af {amount}?",
+ "add_vat": "Þjónusta kostar {amount} án virðisaukaskatts. Virðisaukaskatturinn er {p} %. Hvert er verðið með virðisaukaskatti?",
+ "line": "- {qty} × {price}",
+ "line_total": "Reikningur hefur eftirfarandi línur (magn × einingarverð):\n{lines}\nHver er heildarupphæð reikningsins?",
+ "remove_vat": "Verðið {amount} inniheldur {p} % virðisaukaskatt. Hvert er verðið án virðisaukaskatts?",
+ "discount_chain": "Listaverð upp á {amount} fær fyrst {p1} % afslátt og síðan {p2} % afslátt til viðbótar af lækkaða verðinu. Hvert er endanlegt verð?",
+ "convert": "Umreiknaðu {src} {cur} í {local} á genginu {rate} {local} fyrir 1 {cur}.",
+ "convert_then_vat": "Birgir gefur út reikning upp á {src} {cur} án virðisaukaskatts. Umreiknaðu upphæðina í {local} á genginu {rate} {local} fyrir 1 {cur} (námundaðu umreiknuðu upphæðina að minnstu einingu) og bættu síðan við {p} % virðisaukaskatti. Hver er heildarupphæðin í {local}?",
+ "split": "Reikningi upp á {amount} er skipt á milli {n} einstaklinga. Allir greiða sömu upphæð í heilum minnstu einingum (námundað niður) og fyrsti einstaklingurinn greiðir auk þess það sem eftir stendur, þannig að hlutarnir gangi nákvæmlega upp. Hve mikið greiðir fyrsti einstaklingurinn?",
+ "interest": "Lán upp á {amount} ber {r} % einfalda vexti á ári. Hve miklir vextir safnast á {months} mánuðum (vextir = höfuðstóll × vaxtahlutfall × mánuðir / 12)?",
+ "margin_price": "Vara kostar {cost}. Söluverðið á að skila vergri framlegð sem nemur {m} % af söluverðinu. Hvert er söluverðið?",
+ "discount_then_vat": "Nettóverð upp á {amount} fær {d} % afslátt; námundaðu afsláttarverðið að minnstu einingu og bættu síðan við {p} % virðisaukaskatti. Hvert er endanlegt verð?",
+ "rounding": "Gefðu upp nákvæma upphæð í gjaldmiðli landsins, námundaða samkvæmt viðskiptareglu (helmingur upp) að minnstu einingu."
+}

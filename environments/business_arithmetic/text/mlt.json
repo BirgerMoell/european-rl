@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Kemm hu {p} % ta' {amount}?",
+ "add_vat": "Servizz jiswa {amount} mingħajr VAT. Il-VAT hija ta' {p} %. X'inhu l-prezz inkluż il-VAT?",
+ "line": "- {qty} × {price}",
+ "line_total": "Fattura għandha dawn il-linji (kwantità × prezz unitarju):\n{lines}\nX'inhu t-total tal-fattura?",
+ "remove_vat": "Prezz ta' {amount} jinkludi {p} % VAT. X'inhu l-prezz mingħajr VAT?",
+ "discount_chain": "Prezz tal-lista ta' {amount} jingħata l-ewwel skont ta' {p1} %, u mbagħad skont ieħor ta' {p2} % fuq il-prezz imnaqqas. X'inhu l-prezz finali?",
+ "convert": "Ikkonverti {src} {cur} f'{local} b'rata tal-kambju ta' {rate} {local} għal kull 1 {cur}.",
+ "convert_then_vat": "Fornitur jiffattura {src} {cur} mingħajr VAT. Ikkonverti l-ammont f'{local} b'rata ta' {rate} {local} għal kull 1 {cur} (arrotonda l-ammont ikkonvertit għall-iżgħar unità), imbagħad żid {p} % VAT. X'inhu t-total f'{local}?",
+ "split": "Kont ta' {amount} jinqasam bejn {n} persuni. Kulħadd iħallas l-istess ammont f'unitajiet żgħar sħaħ (arrotondat 'l isfel), u l-ewwel persuna tħallas ukoll dak li jibqa', sabiex is-sehem ta' kulħadd flimkien jagħti eżatt it-total. Kemm tħallas l-ewwel persuna?",
+ "interest": "Self ta' {amount} għandu imgħax sempliċi ta' {r} % fis-sena. In-numru ta' xhur huwa {months}. Kemm imgħax jakkumula (imgħax = kapital × rata × xhur / 12)?",
+ "margin_price": "Prodott jiswa {cost}. Il-prezz tal-bejgħ irid jagħti marġni gross ta' {m} % tal-prezz tal-bejgħ. X'inhu l-prezz tal-bejgħ?",
+ "discount_then_vat": "Prezz nett ta' {amount} jingħata skont ta' {d} %; arrotonda l-prezz imnaqqas għall-iżgħar unità, imbagħad żid {p} % VAT. X'inhu l-prezz finali?",
+ "rounding": "Agħti l-ammont eżatt fil-munita lokali, arrotondat b'mod kummerċjali (nofs 'il fuq) għall-iżgħar unità."
+}

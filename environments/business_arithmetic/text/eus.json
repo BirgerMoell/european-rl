@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Zenbat da {amount} zenbatekoaren {p} %?",
+ "add_vat": "Zerbitzu batek {amount} balio du BEZik gabe. BEZa {p} % da. Zein da prezioa BEZa barne?",
+ "line": "- {qty} × {price}",
+ "line_total": "Faktura batek lerro hauek ditu (kantitatea × unitateko prezioa):\n{lines}\nZein da fakturaren guztizko zenbatekoa?",
+ "remove_vat": "Honako prezio honek {p} % BEZ barne hartzen du: {amount}. Zein da prezioa BEZik gabe?",
+ "discount_chain": "Katalogoko prezio bati, {amount} denari, lehenengo {p1} %ko deskontua aplikatzen zaio, eta gero beste {p2} %ko deskontua prezio murriztuaren gainean. Zein da azken prezioa?",
+ "convert": "Bihurtu {src} {cur} {local} monetara, truke-tasa hau erabiliz: {rate} {local} 1 {cur} bakoitzeko.",
+ "convert_then_vat": "Hornitzaile batek {src} {cur} fakturatzen ditu BEZik gabe. Bihurtu zenbatekoa {local} monetara, {rate} {local} 1 {cur} bakoitzeko truke-tasarekin (biribildu bihurtutako zenbatekoa unitate txikienera), eta gero gehitu {p} % BEZ. Zein da guztizkoa {local} monetan?",
+ "split": "Kontu bat, {amount} zenbatekoa, {n} pertsonaren artean banatzen da. Guztiek zenbateko bera ordaintzen dute unitate txikienen kopuru osoetan (beherantz biribilduta), eta lehen pertsonak, gainera, soberan geratzen dena ordaintzen du, zatiek guztizkoa zehazki osa dezaten. Zenbat ordaintzen du lehen pertsonak?",
+ "interest": "Mailegu batek, {amount} zenbatekoak, urteko {r} %ko interes sinplea du. Zenbat interes sortzen da {months} hilabetetan (interesa = kapitala × interes-tasa × hilabeteak / 12)?",
+ "margin_price": "Produktu batek {cost} balio du. Salmenta-prezioak salmenta-prezioaren {m} %ko marjina gordina eman behar du. Zein da salmenta-prezioa?",
+ "discount_then_vat": "BEZik gabeko prezio bati, {amount} denari, {d} %ko deskontua aplikatzen zaio; biribildu deskontudun prezioa unitate txikienera, eta gero gehitu {p} % BEZ. Zein da azken prezioa?",
+ "rounding": "Eman zenbateko zehatza tokiko monetan, merkataritza-biribiltzearekin (erdia gorantz) unitate txikienera biribilduta."
+}

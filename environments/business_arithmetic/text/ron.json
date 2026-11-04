@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Cât reprezintă {p} % din {amount}?",
+ "add_vat": "Un serviciu costă {amount} fără TVA. TVA este de {p} %. Care este prețul cu TVA?",
+ "line": "- {qty} × {price}",
+ "line_total": "O factură are următoarele rânduri (cantitate × preț unitar):\n{lines}\nCare este totalul facturii?",
+ "remove_vat": "Prețul de {amount} include {p} % TVA. Care este prețul fără TVA?",
+ "discount_chain": "Un preț de listă de {amount} primește mai întâi o reducere de {p1} %, apoi o reducere suplimentară de {p2} % la prețul redus. Care este prețul final?",
+ "convert": "Convertiți {src} {cur} în {local} la cursul de schimb de {rate} {local} pentru 1 {cur}.",
+ "convert_then_vat": "Un furnizor facturează {src} {cur} fără TVA. Convertiți suma în {local} la cursul de {rate} {local} pentru 1 {cur} (rotunjiți suma convertită la cea mai mică unitate), apoi adăugați {p} % TVA. Care este totalul în {local}?",
+ "split": "O notă de plată de {amount} se împarte între {n} persoane. Toți plătesc aceeași sumă în unități minime întregi (rotunjită în jos), iar prima persoană plătește în plus restul, astfel încât părțile să însumeze exact totalul. Cât plătește prima persoană?",
+ "interest": "Un împrumut de {amount} are o dobândă simplă de {r} % pe an. Câtă dobândă se acumulează în {months} luni (dobândă = principal × rată × luni / 12)?",
+ "margin_price": "Un produs costă {cost}. Prețul de vânzare trebuie să asigure o marjă brută de {m} % din prețul de vânzare. Care este prețul de vânzare?",
+ "discount_then_vat": "Un preț net de {amount} primește o reducere de {d} %; rotunjiți prețul redus la cea mai mică unitate, apoi adăugați {p} % TVA. Care este prețul final?",
+ "rounding": "Indicați suma exactă în moneda locală, rotunjită comercial (jumătate în sus) la cea mai mică unitate."
+}

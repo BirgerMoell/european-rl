@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Koliko iznosi {p} % od {amount}?",
+ "add_vat": "Usluga košta {amount} bez PDV-a. PDV iznosi {p} %. Kolika je cijena s PDV-om?",
+ "line": "- {qty} × {price}",
+ "line_total": "Račun sadrži sljedeće stavke (količina × jedinična cijena):\n{lines}\nKoliki je ukupni iznos računa?",
+ "remove_vat": "Cijena od {amount} uključuje {p} % PDV-a. Kolika je cijena bez PDV-a?",
+ "discount_chain": "Na katalošku cijenu od {amount} najprije se odobrava popust od {p1} %, a zatim dodatni popust od {p2} % na sniženu cijenu. Kolika je konačna cijena?",
+ "convert": "Preračunajte {src} {cur} u {local} po tečaju {rate} {local} za 1 {cur}.",
+ "convert_then_vat": "Dobavljač fakturira {src} {cur} bez PDV-a. Preračunajte iznos u {local} po tečaju {rate} {local} za 1 {cur} (preračunati iznos zaokružite na najmanju jedinicu), a zatim dodajte {p} % PDV-a. Koliki je ukupni iznos u {local}?",
+ "split": "Račun od {amount} dijeli se na više osoba (broj osoba: {n}). Svi plaćaju jednak iznos u cijelim najmanjim jedinicama (zaokruženo naniže), a prva osoba dodatno plaća ostatak kako bi se udjeli točno zbrojili u ukupni iznos. Koliko plaća prva osoba?",
+ "interest": "Na zajam od {amount} obračunava se jednostavna kamata od {r} % godišnje. Koliko kamata nastane za {months} mj. (kamata = glavnica × kamatna stopa × mjeseci / 12)?",
+ "margin_price": "Proizvod košta {cost}. Prodajna cijena mora ostvariti bruto maržu od {m} % prodajne cijene. Kolika je prodajna cijena?",
+ "discount_then_vat": "Na neto cijenu od {amount} odobrava se popust od {d} %; sniženu cijenu zaokružite na najmanju jedinicu, a zatim dodajte {p} % PDV-a. Kolika je konačna cijena?",
+ "rounding": "Navedite točan iznos u lokalnoj valuti, komercijalno zaokružen (polovica naviše) na najmanju jedinicu."
+}

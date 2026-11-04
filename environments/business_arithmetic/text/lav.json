@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Cik ir {p} % no {amount}?",
+ "add_vat": "Pakalpojums maksā {amount} bez PVN. PVN likme ir {p} %. Kāda ir cena ar PVN?",
+ "line": "- {qty} × {price}",
+ "line_total": "Rēķinā ir šādas rindas (daudzums × vienības cena):\n{lines}\nKāda ir rēķina kopsumma?",
+ "remove_vat": "Cena {amount} ietver {p} % PVN. Kāda ir cena bez PVN?",
+ "discount_chain": "Cenrāža cenai {amount} vispirms piemēro {p1} % atlaidi un pēc tam vēl {p2} % atlaidi no samazinātās cenas. Kāda ir galīgā cena?",
+ "convert": "Konvertējiet {src} {cur} valūtā {local} pēc kursa {rate} {local} par 1 {cur}.",
+ "convert_then_vat": "Piegādātājs izraksta rēķinu par {src} {cur} bez PVN. Konvertējiet summu valūtā {local} pēc kursa {rate} {local} par 1 {cur} (noapaļojiet konvertēto summu līdz mazākajai vienībai) un pēc tam pieskaitiet {p} % PVN. Kāda ir kopsumma valūtā {local}?",
+ "split": "Rēķinu par {amount} sadala starp {n} personām. Visi maksā vienādu summu veselās mazākajās vienībās (noapaļotu uz leju), un pirmā persona papildus samaksā atlikumu, lai daļas kopā precīzi veidotu kopsummu. Cik maksā pirmā persona?",
+ "interest": "Aizdevumam {amount} piemēro vienkāršos procentus {r} % gadā. Cik lieli procenti uzkrājas {months} mēnešos (procenti = pamatsumma × likme × mēneši / 12)?",
+ "margin_price": "Produkts maksā {cost}. Pārdošanas cenai jānodrošina bruto peļņas marža {m} % no pārdošanas cenas. Kāda ir pārdošanas cena?",
+ "discount_then_vat": "Cenai bez PVN {amount} piemēro {d} % atlaidi; noapaļojiet cenu ar atlaidi līdz mazākajai vienībai un pēc tam pieskaitiet {p} % PVN. Kāda ir galīgā cena?",
+ "rounding": "Norādiet precīzu summu vietējā valūtā, komerciāli noapaļotu (puse uz augšu) līdz mazākajai vienībai."
+}

@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Şu tutarın %{p} oranındaki kısmı ne kadardır: {amount}?",
+ "add_vat": "Bir hizmetin KDV hariç bedeli {amount}. KDV oranı %{p}. KDV dahil fiyat nedir?",
+ "line": "- {qty} × {price}",
+ "line_total": "Bir faturada şu kalemler var (miktar × birim fiyat):\n{lines}\nFatura toplamı nedir?",
+ "remove_vat": "Bir fiyat, %{p} KDV dahil olmak üzere {amount} tutarındadır. KDV hariç fiyat nedir?",
+ "discount_chain": "Liste fiyatı {amount} olan bir ürüne önce %{p1} indirim, ardından indirimli fiyat üzerinden ayrıca %{p2} indirim uygulanıyor. Nihai fiyat nedir?",
+ "convert": "Şu tutarı {local} para birimine çevirin: {src} {cur} (kur: 1 {cur} = {rate} {local}).",
+ "convert_then_vat": "Bir tedarikçi KDV hariç {src} {cur} fatura ediyor. Tutarı 1 {cur} = {rate} {local} kuruyla {local} para birimine çevirin (çevrilen tutarı en küçük birime yuvarlayın), ardından %{p} KDV ekleyin. {local} cinsinden toplam nedir?",
+ "split": "Toplam {amount} tutarındaki bir hesap {n} kişi arasında paylaştırılıyor. Herkes en küçük birimin tam katı olan aynı tutarı ödüyor (aşağı yuvarlanmış), ilk kişi ise payların toplamı tam tutsun diye kalan farkı da ödüyor. İlk kişi ne kadar öder?",
+ "interest": "Anaparası {amount} olan bir krediye yıllık %{r} basit faiz uygulanıyor. {months} ayda ne kadar faiz işler (faiz = anapara × faiz oranı × ay / 12)?",
+ "margin_price": "Bir ürünün maliyeti {cost}. Satış fiyatı, satış fiyatı üzerinden %{m} brüt kâr marjı sağlamalıdır. Satış fiyatı nedir?",
+ "discount_then_vat": "Net fiyatı {amount} olan bir ürüne %{d} indirim uygulanıyor; indirimli fiyatı en küçük birime yuvarlayın, ardından %{p} KDV ekleyin. Nihai fiyat nedir?",
+ "rounding": "Tam tutarı yerel para biriminde, ticari yuvarlamayla (yarım yukarı) en küçük birime yuvarlanmış olarak belirtin."
+}

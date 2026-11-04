@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "¿Cuánto es el {p} % de {amount}?",
+ "add_vat": "Un servicio cuesta {amount} sin IVA. El IVA es del {p} %. ¿Cuál es el precio con IVA incluido?",
+ "line": "- {qty} × {price}",
+ "line_total": "Una factura tiene estas líneas (cantidad × precio unitario):\n{lines}\n¿Cuál es el importe total de la factura?",
+ "remove_vat": "El precio de {amount} incluye un {p} % de IVA. ¿Cuál es el precio sin IVA?",
+ "discount_chain": "A un precio de catálogo de {amount} se le aplica primero un descuento del {p1} % y después un descuento adicional del {p2} % sobre el precio rebajado. ¿Cuál es el precio final?",
+ "convert": "Convierta {src} {cur} a {local} al tipo de cambio de {rate} {local} por 1 {cur}.",
+ "convert_then_vat": "Un proveedor factura {src} {cur} sin IVA. Convierta el importe a {local} al tipo de {rate} {local} por 1 {cur} (redondee el importe convertido a la unidad mínima) y después añada un {p} % de IVA. ¿Cuál es el total en {local}?",
+ "split": "Una cuenta de {amount} se reparte entre {n} personas. Todas pagan el mismo importe en unidades mínimas enteras (redondeado a la baja), y la primera persona paga además lo que sobra, de modo que las partes sumen exactamente el total. ¿Cuánto paga la primera persona?",
+ "interest": "Un préstamo de {amount} devenga un interés simple del {r} % anual. ¿Cuántos intereses se devengan en {months} meses (intereses = capital × tipo de interés × meses / 12)?",
+ "margin_price": "Un producto cuesta {cost}. El precio de venta debe dejar un margen bruto del {m} % sobre el precio de venta. ¿Cuál es el precio de venta?",
+ "discount_then_vat": "A un precio neto de {amount} se le aplica un descuento del {d} %; redondee el precio rebajado a la unidad mínima y después añada un {p} % de IVA. ¿Cuál es el precio final?",
+ "rounding": "Indique el importe exacto en la moneda local, con redondeo comercial (mitad hacia arriba) a la unidad mínima."
+}

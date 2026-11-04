@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Kiek yra {p} % nuo {amount}?",
+ "add_vat": "Paslauga kainuoja {amount} be PVM. PVM tarifas yra {p} %. Kokia kaina su PVM?",
+ "line": "- {qty} × {price}",
+ "line_total": "Sąskaitoje faktūroje yra šios eilutės (kiekis × vieneto kaina):\n{lines}\nKokia bendra sąskaitos faktūros suma?",
+ "remove_vat": "Kaina {amount} apima {p} % PVM. Kokia kaina be PVM?",
+ "discount_chain": "Kainoraščio kainai {amount} pirmiausia taikoma {p1} % nuolaida, o paskui papildoma {p2} % nuolaida sumažintai kainai. Kokia galutinė kaina?",
+ "convert": "Konvertuokite {src} {cur} į {local} taikydami {rate} {local} už 1 {cur} keitimo kursą.",
+ "convert_then_vat": "Tiekėjas išrašo sąskaitą {src} {cur} be PVM. Konvertuokite sumą į {local} taikydami {rate} {local} už 1 {cur} kursą (suapvalinkite konvertuotą sumą iki mažiausio vieneto), tada pridėkite {p} % PVM. Kokia bendra suma valiuta {local}?",
+ "split": "Sąskaita {amount} padalijama {n} asmenims. Visi moka vienodą sumą sveikais mažiausiais vienetais (suapvalintą žemyn), o pirmasis asmuo papildomai sumoka likutį, kad dalys tiksliai sudarytų visą sumą. Kiek moka pirmasis asmuo?",
+ "interest": "Paskolai {amount} taikomos paprastosios palūkanos – {r} % per metus. Kiek palūkanų susikaupia per {months} mėn. (palūkanos = pagrindinė suma × palūkanų norma × mėnesiai / 12)?",
+ "margin_price": "Produktas kainuoja {cost}. Pardavimo kaina turi užtikrinti {m} % bendrąją maržą nuo pardavimo kainos. Kokia pardavimo kaina?",
+ "discount_then_vat": "Kainai be PVM {amount} taikoma {d} % nuolaida; suapvalinkite kainą su nuolaida iki mažiausio vieneto, tada pridėkite {p} % PVM. Kokia galutinė kaina?",
+ "rounding": "Nurodykite tikslią sumą vietine valiuta, suapvalintą komerciškai (pusė į didesnę pusę) iki mažiausio vieneto."
+}

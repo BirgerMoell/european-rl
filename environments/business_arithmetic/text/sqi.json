@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Sa është {p} % e {amount}?",
+ "add_vat": "Një shërbim kushton {amount} pa TVSH. TVSH-ja është {p} %. Sa është çmimi me TVSH?",
+ "line": "- {qty} × {price}",
+ "line_total": "Një faturë ka këto rreshta (sasia × çmimi për njësi):\n{lines}\nSa është shuma totale e faturës?",
+ "remove_vat": "Çmimi prej {amount} përfshin {p} % TVSH. Sa është çmimi pa TVSH?",
+ "discount_chain": "Për një çmim liste prej {amount} zbatohet fillimisht një zbritje prej {p1} % dhe më pas një zbritje shtesë prej {p2} % mbi çmimin e ulur. Sa është çmimi përfundimtar?",
+ "convert": "Konvertoni {src} {cur} në {local} me kursin e këmbimit {rate} {local} për 1 {cur}.",
+ "convert_then_vat": "Një furnitor faturon {src} {cur} pa TVSH. Konvertoni shumën në {local} me kursin {rate} {local} për 1 {cur} (rrumbullakoni shumën e konvertuar në njësinë më të vogël), pastaj shtoni {p} % TVSH. Sa është totali në {local}?",
+ "split": "Një llogari prej {amount} ndahet midis {n} personave. Të gjithë paguajnë të njëjtën shumë në njësi më të vogla të plota (të rrumbullakuar poshtë), dhe personi i parë paguan gjithashtu mbetjen, në mënyrë që pjesët të mblidhen saktësisht në total. Sa paguan personi i parë?",
+ "interest": "Një hua prej {amount} ka interes të thjeshtë {r} % në vit. Sa interes grumbullohet në {months} muaj (interesi = principali × norma × muajt / 12)?",
+ "margin_price": "Një produkt kushton {cost}. Çmimi i shitjes duhet të japë një marzh bruto prej {m} % të çmimit të shitjes. Sa është çmimi i shitjes?",
+ "discount_then_vat": "Për një çmim neto prej {amount} zbatohet një zbritje prej {d} %; rrumbullakoni çmimin e zbritur në njësinë më të vogël, pastaj shtoni {p} % TVSH. Sa është çmimi përfundimtar?",
+ "rounding": "Jepni shumën e saktë në monedhën vendase, të rrumbullakuar sipas rregullit tregtar (gjysma lart) në njësinë më të vogël."
+}

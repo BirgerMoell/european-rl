@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Cé mhéad is {p} % de {amount}?",
+ "add_vat": "Cosnaíonn seirbhís {amount} gan CBL. Is é {p} % ráta CBL. Cad é an praghas lena n-áirítear CBL?",
+ "line": "- {qty} × {price}",
+ "line_total": "Tá na línte seo ar shonrasc (cainníocht × praghas aonaid):\n{lines}\nCad é iomlán an tsonraisc?",
+ "remove_vat": "Áirítear {p} % CBL i bpraghas {amount}. Cad é an praghas gan CBL?",
+ "discount_chain": "Faigheann praghas liosta {amount} lascaine {p1} % ar dtús, agus ansin lascaine bhreise {p2} % ar an bpraghas laghdaithe. Cad é an praghas deiridh?",
+ "convert": "Tiontaigh {src} {cur} go {local} ar ráta malairte {rate} {local} in aghaidh 1 {cur}.",
+ "convert_then_vat": "Sonrasaíonn soláthraí {src} {cur} gan CBL. Tiontaigh an méid go {local} ar ráta {rate} {local} in aghaidh 1 {cur} (slánaigh an méid tiontaithe go dtí an t-aonad is lú), agus ansin cuir {p} % CBL leis. Cad é an t-iomlán in {local}?",
+ "split": "Roinntear bille {amount} idir {n} duine. Íocann gach duine an méid céanna in aonaid is lú iomlána (slánaithe síos), agus íocann an chéad duine an fuílleach freisin ionas go dtagann na scaireanna leis an iomlán go beacht. Cé mhéad a íocann an chéad duine?",
+ "interest": "Tá ús simplí {r} % in aghaidh na bliana ar iasacht {amount}. Cé mhéad úis a fhabhraíonn i gceann {months} mí (ús = príomhshuim × ráta × míonna / 12)?",
+ "margin_price": "Cosnaíonn táirge {cost}. Ní mór don phraghas díola corrlach comhlán {m} % den phraghas díola a thabhairt. Cad é an praghas díola?",
+ "discount_then_vat": "Faigheann glanphraghas {amount} lascaine {d} %; slánaigh an praghas lascainithe go dtí an t-aonad is lú, agus ansin cuir {p} % CBL leis. Cad é an praghas deiridh?",
+ "rounding": "Tabhair an méid beacht san airgeadra áitiúil, slánaithe de réir an ghnáthrialach tráchtála (leath suas) go dtí an t-aonad is lú."
+}

@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Kui palju on {p} % summast {amount}?",
+ "add_vat": "Teenus maksab {amount} ilma käibemaksuta. Käibemaks on {p} %. Milline on hind koos käibemaksuga?",
+ "line": "- {qty} × {price}",
+ "line_total": "Arvel on järgmised read (kogus × ühikuhind):\n{lines}\nMilline on arve kogusumma?",
+ "remove_vat": "Hind {amount} sisaldab {p} % käibemaksu. Milline on hind ilma käibemaksuta?",
+ "discount_chain": "Hinnakirjahinnale {amount} tehakse esmalt {p1} % allahindlus ja seejärel veel {p2} % allahindlus vähendatud hinnast. Milline on lõpphind?",
+ "convert": "Arvestage {src} {cur} ümber valuutasse {local} kursiga {rate} {local} 1 {cur} kohta.",
+ "convert_then_vat": "Tarnija esitab arve summas {src} {cur} ilma käibemaksuta. Arvestage summa ümber valuutasse {local} kursiga {rate} {local} 1 {cur} kohta (ümardage ümberarvestatud summa väikseima ühikuni) ning lisage seejärel {p} % käibemaksu. Milline on kogusumma valuutas {local}?",
+ "split": "Arve summas {amount} jagatakse {n} inimese vahel. Kõik maksavad sama summa täisarvulistes väikseimates ühikutes (allapoole ümardatult) ning esimene inimene maksab lisaks jäägi, et osad annaksid kokku täpselt kogusumma. Kui palju maksab esimene inimene?",
+ "interest": "Laenult {amount} arvestatakse lihtintressi {r} % aastas. Kui palju intressi koguneb {months} kuu jooksul (intress = põhisumma × intressimäär × kuud / 12)?",
+ "margin_price": "Toode maksab {cost}. Müügihind peab andma brutomarginaali {m} % müügihinnast. Milline on müügihind?",
+ "discount_then_vat": "Käibemaksuta hinnale {amount} tehakse {d} % allahindlus; ümardage allahinnatud hind väikseima ühikuni ning lisage seejärel {p} % käibemaksu. Milline on lõpphind?",
+ "rounding": "Esitage täpne summa kohalikus valuutas, ümardatuna kaubandusreegli järgi (pool ülespoole) väikseima ühikuni."
+}

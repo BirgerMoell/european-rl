@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Koliko je {p} % od {amount}?",
+ "add_vat": "Storitev stane {amount} brez DDV. DDV znaša {p} %. Kolikšna je cena z DDV?",
+ "line": "- {qty} × {price}",
+ "line_total": "Račun vsebuje naslednje postavke (količina × cena na enoto):\n{lines}\nKolikšen je skupni znesek računa?",
+ "remove_vat": "Cena {amount} vključuje {p} % DDV. Kolikšna je cena brez DDV?",
+ "discount_chain": "Cenikovna cena {amount} je najprej znižana za {p1} %, nato pa še za dodatnih {p2} % od znižane cene. Kolikšna je končna cena?",
+ "convert": "Pretvorite {src} {cur} v {local} po menjalnem tečaju {rate} {local} za 1 {cur}.",
+ "convert_then_vat": "Dobavitelj zaračuna {src} {cur} brez DDV. Pretvorite znesek v {local} po tečaju {rate} {local} za 1 {cur} (pretvorjeni znesek zaokrožite na najmanjšo enoto), nato pa prištejte {p} % DDV. Kolikšen je skupni znesek v {local}?",
+ "split": "Račun za {amount} se razdeli med več oseb (število oseb: {n}). Vsi plačajo enak znesek v celih najmanjših enotah (zaokroženo navzdol), prva oseba pa poleg tega plača še ostanek, da se deleži natančno seštejejo v skupni znesek. Koliko plača prva oseba?",
+ "interest": "Za posojilo {amount} se obračunajo navadne obresti po {r} % letno. Koliko obresti nastane v {months} mes. (obresti = glavnica × obrestna mera × meseci / 12)?",
+ "margin_price": "Izdelek stane {cost}. Prodajna cena mora zagotoviti bruto maržo v višini {m} % prodajne cene. Kolikšna je prodajna cena?",
+ "discount_then_vat": "Neto cena {amount} je znižana za {d} %; znižano ceno zaokrožite na najmanjšo enoto, nato pa prištejte {p} % DDV. Kolikšna je končna cena?",
+ "rounding": "Navedite natančen znesek v lokalni valuti, komercialno zaokrožen (polovica navzgor) na najmanjšo enoto."
+}

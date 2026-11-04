@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Canto é o {p} % de {amount}?",
+ "add_vat": "Un servizo custa {amount} sen IVE. O IVE é do {p} %. Cal é o prezo con IVE incluído?",
+ "line": "- {qty} × {price}",
+ "line_total": "Unha factura ten estas liñas (cantidade × prezo unitario):\n{lines}\nCal é o importe total da factura?",
+ "remove_vat": "O prezo de {amount} inclúe un {p} % de IVE. Cal é o prezo sen IVE?",
+ "discount_chain": "A un prezo de catálogo de {amount} aplícaselle primeiro un desconto do {p1} % e despois un desconto adicional do {p2} % sobre o prezo rebaixado. Cal é o prezo final?",
+ "convert": "Converta {src} {cur} a {local} ao tipo de cambio de {rate} {local} por 1 {cur}.",
+ "convert_then_vat": "Un provedor factura {src} {cur} sen IVE. Converta o importe a {local} ao tipo de {rate} {local} por 1 {cur} (redondee o importe convertido á unidade mínima) e despois engada un {p} % de IVE. Cal é o total en {local}?",
+ "split": "Unha conta de {amount} repártese entre {n} persoas. Todas pagan o mesmo importe en unidades mínimas enteiras (redondeado á baixa), e a primeira persoa paga ademais o que sobra, de xeito que as partes sumen exactamente o total. Canto paga a primeira persoa?",
+ "interest": "Un préstamo de {amount} xera un xuro simple do {r} % anual. Cantos xuros se xeran en {months} meses (xuros = capital × tipo de xuro × meses / 12)?",
+ "margin_price": "Un produto custa {cost}. O prezo de venda debe deixar unha marxe bruta do {m} % sobre o prezo de venda. Cal é o prezo de venda?",
+ "discount_then_vat": "A un prezo neto de {amount} aplícaselle un desconto do {d} %; redondee o prezo rebaixado á unidade mínima e despois engada un {p} % de IVE. Cal é o prezo final?",
+ "rounding": "Indique o importe exacto na moeda local, con redondeo comercial (metade cara arriba) á unidade mínima."
+}

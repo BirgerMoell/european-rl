@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Quant és el {p} % de {amount}?",
+ "add_vat": "Un servei costa {amount} sense IVA. L'IVA és del {p} %. Quin és el preu amb IVA inclòs?",
+ "line": "- {qty} × {price}",
+ "line_total": "Una factura té aquestes línies (quantitat × preu unitari):\n{lines}\nQuin és l'import total de la factura?",
+ "remove_vat": "El preu de {amount} inclou un {p} % d'IVA. Quin és el preu sense IVA?",
+ "discount_chain": "A un preu de catàleg de {amount} s'hi aplica primer un descompte del {p1} % i després un descompte addicional del {p2} % sobre el preu rebaixat. Quin és el preu final?",
+ "convert": "Converteixi {src} {cur} a {local} al tipus de canvi de {rate} {local} per 1 {cur}.",
+ "convert_then_vat": "Un proveïdor factura {src} {cur} sense IVA. Converteixi l'import a {local} al tipus de {rate} {local} per 1 {cur} (arrodoneixi l'import convertit a la unitat mínima) i després afegeixi-hi un {p} % d'IVA. Quin és el total en {local}?",
+ "split": "Un compte de {amount} es reparteix entre {n} persones. Totes paguen el mateix import en unitats mínimes senceres (arrodonit a la baixa), i la primera persona paga a més el que sobra, de manera que les parts sumin exactament el total. Quant paga la primera persona?",
+ "interest": "Un préstec de {amount} meritua un interès simple del {r} % anual. Quants interessos es meriten en {months} mesos (interessos = capital × tipus d'interès × mesos / 12)?",
+ "margin_price": "Un producte costa {cost}. El preu de venda ha de deixar un marge brut del {m} % sobre el preu de venda. Quin és el preu de venda?",
+ "discount_then_vat": "A un preu net de {amount} s'hi aplica un descompte del {d} %; arrodoneixi el preu rebaixat a la unitat mínima i després afegeixi-hi un {p} % d'IVA. Quin és el preu final?",
+ "rounding": "Indiqui l'import exacte en la moneda local, amb arrodoniment comercial (meitat cap amunt) a la unitat mínima."
+}

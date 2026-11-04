@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Kolik je {p} % z {amount}?",
+ "add_vat": "Služba stojí {amount} bez DPH. DPH činí {p} %. Jaká je cena včetně DPH?",
+ "line": "- {qty} × {price}",
+ "line_total": "Faktura obsahuje tyto položky (množství × jednotková cena):\n{lines}\nJaká je celková částka faktury?",
+ "remove_vat": "Cena {amount} zahrnuje {p} % DPH. Jaká je cena bez DPH?",
+ "discount_chain": "Z ceníkové ceny {amount} se nejprve poskytne sleva {p1} % a poté další sleva {p2} % ze snížené ceny. Jaká je konečná cena?",
+ "convert": "Přepočtěte {src} {cur} na {local} kurzem {rate} {local} za 1 {cur}.",
+ "convert_then_vat": "Dodavatel fakturuje {src} {cur} bez DPH. Přepočtěte částku na {local} kurzem {rate} {local} za 1 {cur} (přepočtenou částku zaokrouhlete na nejmenší jednotku) a poté připočtěte {p} % DPH. Jaká je celková částka v {local}?",
+ "split": "Účet na {amount} se rozdělí mezi několik osob (počet osob: {n}). Všichni platí stejnou částku v celých nejmenších jednotkách (zaokrouhlenou dolů) a první osoba navíc doplatí zbytek, aby podíly dávaly přesně celkovou částku. Kolik zaplatí první osoba?",
+ "interest": "Z půjčky {amount} se platí jednoduchý úrok {r} % ročně. Kolik úroku naroste za {months} měs. (úrok = jistina × úroková sazba × měsíce / 12)?",
+ "margin_price": "Výrobek stojí {cost}. Prodejní cena má zajistit hrubou marži {m} % z prodejní ceny. Jaká je prodejní cena?",
+ "discount_then_vat": "Z ceny bez DPH {amount} se poskytne sleva {d} %; zlevněnou cenu zaokrouhlete na nejmenší jednotku a poté připočtěte {p} % DPH. Jaká je konečná cena?",
+ "rounding": "Uveďte přesnou částku v místní měně, obchodně zaokrouhlenou (polovina nahoru) na nejmenší jednotku."
+}

@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Quanto é {p} % de {amount}?",
+ "add_vat": "Um serviço custa {amount} sem IVA. O IVA é de {p} %. Qual é o preço com IVA?",
+ "line": "- {qty} × {price}",
+ "line_total": "Uma fatura tem as seguintes linhas (quantidade × preço unitário):\n{lines}\nQual é o total da fatura?",
+ "remove_vat": "O preço de {amount} inclui {p} % de IVA. Qual é o preço sem IVA?",
+ "discount_chain": "Um preço de tabela de {amount} recebe primeiro um desconto de {p1} % e depois um desconto adicional de {p2} % sobre o preço reduzido. Qual é o preço final?",
+ "convert": "Converta {src} {cur} em {local} à taxa de câmbio de {rate} {local} por 1 {cur}.",
+ "convert_then_vat": "Um fornecedor fatura {src} {cur} sem IVA. Converta o montante em {local} à taxa de {rate} {local} por 1 {cur} (arredonde o montante convertido à unidade mínima) e, em seguida, acrescente {p} % de IVA. Qual é o total em {local}?",
+ "split": "Uma conta de {amount} é dividida entre {n} pessoas. Todas pagam o mesmo montante em unidades mínimas inteiras (arredondado por defeito), e a primeira pessoa paga ainda o que sobrar, de modo que as partes somem exatamente o total. Quanto paga a primeira pessoa?",
+ "interest": "Um empréstimo de {amount} vence juros simples de {r} % ao ano. Quanto se vence de juros em {months} meses (juros = capital × taxa × meses / 12)?",
+ "margin_price": "Um produto custa {cost}. O preço de venda deve proporcionar uma margem bruta de {m} % do preço de venda. Qual é o preço de venda?",
+ "discount_then_vat": "Um preço sem IVA de {amount} recebe um desconto de {d} %; arredonde o preço com desconto à unidade mínima e, em seguida, acrescente {p} % de IVA. Qual é o preço final?",
+ "rounding": "Indique o montante exato na moeda local, arredondado comercialmente (metade para cima) à unidade mínima."
+}

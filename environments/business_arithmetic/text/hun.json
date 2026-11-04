@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Mennyi a következő összeg {p} %-a: {amount}?",
+ "add_vat": "Egy szolgáltatás nettó ára {amount}. Az áfa mértéke {p} %. Mennyi a bruttó ár?",
+ "line": "- {qty} × {price}",
+ "line_total": "Egy számla a következő tételeket tartalmazza (mennyiség × egységár):\n{lines}\nMennyi a számla végösszege?",
+ "remove_vat": "Egy termék bruttó ára {amount}, amely {p} % áfát tartalmaz. Mennyi a nettó ár?",
+ "discount_chain": "A listaár {amount}; erre először {p1} % kedvezményt adnak, majd a csökkentett árból további {p2} % kedvezményt. Mennyi a végső ár?",
+ "convert": "Váltson át {src} {cur} összeget {local} pénznemre {rate} {local} / 1 {cur} árfolyamon.",
+ "convert_then_vat": "Egy szállító nettó {src} {cur} összeget számláz. Váltsa át az összeget {local} pénznemre {rate} {local} / 1 {cur} árfolyamon (az átváltott összeget kerekítse a legkisebb egységre), majd adjon hozzá {p} % áfát. Mennyi a végösszeg {local} pénznemben?",
+ "split": "Egy számlát, amelynek összege {amount}, {n} személy között osztanak fel. Mindenki ugyanannyit fizet egész legkisebb egységekben (lefelé kerekítve), az első személy pedig ezen felül kifizeti a maradékot is, hogy a részek pontosan kiadják a végösszeget. Mennyit fizet az első személy?",
+ "interest": "Egy kölcsön összege {amount}, egyszerű kamata évi {r} %. Mennyi kamat halmozódik fel {months} hónap alatt (kamat = tőke × kamatláb × hónapok / 12)?",
+ "margin_price": "Egy termék önköltsége {cost}. Az eladási árnak az eladási ár {m} %-ának megfelelő bruttó árrést kell biztosítania. Mennyi az eladási ár?",
+ "discount_then_vat": "Egy nettó ár {amount}; erre {d} % kedvezményt adnak. A kedvezményes árat kerekítse a legkisebb egységre, majd adjon hozzá {p} % áfát. Mennyi a végső ár?",
+ "rounding": "Adja meg a pontos összeget a helyi pénznemben, kereskedelmi kerekítéssel (a fél felfelé) a legkisebb egységre kerekítve."
+}
