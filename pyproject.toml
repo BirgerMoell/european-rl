@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "european-rl"
+version = "0.1.0"
+description = "Verifiable RL environments for office, document and agentic work in the 36 OpenEuroLLM languages"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "holidays>=0.60", "python-stdnum>=1.20", "python-dateutil>=2.9"]
+
+[tool.setuptools.packages.find]
+include = ["eurl*", "environments*"]

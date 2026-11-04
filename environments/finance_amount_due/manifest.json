@@ -1,0 +1,18 @@
+{
+  "id": "finance_amount_due",
+  "title": "Amount due on an invoice under national VAT rules",
+  "family": "finance_desk",
+  "capability": "calculate, look up policy, abstain",
+  "languages": ["eng", "swe", "deu", "fra", "pol", "fin"],
+  "locales": ["SE", "DE", "FR", "PL", "FI"],
+  "version": "0.1.0",
+  "contract": "0.3",
+  "interaction": "typed_answer",
+  "answer_type": "money",
+  "description": "Invoice lines, national VAT rates (inline or from a handbook excerpt), line discounts, part payments, credit notes, rounding to whole units and intra-EU reverse charge; about 12 % of tasks are unanswerable.",
+  "origin": "generalised from svenska-rl invoice_amount_due (contract v0.2)",
+  "data_license": "Apache-2.0",
+  "data_source": "synthetic procedural generator (eurl locale packs)",
+  "text_review": {"eng": "author", "swe": "llm", "deu": "llm", "fra": "llm", "pol": "llm", "fin": "llm"},
+  "qualification": {"contract": "pending", "L1": "pending", "L2": "pending", "L3": "pending"}
+}
