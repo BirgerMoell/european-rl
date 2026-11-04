@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Remate cunha liña da forma `ANSWER: <importe>`, por exemplo `ANSWER: {example}`.",
+ "date": "Remate cunha liña da forma `ANSWER: AAAA-MM-DD`.",
+ "datetime": "Remate cunha liña da forma `ANSWER: AAAA-MM-DD HH:MM`.",
+ "integer": "Remate cunha liña da forma `ANSWER: <número enteiro>`.",
+ "text": "Remate cunha liña da forma `ANSWER: <resposta>`.",
+ "mapping": "Remate con `ANSWER:` seguido dun obxecto JSON.",
+ "strings": "Remate con `ANSWER:` seguido dunha lista JSON de cadeas, exactamente como aparecen no texto e na orde en que aparecen.",
+ "abstain": "Se a tarefa non se pode resolver coa información dispoñible, responda `ANSWER: UNKNOWN`.",
+ "done": "Feito.",
+ "err_action": "acción non válida: chame unha ferramenta ou escriba unha resposta final",
+ "err_tool": "ferramenta descoñecida: {name}",
+ "err_args_object": "os argumentos deben ser un obxecto JSON",
+ "err_missing": "falta o argumento: {key}",
+ "err_unknown_arg": "argumento descoñecido: {key}",
+ "err_type": "tipo incorrecto para {key}: agardábase {expected}",
+ "err_enum": "valor non válido para {key}"
+}

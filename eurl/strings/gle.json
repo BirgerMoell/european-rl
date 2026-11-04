@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Críochnaigh le líne den fhoirm `ANSWER: <méid>`, mar shampla `ANSWER: {example}`.",
+ "date": "Críochnaigh le líne den fhoirm `ANSWER: BBBB-MM-LL`.",
+ "datetime": "Críochnaigh le líne den fhoirm `ANSWER: BBBB-MM-LL UU:NN`.",
+ "integer": "Críochnaigh le líne den fhoirm `ANSWER: <slánuimhir>`.",
+ "text": "Críochnaigh le líne den fhoirm `ANSWER: <freagra>`.",
+ "mapping": "Críochnaigh le `ANSWER:` agus réad JSON ina dhiaidh.",
+ "strings": "Críochnaigh le `ANSWER:` agus liosta JSON de theaghráin ina dhiaidh, díreach mar atá siad scríofa sa téacs agus san ord ina bhfuil siad.",
+ "abstain": "Mura féidir an tasc a réiteach leis an eolas atá ar fáil, freagair `ANSWER: UNKNOWN`.",
+ "done": "Déanta.",
+ "err_action": "gníomh neamhbhailí: glaoigh ar uirlis nó scríobh freagra deiridh",
+ "err_tool": "uirlis anaithnid: {name}",
+ "err_args_object": "caithfidh na hargóintí a bheith ina réad JSON",
+ "err_missing": "argóint ar iarraidh: {key}",
+ "err_unknown_arg": "argóint anaithnid: {key}",
+ "err_type": "cineál mícheart do {key}: bhíothas ag súil le {expected}",
+ "err_enum": "luach neamhbhailí do {key}"
+}

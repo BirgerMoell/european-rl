@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Acabi amb una línia de la forma `ANSWER: <import>`, per exemple `ANSWER: {example}`.",
+ "date": "Acabi amb una línia de la forma `ANSWER: AAAA-MM-DD`.",
+ "datetime": "Acabi amb una línia de la forma `ANSWER: AAAA-MM-DD HH:MM`.",
+ "integer": "Acabi amb una línia de la forma `ANSWER: <nombre enter>`.",
+ "text": "Acabi amb una línia de la forma `ANSWER: <resposta>`.",
+ "mapping": "Acabi amb `ANSWER:` seguit d'un objecte JSON.",
+ "strings": "Acabi amb `ANSWER:` seguit d'una llista JSON de cadenes, exactament com apareixen al text i en l'ordre en què apareixen.",
+ "abstain": "Si la tasca no es pot resoldre amb la informació disponible, respongui `ANSWER: UNKNOWN`.",
+ "done": "Fet.",
+ "err_action": "acció no vàlida: cridi una eina o escrigui una resposta final",
+ "err_tool": "eina desconeguda: {name}",
+ "err_args_object": "els arguments han de ser un objecte JSON",
+ "err_missing": "falta l'argument: {key}",
+ "err_unknown_arg": "argument desconegut: {key}",
+ "err_type": "tipus incorrecte per a {key}: s'esperava {expected}",
+ "err_enum": "valor no vàlid per a {key}"
+}

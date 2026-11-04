@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Sluit af met een regel van de vorm `ANSWER: <bedrag>`, bijvoorbeeld `ANSWER: {example}`.",
+ "date": "Sluit af met een regel van de vorm `ANSWER: JJJJ-MM-DD`.",
+ "datetime": "Sluit af met een regel van de vorm `ANSWER: JJJJ-MM-DD UU:MM`.",
+ "integer": "Sluit af met een regel van de vorm `ANSWER: <geheel getal>`.",
+ "text": "Sluit af met een regel van de vorm `ANSWER: <antwoord>`.",
+ "mapping": "Sluit af met `ANSWER:` gevolgd door een JSON-object.",
+ "strings": "Sluit af met `ANSWER:` gevolgd door een JSON-lijst van strings, precies zoals ze in de tekst staan en in de volgorde waarin ze voorkomen.",
+ "abstain": "Als de taak met de gegeven informatie niet kan worden opgelost, antwoordt u `ANSWER: UNKNOWN`.",
+ "done": "Klaar.",
+ "err_action": "ongeldige actie: roep een tool aan of schrijf een definitief antwoord",
+ "err_tool": "onbekende tool: {name}",
+ "err_args_object": "de argumenten moeten een JSON-object zijn",
+ "err_missing": "ontbrekend argument: {key}",
+ "err_unknown_arg": "onbekend argument: {key}",
+ "err_type": "verkeerd type voor {key}: {expected} verwacht",
+ "err_enum": "ongeldige waarde voor {key}"
+}

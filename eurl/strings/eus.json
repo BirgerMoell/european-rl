@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Amaitu `ANSWER: <zenbatekoa>` formako lerro batekin, adibidez `ANSWER: {example}`.",
+ "date": "Amaitu `ANSWER: UUUU-HH-EE` formako lerro batekin.",
+ "datetime": "Amaitu `ANSWER: UUUU-HH-EE OO:MM` formako lerro batekin.",
+ "integer": "Amaitu `ANSWER: <zenbaki osoa>` formako lerro batekin.",
+ "text": "Amaitu `ANSWER: <erantzuna>` formako lerro batekin.",
+ "mapping": "Amaitu `ANSWER:` idatzita eta, ondoren, JSON objektu bat.",
+ "strings": "Amaitu `ANSWER:` idatzita eta, ondoren, kateen JSON zerrenda bat, testuan idatzita dauden bezala eta agertzen diren ordenan.",
+ "abstain": "Emandako informazioarekin ataza ebatzi ezin bada, erantzun `ANSWER: UNKNOWN`.",
+ "done": "Eginda.",
+ "err_action": "ekintza baliogabea: deitu tresna bati edo idatzi azken erantzun bat",
+ "err_tool": "tresna ezezaguna: {name}",
+ "err_args_object": "argumentuek JSON objektu bat izan behar dute",
+ "err_missing": "argumentu bat falta da: {key}",
+ "err_unknown_arg": "argumentu ezezaguna: {key}",
+ "err_type": "mota okerra {key} argumentuan: {expected} espero zen",
+ "err_enum": "balio baliogabea {key} argumentuan"
+}

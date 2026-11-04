@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Concluda con una riga nella forma `ANSWER: <importo>`, per esempio `ANSWER: {example}`.",
+ "date": "Concluda con una riga nella forma `ANSWER: AAAA-MM-GG`.",
+ "datetime": "Concluda con una riga nella forma `ANSWER: AAAA-MM-GG HH:MM`.",
+ "integer": "Concluda con una riga nella forma `ANSWER: <numero intero>`.",
+ "text": "Concluda con una riga nella forma `ANSWER: <risposta>`.",
+ "mapping": "Concluda con `ANSWER:` seguito da un oggetto JSON.",
+ "strings": "Concluda con `ANSWER:` seguito da un elenco JSON di stringhe, esattamente come compaiono nel testo e nell'ordine in cui appaiono.",
+ "abstain": "Se il compito non può essere risolto con le informazioni fornite, risponda `ANSWER: UNKNOWN`.",
+ "done": "Fatto.",
+ "err_action": "azione non valida: richiami uno strumento o scriva una risposta finale",
+ "err_tool": "strumento sconosciuto: {name}",
+ "err_args_object": "gli argomenti devono essere un oggetto JSON",
+ "err_missing": "argomento mancante: {key}",
+ "err_unknown_arg": "argomento sconosciuto: {key}",
+ "err_type": "tipo errato per {key}: atteso {expected}",
+ "err_enum": "valore non valido per {key}"
+}

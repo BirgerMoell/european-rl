@@ -51,7 +51,7 @@ def test_public_holidays_match_the_holidays_package(pack):
 def test_pack_fields(pack):
     locale = load(pack)
     assert set(locale.vat_bp) == set(VAT_CATEGORIES)
-    assert all(0 < bp < 3000 for bp in locale.vat_bp.values())
+    assert all(0 <= bp < 3000 for bp in locale.vat_bp.values())  # 0 % is real (IE, MT zero-rating)
     assert all(lang in LANGUAGES for lang in locale.languages)
     for rule in locale.holidays:
         assert set(rule.names) <= set(locale.languages) and locale.language in rule.names

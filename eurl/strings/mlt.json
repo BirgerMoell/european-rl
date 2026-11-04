@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Temm b'linja tal-forma `ANSWER: <ammont>`, pereżempju `ANSWER: {example}`.",
+ "date": "Temm b'linja tal-forma `ANSWER: SSSS-XX-JJ`.",
+ "datetime": "Temm b'linja tal-forma `ANSWER: SSSS-XX-JJ HH:MM`.",
+ "integer": "Temm b'linja tal-forma `ANSWER: <numru sħiħ>`.",
+ "text": "Temm b'linja tal-forma `ANSWER: <tweġiba>`.",
+ "mapping": "Temm b'`ANSWER:` segwit minn oġġett JSON.",
+ "strings": "Temm b'`ANSWER:` segwit minn lista JSON ta' strings, eżatt kif jidhru fit-test u fl-ordni li fiha jidhru.",
+ "abstain": "Jekk il-kompitu ma jistax jiġi solvut bl-informazzjoni mogħtija, wieġeb `ANSWER: UNKNOWN`.",
+ "done": "Lest.",
+ "err_action": "azzjoni invalida: sejjaħ għodda jew ikteb tweġiba finali",
+ "err_tool": "għodda mhux magħrufa: {name}",
+ "err_args_object": "l-argumenti għandhom ikunu oġġett JSON",
+ "err_missing": "argument nieqes: {key}",
+ "err_unknown_arg": "argument mhux magħruf: {key}",
+ "err_type": "tip ħażin għal {key}: kien mistenni {expected}",
+ "err_enum": "valur invalidu għal {key}"
+}

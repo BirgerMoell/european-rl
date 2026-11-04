@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Termine com uma linha da forma `ANSWER: <montante>`, por exemplo `ANSWER: {example}`.",
+ "date": "Termine com uma linha da forma `ANSWER: AAAA-MM-DD`.",
+ "datetime": "Termine com uma linha da forma `ANSWER: AAAA-MM-DD HH:MM`.",
+ "integer": "Termine com uma linha da forma `ANSWER: <número inteiro>`.",
+ "text": "Termine com uma linha da forma `ANSWER: <resposta>`.",
+ "mapping": "Termine com `ANSWER:` seguido de um objeto JSON.",
+ "strings": "Termine com `ANSWER:` seguido de uma lista JSON de cadeias de caracteres, exatamente como aparecem no texto e pela ordem em que surgem.",
+ "abstain": "Se a tarefa não puder ser resolvida com a informação disponível, responda `ANSWER: UNKNOWN`.",
+ "done": "Concluído.",
+ "err_action": "ação inválida: chame uma ferramenta ou escreva uma resposta final",
+ "err_tool": "ferramenta desconhecida: {name}",
+ "err_args_object": "os argumentos têm de ser um objeto JSON",
+ "err_missing": "argumento em falta: {key}",
+ "err_unknown_arg": "argumento desconhecido: {key}",
+ "err_type": "tipo errado para {key}: esperava-se {expected}",
+ "err_enum": "valor inválido para {key}"
+}

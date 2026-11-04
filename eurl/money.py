@@ -46,6 +46,7 @@ def parse_money(text: Optional[str], minor_digits: int = 2) -> Optional[int]:
     if text is None:
         return None
     cleaned = _CURRENCY.sub(" ", text).replace("−", "-").strip()
+    cleaned = re.sub(r"-\s+(?=\d)", "-", cleaned)  # "-€ 1.234,56" -> "- 1.234,56" -> "-1.234,56"
     found = _AMOUNT.findall(cleaned)
     if len(found) != 1:
         return None
