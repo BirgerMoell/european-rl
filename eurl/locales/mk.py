@@ -80,6 +80,7 @@ LOCALE = Locale(
     cities=("Скопје", "Битола", "Куманово", "Прилеп", "Тетово", "Охрид", "Велес", "Штип"),
     eu_member=False,
     price_scale=62,
+    date_style="DD.MM.YYYY",
     office_hours=("08:00", "16:00"), lunch=("12:00", "12:30"),
     notes=[
         "Non-EU: VAT (ДДВ) standard 18 %; 5 % for food, books, passenger transport and hotel accommodation; 10 % "

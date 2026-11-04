@@ -67,6 +67,7 @@ LOCALE = Locale(
     last_names=("Παπαδόπουλος", "Παπαδάκης", "Γεωργίου", "Νικολάου", "Ιωάννου", "Βασιλείου", "Αντωνίου",
                 "Μαυρίδης", "Οικονόμου", "Δημητρίου", "Καραγιάννης", "Αλεξίου"),
     cities=("Αθήνα", "Θεσσαλονίκη", "Πάτρα", "Ηράκλειο", "Λάρισα", "Βόλος", "Ιωάννινα", "Καβάλα"),
+    date_style="DD/MM/YYYY",
     office_hours=("09:00", "17:00"), lunch=("13:00", "13:30"),
     notes=[
         "VAT 2025: standard 24 %; 13 % for basic foodstuffs, hotel accommodation, passenger transport and restaurant "

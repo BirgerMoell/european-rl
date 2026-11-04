@@ -1,0 +1,72 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Scrieți un e-mail către {name} de la {company} ({city}). {topic} Scrieți în numele expeditorului {sender}.\nCerințe:\n{requirements}\nScrieți doar e-mailul.",
+  "Vă rugăm să redactați următorul e-mail în numele expeditorului {sender}. Destinatar: {name}, {company}, {city}. {topic}\nE-mailul trebuie să îndeplinească aceste cerințe:\n{requirements}\nRăspundeți doar cu textul e-mailului."
+ ],
+ "topics": {
+  "payment_reminder": "Este o reamintire politicoasă că o factură în valoare de {amount} era scadentă la {date}.",
+  "order_confirmation": "E-mailul confirmă o comandă în valoare de {amount}, cu livrare la {date}.",
+  "meeting_confirmation": "E-mailul confirmă o întâlnire la {date} pentru discutarea unui contract în valoare de {amount}."
+ },
+ "req": {
+  "subject": "Primul rând este subiectul și începe cu „{label}”.",
+  "closing": "Încheiați cu o formulă de încheiere uzuală, de exemplu {examples}, urmată de numele expeditorului.",
+  "formal": "Folosiți pe tot parcursul forma de politețe (dumneavoastră).",
+  "amount": "Scrieți suma în formatul monetar local al destinatarului.",
+  "date": "Scrieți data în formatul local de dată al destinatarului.",
+  "name": "Adresați-vă destinatarului cu numele complet, scris exact așa cum a fost dat.",
+  "no_english": "Nu folosiți niciun cuvânt în limba engleză.",
+  "words": "E-mailul are între {min} și {max} cuvinte.",
+  "bullets": "Includeți exact {n} puncte de listă (rânduri care încep cu „- ”)."
+ },
+ "subject_label": "Subiect:",
+ "closings": [
+  "Cu stimă",
+  "Cu deosebită considerație",
+  "Cu respect"
+ ],
+ "formal": {
+  "formal": [
+   "dumneavoastră",
+   "Dumneavoastră"
+  ],
+  "informal": [
+   "tu",
+   "tine",
+   "ție",
+   "tău",
+   "ta",
+   "tale",
+   "îți"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Reamintire privind factura neachitată",
+  "order_confirmation": "Confirmarea comenzii",
+  "meeting_confirmation": "Confirmarea întâlnirii"
+ },
+ "ref_body": {
+  "payment_reminder": "dorim să vă reamintim politicos că suma de {amount} datorată de dumneavoastră era scadentă la {date}.",
+  "order_confirmation": "prin prezenta confirmăm comanda dumneavoastră în valoare de {amount}; livrarea este planificată pentru {date}.",
+  "meeting_confirmation": "prin prezenta confirmăm întâlnirea noastră cu dumneavoastră din {date} privind contractul în valoare de {amount}."
+ },
+ "ref_greeting": "Stimate/Stimată {name},",
+ "ref_bullets": [
+  "numărul de referință se află în documentul atașat",
+  "serviciul nostru pentru clienți este disponibil în zilele lucrătoare",
+  "toate prețurile includ taxele aplicabile",
+  "vă rugăm să păstrați acest mesaj pentru evidența dumneavoastră"
+ ],
+ "ref_filler": [
+  "Vă mulțumim pentru buna colaborare din ultimele luni.",
+  "Dacă ceva nu este clar, nu ezitați să ne contactați.",
+  "Biroul nostru este deschis de luni până vineri, în timpul programului obișnuit.",
+  "Vom răspunde cu plăcere la orice întrebări ați avea despre detalii.",
+  "O copie a documentelor relevante a fost salvată în sistemul nostru.",
+  "Așteptăm cu interes continuarea colaborării noastre în anul care vine.",
+  "Dacă ați rezolvat deja această chestiune, vă rugăm să ignorați acest mesaj.",
+  "Vă mulțumim anticipat pentru atenția acordată."
+ ],
+ "word_factor": 0.9
+}

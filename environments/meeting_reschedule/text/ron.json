@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Lucrați ca asistent pentru {organizer} la {company} și folosiți instrumentele de calendar și e-mail ale grupului. Ocupați-vă de noul e-mail din căsuța de mesaje primite. Politica grupului privind programarea: o ședință se mută la cea mai devreme oră de începere, la oră fixă sau la jumătate de oră, din săptămâna solicitată în care toți participanții sunt liberi — în programul de lucru al propriului birou și în afara pauzei de prânz a acestuia, în ora lor locală, și nu în weekend sau într-o zi liberă din țara lor. Păstrați durata și participanții ședinței. Apoi trimiteți fiecărui participant, în afară de {organizer}, un e-mail cu noua dată (YYYY-MM-DD) și ora (HH:MM) în ora sa locală. Dacă nu există nicio oră potrivită, nu mutați ședința; răspundeți doar persoanei care a solicitat mutarea. Nu trimiteți e-mailuri nimănui altcuiva. Încheiați cu un mesaj scurt, fără apel de instrument.",
+  "Oferiți asistență pentru {organizer} ({company}). În căsuța de mesaje primite există un e-mail nou; tratați-l cu instrumentele de calendar și e-mail. Reguli pentru mutarea ședințelor: alegeți cel mai devreme interval din săptămâna solicitată (cu începere la oră fixă sau la jumătate de oră) care se încadrează în programul de lucru local al fiecărui participant, evită pauza de prânz a acestuia, weekendurile și zilele libere din țara sa și nu se suprapune cu celelalte ședințe ale sale; păstrați durata și participanții. Anunțați fiecare participant în afară de {organizer} despre noua dată (YYYY-MM-DD) și ora (HH:MM) în fusul său orar. Dacă nu există un astfel de interval, lăsați ședința neschimbată și răspundeți doar expeditorului. Când ați terminat, scrieți un scurt mesaj de încheiere fără apel de instrument."
+ ],
+ "request": [
+  "Bună ziua, {organizer},\n\ndin păcate nu pot participa la „{title}” la ora actuală ({original}). Ați putea muta ședința la cea mai devreme oră din săptămâna {monday} – {friday} în care suntem cu toții liberi și să anunțați pe toată lumea noua oră?\n\nMulțumesc,\n{name}",
+  "Stimate/Stimată {organizer},\n\na intervenit ceva neprevăzut și nu pot participa la „{title}” pe {original}. Vă rog să reprogramați ședința la prima oră posibilă între {monday} și {friday} care convine tuturor participanților și să informați pe toată lumea.\n\nCu stimă,\n{name}"
+ ],
+ "request_subject": "Reprogramare: {title}",
+ "notice_subject": "Oră nouă: {title}",
+ "notice": "Bună ziua,\n\nședința „{title}” a fost mutată pe {date}, ora {time} ({tz}).\n\nCu stimă",
+ "no_slot_reply": "Bună ziua,\n\ndin păcate, în săptămâna solicitată nu există nicio oră în care toți participanții la „{title}” să fie liberi, așa că ședința rămâne conform planificării.\n\nCu stimă",
+ "titles": [
+  "Analiza trimestrială a bugetului",
+  "Comitetul de coordonare al proiectului",
+  "Negocieri cu furnizorul",
+  "Actualizare privind securitatea IT"
+ ],
+ "busy_titles": [
+  "Apel cu clientul",
+  "Atelier intern",
+  "Discuție individuală"
+ ],
+ "done": "Ședința a fost gestionată."
+}

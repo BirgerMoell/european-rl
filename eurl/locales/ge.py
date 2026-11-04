@@ -73,6 +73,7 @@ LOCALE = Locale(
     cities=("თბილისი", "ქუთაისი", "ბათუმი", "რუსთავი", "ზუგდიდი", "ფოთი", "თელავი", "ახალციხე"),
     eu_member=False,
     price_scale=3,
+    date_style="DD.MM.YYYY",
     office_hours=("10:00", "19:00"), lunch=("13:00", "14:00"),
     notes=[
         "Non-EU: one VAT (დღგ) rate of 18 % (no reduced rates; some supplies are exempt); every category uses it.",

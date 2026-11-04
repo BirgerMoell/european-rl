@@ -1,0 +1,81 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "{company} ({city}) şirketinden {name} adlı kişiye bir e-posta yazın. {topic} {sender} adına yazıyorsunuz.\nGereksinimler:\n{requirements}\nYalnızca e-postayı yazın.",
+  "Lütfen aşağıdaki e-postayı {sender} adına hazırlayın. Alıcı: {name}, {company}, {city}. {topic}\nE-posta şu gereksinimleri karşılamalıdır:\n{requirements}\nYalnızca e-posta metniyle yanıt verin."
+ ],
+ "topics": {
+  "payment_reminder": "Bu, {amount} tutarındaki bir faturanın vadesinin {date} tarihinde dolduğuna dair nazik bir hatırlatmadır.",
+  "order_confirmation": "E-posta, {date} tarihinde teslim edilecek {amount} değerindeki bir siparişi onaylar.",
+  "meeting_confirmation": "E-posta, {amount} değerindeki bir sözleşmeyi görüşmek üzere {date} tarihinde yapılacak bir toplantıyı onaylar."
+ },
+ "req": {
+  "subject": "İlk satır konu satırıdır ve “{label}” ile başlar.",
+  "closing": "E-postayı {examples} gibi standart bir kapanış ifadesiyle ve ardından gönderenin adıyla bitirin.",
+  "formal": "Alıcıya baştan sona resmî hitap biçimiyle (siz) hitap edin.",
+  "amount": "Tutarı alıcının yerel para biçiminde yazın.",
+  "date": "Tarihi alıcının yerel tarih biçiminde yazın.",
+  "name": "Alıcıya, tam olarak verildiği şekilde yazılmış adı ve soyadıyla hitap edin.",
+  "no_english": "Hiçbir İngilizce kelime kullanmayın.",
+  "words": "E-posta {min} ile {max} kelime arasında olmalıdır.",
+  "bullets": "Tam olarak {n} madde işareti ekleyin (“- ” ile başlayan satırlar)."
+ },
+ "subject_label": "Konu:",
+ "closings": [
+  "Saygılarımızla",
+  "Saygılarımla",
+  "İyi çalışmalar"
+ ],
+ "formal": {
+  "formal": [
+   "Siz",
+   "siz",
+   "Size",
+   "size",
+   "Sizi",
+   "sizi",
+   "Sizin",
+   "sizin",
+   "Sizinle",
+   "sizinle",
+   "Sizden",
+   "sizden"
+  ],
+  "informal": [
+   "sen",
+   "seni",
+   "sana",
+   "senin",
+   "seninle",
+   "senden"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Ödenmemiş fatura hatırlatması",
+  "order_confirmation": "Sipariş onayı",
+  "meeting_confirmation": "Toplantı onayı"
+ },
+ "ref_body": {
+  "payment_reminder": "{amount} tutarındaki ödemenin vadesinin {date} tarihinde dolduğunu size nazikçe hatırlatmak isteriz.",
+  "order_confirmation": "{amount} tutarındaki siparişinizi onaylıyor ve teslimatın {date} tarihinde yapılmasının planlandığını size bildirmek istiyoruz.",
+  "meeting_confirmation": "{date} tarihinde {amount} değerindeki sözleşme hakkında sizinle yapacağımız toplantıyı onaylarız."
+ },
+ "ref_greeting": "Sayın {name},",
+ "ref_bullets": [
+  "referans numarası ekteki belgede yer almaktadır",
+  "müşteri hizmetlerimiz hafta içi hizmet vermektedir",
+  "tüm fiyatlara geçerli vergiler dahildir",
+  "lütfen bu mesajı kayıtlarınız için saklayınız"
+ ],
+ "ref_filler": [
+  "Son aylardaki iyi iş birliğiniz için size teşekkür ederiz.",
+  "Anlaşılmayan bir husus olursa bizimle iletişime geçmekten çekinmeyiniz.",
+  "Ofisimiz pazartesiden cumaya olağan çalışma saatlerinde açıktır.",
+  "Ayrıntılarla ilgili tüm sorularınızı memnuniyetle yanıtlarız.",
+  "İlgili belgelerin bir kopyası sistemimizde saklanmıştır.",
+  "Önümüzdeki yıl da iş birliğimizi sürdürmeyi dört gözle bekliyoruz.",
+  "Bu konuyu zaten hallettiyseniz lütfen bu mesajı dikkate almayınız.",
+  "İlginiz için şimdiden teşekkür ederiz."
+ ],
+ "word_factor": 0.8
+}

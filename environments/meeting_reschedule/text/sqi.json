@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Ju punoni si asistent për {organizer} në {company} dhe përdorni mjetet e kalendarit dhe të postës elektronike të grupit. Trajtoni e-mailin e ri në kutinë hyrëse. Politika e grupit për planifikimin: një takim zhvendoset në fillimin më të hershëm, në orë të plotë ose në gjysmë ore, në javën e kërkuar kur të gjithë pjesëmarrësit janë të lirë — brenda orarit të punës së zyrës së tyre dhe jashtë pushimit të drekës së saj, sipas orës së tyre lokale, dhe jo në fundjavë apo në një ditë pushimi në vendin e tyre. Ruani kohëzgjatjen dhe pjesëmarrësit e takimit. Pastaj dërgojini çdo pjesëmarrësi, përveç {organizer}, një e-mail me datën e re (YYYY-MM-DD) dhe orën (HH:MM) sipas orës së tij lokale. Nëse nuk ka asnjë orë të përshtatshme, mos e zhvendosni takimin; përgjigjuni vetëm personit që e kërkoi. Mos i dërgoni e-mail askujt tjetër. Përfundoni me një mesazh të shkurtër pa thirrje mjeti.",
+  "Ju ndihmoni {organizer} ({company}). Në kutinë hyrëse ka një e-mail të ri; trajtojeni me mjetet e kalendarit dhe të postës elektronike. Rregullat për zhvendosjen e takimeve: zgjidhni intervalin më të hershëm në javën e kërkuar (me fillim në orë të plotë ose në gjysmë ore) që bie brenda orarit lokal të punës së çdo pjesëmarrësi, shmang pushimin e tij të drekës, fundjavat dhe ditët e pushimit në vendin e tij dhe nuk përplaset me takimet e tjera të tij; ruani kohëzgjatjen dhe pjesëmarrësit. Njoftoni çdo pjesëmarrës përveç {organizer} për datën e re (YYYY-MM-DD) dhe orën (HH:MM) në zonën e tij kohore. Nëse nuk ka një interval të tillë, lëreni takimin siç është dhe përgjigjuni vetëm dërguesit. Kur të keni mbaruar, shkruani një mesazh të shkurtër përmbyllës pa thirrje mjeti."
+ ],
+ "request": [
+  "Përshëndetje {organizer},\n\nfatkeqësisht nuk mund të marr pjesë në «{title}» në orarin aktual ({original}). A mund ta zhvendosni takimin në orën më të hershme të javës {monday} deri {friday} kur të gjithë jemi të lirë dhe t'i njoftoni të gjithë për orën e re?\n\nFaleminderit,\n{name}",
+  "I/E nderuar {organizer},\n\nmë ka dalë diçka e papritur dhe nuk mund të marr pjesë në «{title}» më {original}. Ju lutem zhvendoseni takimin në orën e parë të mundshme ndërmjet {monday} dhe {friday} që u përshtatet të gjithë pjesëmarrësve dhe njoftoni të gjithë.\n\nMe respekt,\n{name}"
+ ],
+ "request_subject": "Riplanifikim: {title}",
+ "notice_subject": "Orë e re: {title}",
+ "notice": "Përshëndetje,\n\ntakimi «{title}» është zhvendosur më {date} në orën {time} ({tz}).\n\nMe respekt",
+ "no_slot_reply": "Përshëndetje,\n\nfatkeqësisht në javën e kërkuar nuk ka asnjë orë kur të gjithë pjesëmarrësit e takimit «{title}» të jenë të lirë, prandaj takimi mbetet siç është planifikuar.\n\nMe respekt",
+ "titles": [
+  "Rishikimi tremujor i buxhetit",
+  "Komiteti drejtues i projektit",
+  "Negociata me furnitorin",
+  "Përditësim për sigurinë e TI-së"
+ ],
+ "busy_titles": [
+  "Telefonatë me klientin",
+  "Punëtori e brendshme",
+  "Takim individual"
+ ],
+ "done": "Takimi është trajtuar."
+}

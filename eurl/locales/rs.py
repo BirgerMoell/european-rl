@@ -80,6 +80,7 @@ LOCALE = Locale(
     cities=("Београд", "Нови Сад", "Ниш", "Крагујевац", "Суботица", "Чачак", "Краљево", "Зрењанин"),
     eu_member=False,
     price_scale=117,
+    date_style="DD.MM.YYYY.",
     office_hours=("08:00", "16:00"), lunch=("12:00", "12:30"),
     notes=[
         "Non-EU: VAT (ПДВ) standard 20 %; 10 % for basic food, hotel accommodation, books and other monographic "

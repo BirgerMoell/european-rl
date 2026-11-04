@@ -1,0 +1,81 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Napišite e-poruku za {name} u kompaniji {company} ({city}). {topic} Pišete u ime osobe {sender}.\nZahtjevi:\n{requirements}\nNapišite samo e-poruku.",
+  "Molimo pripremite sljedeću e-poruku u ime osobe {sender}. Primalac: {name}, {company}, {city}. {topic}\nE-poruka mora ispuniti ove zahtjeve:\n{requirements}\nOdgovorite samo tekstom e-poruke."
+ ],
+ "topics": {
+  "payment_reminder": "Riječ je o ljubaznom podsjetniku da je faktura u iznosu od {amount} dospjela {date}.",
+  "order_confirmation": "Potvrđuje narudžbu u vrijednosti od {amount}, s isporukom {date}.",
+  "meeting_confirmation": "Potvrđuje sastanak {date} radi razgovora o ugovoru u vrijednosti od {amount}."
+ },
+ "req": {
+  "subject": "Prvi red je predmet i počinje sa „{label}“.",
+  "closing": "Završite uobičajenom pozdravnom formulom, npr. {examples}, nakon koje slijedi ime pošiljaoca.",
+  "formal": "Primaocu se u cijeloj poruci obraćajte s „Vi“ (oblik iz poštovanja).",
+  "amount": "Napišite iznos u lokalnom novčanom formatu primaoca.",
+  "date": "Napišite datum u lokalnom formatu datuma primaoca.",
+  "name": "Obratite se primaocu punim imenom i prezimenom, napisanim tačno kako je navedeno.",
+  "no_english": "Ne koristite nijednu englesku riječ.",
+  "words": "E-poruka ima između {min} i {max} riječi.",
+  "bullets": "Uključite tačno {n} stavke s oznakom (redovi koji počinju sa „- “)."
+ },
+ "subject_label": "Predmet:",
+ "closings": [
+  "S poštovanjem",
+  "Srdačan pozdrav",
+  "Lijep pozdrav"
+ ],
+ "formal": {
+  "formal": [
+   "Vi",
+   "Vas",
+   "Vam",
+   "Vaš",
+   "Vaša",
+   "Vaše",
+   "Vašu",
+   "Vašeg",
+   "Vašem",
+   "Vaši"
+  ],
+  "informal": [
+   "ti",
+   "tebe",
+   "tebi",
+   "tvoj",
+   "tvoja",
+   "tvoje",
+   "tvoju",
+   "tvog"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Podsjetnik na neplaćenu fakturu",
+  "order_confirmation": "Potvrda Vaše narudžbe",
+  "meeting_confirmation": "Potvrda našeg sastanka"
+ },
+ "ref_body": {
+  "payment_reminder": "ljubazno Vas podsjećamo da je iznos od {amount} dospio {date}.",
+  "order_confirmation": "ovim putem potvrđujemo Vašu narudžbu u iznosu od {amount}; isporuka je planirana za {date}.",
+  "meeting_confirmation": "ovim putem Vam potvrđujemo naš sastanak {date} u vezi s ugovorom u vrijednosti od {amount}."
+ },
+ "ref_greeting": "Poštovani/Poštovana {name},",
+ "ref_bullets": [
+  "referentni broj nalazi se u priloženom dokumentu",
+  "naša služba za korisnike dostupna je radnim danima",
+  "sve cijene uključuju važeće poreze",
+  "molimo Vas da sačuvate ovu poruku za svoju evidenciju"
+ ],
+ "ref_filler": [
+  "Zahvaljujemo Vam na dobroj saradnji tokom proteklih mjeseci.",
+  "Ako nešto nije jasno, slobodno nas kontaktirajte.",
+  "Naš ured radi od ponedjeljka do petka u uobičajeno radno vrijeme.",
+  "Rado ćemo odgovoriti na sva Vaša pitanja o pojedinostima.",
+  "Kopija relevantnih dokumenata pohranjena je u našem sistemu.",
+  "Radujemo se nastavku saradnje u narednoj godini.",
+  "Ukoliko ste ovo pitanje već riješili, molimo Vas da zanemarite ovu poruku.",
+  "Unaprijed Vam zahvaljujemo na pažnji."
+ ],
+ "word_factor": 0.9
+}

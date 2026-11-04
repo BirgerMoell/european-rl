@@ -76,6 +76,7 @@ LOCALE = Locale(
     last_names=("Γεωργίου", "Χαραλάμπους", "Κωνσταντίνου", "Ιωάννου", "Νικολάου", "Αντωνίου", "Χριστοδούλου",
                 "Παναγιώτου", "Δημητρίου", "Μιχαήλ", "Ευαγγέλου", "Λοΐζου"),
     cities=("Λευκωσία", "Λεμεσός", "Λάρνακα", "Πάφος", "Παραλίμνι", "Αγία Νάπα", "Στρόβολος", "Λακατάμια"),
+    date_style="DD/MM/YYYY",
     office_hours=("08:00", "17:00"), lunch=("13:00", "14:00"),
     notes=[
         "Languages: Greek (business default) and Turkish are both official; eurl.languages maps Turkish text to "

@@ -72,6 +72,7 @@ LOCALE = Locale(
     cities=("Sarajevo", "Banja Luka", "Tuzla", "Zenica", "Mostar", "Bihać", "Bijeljina", "Doboj"),
     eu_member=False,
     price_scale=2,
+    date_style="DD.MM.YYYY.",
     office_hours=("08:00", "16:00"), lunch=("12:00", "12:30"),
     notes=[
         "Non-EU: one VAT (PDV) rate of 17 % for all goods and services (no reduced rates); every category uses it.",

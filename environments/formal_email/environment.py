@@ -158,7 +158,7 @@ class FormalEmail(TypedEnvironment):
         probes = {"echo_prompt": prompt}
         if "formal" in chosen:
             probes["informal_register"] = ref + "\n" + t["formal"]["informal"][0]
-        if "amount" in chosen or "date" in chosen:
+        if ("amount" in chosen and r["amount"] != "1234.50") or ("date" in chosen and r["date"] != "2026-01-01"):
             probes["neutral_formats"] = ref.replace(r["amount"], "1234.50").replace(r["date"], "2026-01-01")
         probes["no_closing"] = "\n".join(ref.splitlines()[:-2])
         probes["english_email"] = "Subject: Invoice\n\nDear customer,\n\nplease pay the invoice.\n\nKind regards"

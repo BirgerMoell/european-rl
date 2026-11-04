@@ -82,6 +82,7 @@ LOCALE = Locale(
     cities=("Tiranë", "Durrës", "Vlorë", "Shkodër", "Elbasan", "Korçë", "Fier", "Berat"),
     eu_member=False,
     price_scale=100,
+    date_style="DD.MM.YYYY",
     office_hours=("08:00", "16:30"), lunch=("12:00", "12:30"),
     notes=[
         "Non-EU: VAT (TVSH) standard 20 %; 6 % for hotel accommodation (and certified agritourism) and books; 10 % "

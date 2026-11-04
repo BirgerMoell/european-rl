@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "{company} şirketinde {organizer} için asistanlık yapıyor ve grubun takvim ve e-posta araçlarını kullanıyorsunuz. Gelen kutusundaki yeni e-postayı ele alın. Grubun toplantı planlama politikası: bir toplantı, talep edilen haftada tüm katılımcıların müsait olduğu, tam saatte veya buçukta başlayan en erken zamana taşınır — her katılımcının kendi ofisinin çalışma saatleri içinde ve ofisin öğle arası dışında, kendi yerel saatine göre, hafta sonuna veya kendi ülkesindeki bir tatil gününe denk gelmeyecek şekilde. Toplantının süresini ve katılımcılarını koruyun. Ardından {organizer} dışındaki her katılımcıya yeni tarihi (YYYY-MM-DD) ve saati (HH:MM) kendi yerel saatine göre e-postayla bildirin. Uygun bir zaman yoksa toplantıyı taşımayın; yalnızca talepte bulunan kişiye yanıt verin. Başka kimseye e-posta göndermeyin. Araç çağrısı içermeyen kısa bir mesajla bitirin.",
+  "{organizer} ({company}) için asistanlık yapıyorsunuz. Gelen kutusunda yeni bir e-posta var; takvim ve e-posta araçlarıyla bunu ele alın. Toplantı taşıma kuralları: talep edilen haftada (tam saatte veya buçukta başlayan) her katılımcının yerel çalışma saatleri içinde kalan, öğle arasına, hafta sonlarına ve ülkesinin tatil günlerine denk gelmeyen ve diğer toplantılarıyla çakışmayan en erken zaman aralığını seçin; süreyi ve katılımcıları koruyun. {organizer} dışındaki her katılımcıya yeni tarihi (YYYY-MM-DD) ve saati (HH:MM) kendi saat diliminde bildirin. Böyle bir aralık yoksa toplantıyı olduğu gibi bırakın ve yalnızca gönderene yanıt verin. İşiniz bittiğinde araç çağrısı içermeyen kısa bir kapanış mesajı yazın."
+ ],
+ "request": [
+  "Merhaba {organizer},\n\nne yazık ki “{title}” toplantısına mevcut saatte ({original}) katılamıyorum. Toplantıyı {monday} – {friday} haftasında hepimizin müsait olduğu en erken zamana taşıyıp herkese yeni saati bildirebilir misiniz?\n\nTeşekkürler,\n{name}",
+  "Sayın {organizer},\n\nbeklenmedik bir durum oldu ve {original} tarihindeki “{title}” toplantısına katılamayacağım. Lütfen toplantıyı {monday} ile {friday} arasında tüm katılımcılara uyan ilk uygun zamana taşıyın ve herkesi bilgilendirin.\n\nSaygılarımla,\n{name}"
+ ],
+ "request_subject": "Yeniden planlama: {title}",
+ "notice_subject": "Yeni saat: {title}",
+ "notice": "Merhaba,\n\n“{title}” toplantısı {date} tarihine, saat {time} ({tz}) olarak taşındı.\n\nSaygılarımla",
+ "no_slot_reply": "Merhaba,\n\nne yazık ki talep edilen haftada “{title}” toplantısının tüm katılımcılarının müsait olduğu bir zaman bulunmuyor; bu nedenle toplantı planlandığı gibi kalıyor.\n\nSaygılarımla",
+ "titles": [
+  "Üç aylık bütçe değerlendirmesi",
+  "Proje yönlendirme kurulu",
+  "Tedarikçi müzakeresi",
+  "BT güvenliği güncellemesi"
+ ],
+ "busy_titles": [
+  "Müşteri görüşmesi",
+  "İç çalıştay",
+  "Birebir görüşme"
+ ],
+ "done": "Toplantıyla ilgili işlem tamamlandı."
+}

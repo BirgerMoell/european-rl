@@ -74,6 +74,7 @@ LOCALE = Locale(
                 "Constantin", "Munteanu"),
     cities=("București", "Cluj-Napoca", "Timișoara", "Iași", "Constanța", "Brașov", "Craiova", "Oradea"),
     price_scale=5,
+    date_style="DD.MM.YYYY",
     office_hours=("09:00", "18:00"), lunch=("13:00", "14:00"),
     notes=[
         "VAT 2025: rates in force from 2025-08-01 (Legea 141/2025): standard 21 %, a single reduced rate of 11 % "

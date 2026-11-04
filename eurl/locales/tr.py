@@ -71,6 +71,7 @@ LOCALE = Locale(
     cities=("İstanbul", "Ankara", "İzmir", "Bursa", "Antalya", "Konya", "Gaziantep", "Eskişehir"),
     eu_member=False,
     price_scale=40,
+    date_style="DD.MM.YYYY",
     office_hours=("09:00", "18:00"), lunch=("12:30", "13:30"),
     notes=[
         "Non-EU: KDV standard 20 % (since 2023-07-10); 10 % (list II) for hotel accommodation, restaurant services "

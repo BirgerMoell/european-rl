@@ -1,0 +1,77 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Shkruani një e-mail për {name} në {company} ({city}). {topic} Shkruani në emër të {sender}.\nKërkesat:\n{requirements}\nShkruani vetëm e-mailin.",
+  "Ju lutemi hartoni e-mailin e mëposhtëm në emër të {sender}. Marrësi: {name}, {company}, {city}. {topic}\nE-maili duhet të plotësojë këto kërkesa:\n{requirements}\nPërgjigjuni vetëm me tekstin e e-mailit."
+ ],
+ "topics": {
+  "payment_reminder": "Është një kujtesë e sjellshme se një faturë prej {amount} duhej paguar më {date}.",
+  "order_confirmation": "Konfirmon një porosi me vlerë {amount}, me dorëzim më {date}.",
+  "meeting_confirmation": "Konfirmon një takim më {date} për të diskutuar një kontratë me vlerë {amount}."
+ },
+ "req": {
+  "subject": "Rreshti i parë është subjekti dhe fillon me «{label}».",
+  "closing": "Përfundoni me një formulë standarde përshëndetjeje, si {examples}, të ndjekur nga emri i dërguesit.",
+  "formal": "Përdorni gjatë gjithë e-mailit formën e mirësjelljes (Ju).",
+  "amount": "Shkruani shumën në formatin monetar lokal të marrësit.",
+  "date": "Shkruani datën në formatin lokal të datës së marrësit.",
+  "name": "Drejtojuni marrësit me emrin e plotë, të shkruar saktësisht siç është dhënë.",
+  "no_english": "Mos përdorni asnjë fjalë angleze.",
+  "words": "E-maili ka nga {min} deri në {max} fjalë.",
+  "bullets": "Përfshini saktësisht {n} pika liste (rreshta që fillojnë me «- »)."
+ },
+ "subject_label": "Subjekti:",
+ "closings": [
+  "Me respekt",
+  "Me konsideratë",
+  "Përshëndetje të përzemërta"
+ ],
+ "formal": {
+  "formal": [
+   "Ju",
+   "Juve",
+   "Jush",
+   "Tuaj",
+   "Tuaja",
+   "Tuajin",
+   "Tuajën"
+  ],
+  "informal": [
+   "ti",
+   "ty",
+   "yt",
+   "jot",
+   "tënd",
+   "tëndin",
+   "tënden"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Kujtesë për faturën e papaguar",
+  "order_confirmation": "Konfirmim i porosisë",
+  "meeting_confirmation": "Konfirmim i takimit"
+ },
+ "ref_body": {
+  "payment_reminder": "Ju kujtojmë me mirësjellje se shuma prej {amount} duhej paguar më {date}.",
+  "order_confirmation": "me anë të këtij mesazhi Ju konfirmojmë porosinë Tuaj me vlerë {amount}; dorëzimi është planifikuar më {date}.",
+  "meeting_confirmation": "me anë të këtij mesazhi Ju konfirmojmë takimin tonë më {date} për kontratën me vlerë {amount}."
+ },
+ "ref_greeting": "I/E nderuar {name},",
+ "ref_bullets": [
+  "numri i referencës ndodhet në dokumentin bashkëngjitur",
+  "shërbimi ynë i klientëve është në dispozicion në ditët e punës",
+  "të gjitha çmimet përfshijnë taksat në fuqi",
+  "Ju lutemi ta ruani këtë mesazh për dokumentacionin Tuaj"
+ ],
+ "ref_filler": [
+  "Ju falënderojmë për bashkëpunimin e mirë gjatë muajve të fundit.",
+  "Nëse diçka nuk është e qartë, mos hezitoni të na kontaktoni.",
+  "Zyra jonë është e hapur nga e hëna deri të premten gjatë orarit të zakonshëm të punës.",
+  "Do t'u përgjigjemi me kënaqësi të gjitha pyetjeve Tuaja për hollësitë.",
+  "Një kopje e dokumenteve përkatëse është ruajtur në sistemin tonë.",
+  "Mezi presim vazhdimin e bashkëpunimit tonë në vitin që vjen.",
+  "Nëse e keni zgjidhur tashmë këtë çështje, Ju lutemi ta shpërfillni këtë mesazh.",
+  "Ju falënderojmë paraprakisht për vëmendjen."
+ ],
+ "word_factor": 0.9
+}

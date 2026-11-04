@@ -72,6 +72,7 @@ LOCALE = Locale(
                 "Петков", "Ангелов", "Колев"),
     cities=("София", "Пловдив", "Варна", "Бургас", "Русе", "Стара Загора", "Плевен", "Велико Търново"),
     price_scale=2,
+    date_style="DD.MM.YYYY",
     office_hours=("09:00", "18:00"), lunch=("12:00", "13:00"),
     notes=[
         "Currency: the 2025 snapshot uses the lev (BGN, fixed at 1.95583 per euro). Bulgaria adopts the euro on "

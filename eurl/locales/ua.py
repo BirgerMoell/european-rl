@@ -83,6 +83,7 @@ LOCALE = Locale(
     cities=("Київ", "Львів", "Одеса", "Харків", "Дніпро", "Вінниця", "Полтава", "Ужгород"),
     eu_member=False,
     price_scale=45,
+    date_style="DD.MM.YYYY",
     office_hours=("09:00", "18:00"), lunch=("13:00", "14:00"),
     notes=[
         "Non-EU: ПДВ standard 20 %; 7 % for hotel (temporary) accommodation, medicines and some cultural events; "
