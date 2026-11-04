@@ -37,10 +37,18 @@ contract) and implements the design in
 | Names | gender-consistent surnames (PL, CZ, SK, LT, LV, BG, MK, GR, Icelandic patronymics) (`eurl/names.py`) |
 | `finance_amount_due` | typed answer, 5 levels (national VAT, handbook lookup, discounts, credit notes, rounding, intra-EU reverse charge); contract passed in 36 languages |
 | `meeting_reschedule` | tool episode in the synthetic company group: time zones, local office hours and lunch, national days off, cross-lingual requests, notify each participant in their own local time; contract passed in 36 languages; a tools-only solver solves every tested task |
+| `business_arithmetic` | exact business arithmetic in local number formats (percentages, VAT in/out, chained discounts, line totals, conversion, splits with remainder, simple interest, margin pricing); slip probes; contract passed in 36 languages |
 | `formal_email` | instruction following: formal register (per-language pronoun lists), local money and date formats, exact names, local subject and closing, no code-switching, length, bullets; contract passed in 36 languages |
 
-Contract reports: `runs/contract-*.json`. First model baselines (finance, OpenEuroLLM 9B checkpoints): 6–11 % overall; levels 1–3
-at 8–25 %, levels 4–5 near 0, so training starts at levels 1–3.
+Tool environments can run behind `python -m eurl.serve` (stdlib HTTP service: reset / step / finish sessions) for
+remote RL trainers. Contract reports: `runs/contract-*.json`. First baselines on OpenEuroLLM 9B checkpoints (default / thinking mode):
+
+| Environment | Reward | Note |
+|---|---|---|
+| business_arithmetic | 0.32–0.40 | level 1 ≈ 0.5, levels 2–3 ≈ 0.2–0.4: in the learnable band |
+| finance_amount_due | 0.06–0.11 | levels 1–3 at 8–25 %; arithmetic slips dominate |
+| formal_email | 0.11–0.13 (v1 checks) | v1 checks were too strict (vocative names, currency codes, long dates) and were relaxed in v2 |
+| meeting_reschedule | ≈ 0.01 | the v1 step budget truncated honest agents; raised to 10 + 6 per participant |
 
 **Text review.** Interface strings and task templates outside English are LLM-written and marked `"llm"` in
 `eurl/i18n.py` and each manifest; they are not yet reviewed by native speakers. VAT rates are a dated policy
