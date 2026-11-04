@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 
 from eurl.calendar import days_off
 from eurl.locales import Locale, load as load_locale
+from eurl.names import full_name
 
 GROUP_STEMS = ("Aurora", "Meridian", "Borealis", "Lumen", "Atlas", "Helix", "Nordia", "Solvia", "Vertex", "Alba")
 
@@ -87,7 +88,7 @@ def make_world(rng: random.Random, countries: List[str], staff_per_office: int =
         offices.append(office)
         for _ in range(staff_per_office):
             while True:
-                first, last = rng.choice(loc.first_names), rng.choice(loc.last_names)
+                first, last = full_name(rng, loc)
                 email = f"{_slug(first)}.{_slug(last)}@{domain}"
                 if email not in used:
                     used.add(email)

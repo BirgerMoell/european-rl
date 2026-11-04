@@ -26,6 +26,7 @@ from eurl.languages import LANGUAGES
 from eurl.locales import PACKS, format_date
 from eurl.locales import load as load_locale
 from eurl.money import format_money
+from eurl.names import full_name
 
 TEXT_DIR = Path(__file__).parent / "text"
 ENGLISH_MARKERS = ["the", "and", "please", "regards", "dear", "thank", "your", "invoice", "payment", "meeting"]
@@ -58,11 +59,13 @@ class FormalEmail(TypedEnvironment):
         t = text(lang)
         country = rng.choice(locales_for(lang))
         loc = load_locale(country)
-        names = [f"{a} {b}" for a in loc.first_names for b in loc.last_names]
-        accented = [n for n in names if not n.isascii()]
-        name = rng.choice(accented if accented and rng.random() < 0.7 else names)
+        want_accent = rng.random() < 0.7  # prefer names with diacritics: copying them exactly is part of the task
+        for _ in range(20):
+            name = " ".join(full_name(rng, loc))
+            if not want_accent or not name.isascii():
+                break
         company = f"{rng.choice(loc.company_stems)} {rng.choice(loc.company_suffixes)}"
-        sender = f"{rng.choice(loc.first_names)} {rng.choice(loc.last_names)}"
+        sender = " ".join(full_name(rng, loc))
         amount = rng.randint(50, 20000) * 100 * loc.price_scale + rng.choice([0, 50, 25, 90, 5])
         if loc.money.minor_digits == 0:
             amount = amount // 100 * 100
