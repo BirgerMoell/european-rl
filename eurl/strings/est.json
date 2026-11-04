@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Lõpetage reaga kujul `ANSWER: <summa>`, näiteks `ANSWER: {example}`.",
+ "date": "Lõpetage reaga kujul `ANSWER: AAAA-KK-PP`.",
+ "datetime": "Lõpetage reaga kujul `ANSWER: AAAA-KK-PP TT:MM`.",
+ "integer": "Lõpetage reaga kujul `ANSWER: <täisarv>`.",
+ "text": "Lõpetage reaga kujul `ANSWER: <vastus>`.",
+ "mapping": "Lõpetage `ANSWER:` ja sellele järgneva JSON-objektiga.",
+ "strings": "Lõpetage `ANSWER:` ja sellele järgneva JSON-loendiga sõnedest, täpselt nii, nagu need on tekstis kirjas, ja nende esinemise järjekorras.",
+ "abstain": "Kui ülesannet ei saa antud teabe põhjal lahendada, vastake `ANSWER: UNKNOWN`.",
+ "done": "Valmis.",
+ "err_action": "vigane toiming: kutsuge välja tööriist või kirjutage lõplik vastus",
+ "err_tool": "tundmatu tööriist: {name}",
+ "err_args_object": "argumendid peavad olema JSON-objekt",
+ "err_missing": "puuduv argument: {key}",
+ "err_unknown_arg": "tundmatu argument: {key}",
+ "err_type": "vale tüüp argumendil {key}: oodati tüüpi {expected}",
+ "err_enum": "vigane väärtus argumendil {key}"
+}

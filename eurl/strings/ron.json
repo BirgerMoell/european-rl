@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Încheiați cu un rând de forma `ANSWER: <sumă>`, de exemplu `ANSWER: {example}`.",
+ "date": "Încheiați cu un rând de forma `ANSWER: YYYY-MM-DD`.",
+ "datetime": "Încheiați cu un rând de forma `ANSWER: YYYY-MM-DD HH:MM`.",
+ "integer": "Încheiați cu un rând de forma `ANSWER: <număr întreg>`.",
+ "text": "Încheiați cu un rând de forma `ANSWER: <răspuns>`.",
+ "mapping": "Încheiați cu `ANSWER:`, urmat de un obiect JSON.",
+ "strings": "Încheiați cu `ANSWER:`, urmat de o listă JSON de șiruri, scrise exact ca în text și în ordinea în care apar.",
+ "abstain": "Dacă sarcina nu poate fi rezolvată cu informațiile date, răspundeți `ANSWER: UNKNOWN`.",
+ "done": "Gata.",
+ "err_action": "acțiune nevalidă: apelați un instrument sau scrieți un răspuns final",
+ "err_tool": "instrument necunoscut: {name}",
+ "err_args_object": "argumentele trebuie să fie un obiect JSON",
+ "err_missing": "argument lipsă: {key}",
+ "err_unknown_arg": "argument necunoscut: {key}",
+ "err_type": "tip greșit pentru {key}: se aștepta {expected}",
+ "err_enum": "valoare nevalidă pentru {key}"
+}

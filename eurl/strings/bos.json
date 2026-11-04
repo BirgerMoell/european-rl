@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Završite redom u obliku `ANSWER: <iznos>`, na primjer `ANSWER: {example}`.",
+ "date": "Završite redom u obliku `ANSWER: YYYY-MM-DD`.",
+ "datetime": "Završite redom u obliku `ANSWER: YYYY-MM-DD HH:MM`.",
+ "integer": "Završite redom u obliku `ANSWER: <cijeli broj>`.",
+ "text": "Završite redom u obliku `ANSWER: <odgovor>`.",
+ "mapping": "Završite sa `ANSWER:` nakon čega slijedi JSON objekat.",
+ "strings": "Završite sa `ANSWER:` nakon čega slijedi JSON lista nizova, tačno onako kako su napisani u tekstu i redoslijedom kojim se pojavljuju.",
+ "abstain": "Ako se zadatak ne može riješiti s datim informacijama, odgovorite `ANSWER: UNKNOWN`.",
+ "done": "Gotovo.",
+ "err_action": "nevažeća radnja: pozovite alat ili napišite konačan odgovor",
+ "err_tool": "nepoznat alat: {name}",
+ "err_args_object": "argumenti moraju biti JSON objekat",
+ "err_missing": "nedostaje argument: {key}",
+ "err_unknown_arg": "nepoznat argument: {key}",
+ "err_type": "pogrešan tip za {key}: očekuje se {expected}",
+ "err_enum": "nevažeća vrijednost za {key}"
+}

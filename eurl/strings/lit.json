@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Baikite eilute, kurios forma `ANSWER: <suma>`, pavyzdžiui, `ANSWER: {example}`.",
+ "date": "Baikite eilute, kurios forma `ANSWER: MMMM-MM-DD`.",
+ "datetime": "Baikite eilute, kurios forma `ANSWER: MMMM-MM-DD VV:MM`.",
+ "integer": "Baikite eilute, kurios forma `ANSWER: <sveikasis skaičius>`.",
+ "text": "Baikite eilute, kurios forma `ANSWER: <atsakymas>`.",
+ "mapping": "Baikite `ANSWER:` ir po jo einančiu JSON objektu.",
+ "strings": "Baikite `ANSWER:` ir po jo einančiu JSON eilučių sąrašu, tiksliai taip, kaip jos parašytos tekste, ir ta tvarka, kuria jos pasirodo.",
+ "abstain": "Jei užduoties neįmanoma išspręsti turima informacija, atsakykite `ANSWER: UNKNOWN`.",
+ "done": "Atlikta.",
+ "err_action": "netinkamas veiksmas: iškvieskite įrankį arba parašykite galutinį atsakymą",
+ "err_tool": "nežinomas įrankis: {name}",
+ "err_args_object": "argumentai turi būti JSON objektas",
+ "err_missing": "trūksta argumento: {key}",
+ "err_unknown_arg": "nežinomas argumentas: {key}",
+ "err_type": "netinkamas {key} tipas: tikėtasi {expected}",
+ "err_enum": "netinkama {key} reikšmė"
+}

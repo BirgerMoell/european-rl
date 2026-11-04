@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Noslēdziet ar rindu formā `ANSWER: <summa>`, piemēram, `ANSWER: {example}`.",
+ "date": "Noslēdziet ar rindu formā `ANSWER: GGGG-MM-DD`.",
+ "datetime": "Noslēdziet ar rindu formā `ANSWER: GGGG-MM-DD SS:MM`.",
+ "integer": "Noslēdziet ar rindu formā `ANSWER: <vesels skaitlis>`.",
+ "text": "Noslēdziet ar rindu formā `ANSWER: <atbilde>`.",
+ "mapping": "Noslēdziet ar `ANSWER:`, kam seko JSON objekts.",
+ "strings": "Noslēdziet ar `ANSWER:`, kam seko JSON virkņu saraksts, precīzi tā, kā virknes rakstītas tekstā, un to parādīšanās secībā.",
+ "abstain": "Ja uzdevumu nav iespējams atrisināt ar sniegto informāciju, atbildiet `ANSWER: UNKNOWN`.",
+ "done": "Gatavs.",
+ "err_action": "nederīga darbība: izsauciet rīku vai uzrakstiet galīgo atbildi",
+ "err_tool": "nezināms rīks: {name}",
+ "err_args_object": "argumentiem jābūt JSON objektam",
+ "err_missing": "trūkst argumenta: {key}",
+ "err_unknown_arg": "nezināms arguments: {key}",
+ "err_type": "nepareizs tips argumentam {key}: gaidīts {expected}",
+ "err_enum": "nederīga vērtība argumentam {key}"
+}

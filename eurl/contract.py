@@ -56,7 +56,8 @@ class TypedEnvironment:
 
     def public_prompt(self) -> str:
         t = self._task
-        example = format_money(123450, load_locale(t.locale).money) if t.answer_type == "money" else ""
+        money = load_locale(t.locale).money
+        example = format_money(123450 // 10 ** (2 - money.minor_digits), money) if t.answer_type == "money" else ""
         hint = i18n.text(t.language, t.answer_type, example=example)
         if self.abstention:
             hint += " " + i18n.text(t.language, "abstain")

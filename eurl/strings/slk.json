@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Ukončite riadkom v tvare `ANSWER: <suma>`, napríklad `ANSWER: {example}`.",
+ "date": "Ukončite riadkom v tvare `ANSWER: RRRR-MM-DD`.",
+ "datetime": "Ukončite riadkom v tvare `ANSWER: RRRR-MM-DD HH:MM`.",
+ "integer": "Ukončite riadkom v tvare `ANSWER: <celé číslo>`.",
+ "text": "Ukončite riadkom v tvare `ANSWER: <odpoveď>`.",
+ "mapping": "Ukončite `ANSWER:` a za ním objektom JSON.",
+ "strings": "Ukončite `ANSWER:` a za ním zoznamom reťazcov vo formáte JSON, presne tak, ako sú napísané v texte, a v poradí, v akom sa v ňom vyskytujú.",
+ "abstain": "Ak úlohu nemožno vyriešiť s danými informáciami, odpovedzte `ANSWER: UNKNOWN`.",
+ "done": "Hotovo.",
+ "err_action": "neplatná akcia: zavolajte nástroj alebo napíšte konečnú odpoveď",
+ "err_tool": "neznámy nástroj: {name}",
+ "err_args_object": "argumenty musia byť objekt JSON",
+ "err_missing": "chýba argument: {key}",
+ "err_unknown_arg": "neznámy argument: {key}",
+ "err_type": "nesprávny typ pre {key}: očakáva sa {expected}",
+ "err_enum": "neplatná hodnota pre {key}"
+}

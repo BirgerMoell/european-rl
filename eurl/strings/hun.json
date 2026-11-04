@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Válaszát egy `ANSWER: <összeg>` alakú sorral zárja, például `ANSWER: {example}`.",
+ "date": "Válaszát egy `ANSWER: ÉÉÉÉ-HH-NN` alakú sorral zárja.",
+ "datetime": "Válaszát egy `ANSWER: ÉÉÉÉ-HH-NN ÓÓ:PP` alakú sorral zárja.",
+ "integer": "Válaszát egy `ANSWER: <egész szám>` alakú sorral zárja.",
+ "text": "Válaszát egy `ANSWER: <válasz>` alakú sorral zárja.",
+ "mapping": "Válaszát `ANSWER:` és egy azt követő JSON-objektum zárja.",
+ "strings": "Válaszát `ANSWER:` és egy azt követő, karakterláncokból álló JSON-lista zárja, pontosan úgy, ahogy a szövegben szerepelnek, és előfordulásuk sorrendjében.",
+ "abstain": "Ha a feladat a megadott információk alapján nem oldható meg, válaszoljon így: `ANSWER: UNKNOWN`.",
+ "done": "Kész.",
+ "err_action": "érvénytelen művelet: hívjon meg egy eszközt, vagy írjon végleges választ",
+ "err_tool": "ismeretlen eszköz: {name}",
+ "err_args_object": "az argumentumoknak JSON-objektumnak kell lenniük",
+ "err_missing": "hiányzó argumentum: {key}",
+ "err_unknown_arg": "ismeretlen argumentum: {key}",
+ "err_type": "hibás típus ({key}): {expected} szükséges",
+ "err_enum": "érvénytelen érték ({key})"
+}

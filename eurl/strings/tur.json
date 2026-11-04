@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Şu biçimde bir satırla bitirin: `ANSWER: <tutar>`, örneğin `ANSWER: {example}`.",
+ "date": "Şu biçimde bir satırla bitirin: `ANSWER: YYYY-MM-DD`.",
+ "datetime": "Şu biçimde bir satırla bitirin: `ANSWER: YYYY-MM-DD HH:MM`.",
+ "integer": "Şu biçimde bir satırla bitirin: `ANSWER: <tam sayı>`.",
+ "text": "Şu biçimde bir satırla bitirin: `ANSWER: <yanıt>`.",
+ "mapping": "`ANSWER:` ve ardından bir JSON nesnesiyle bitirin.",
+ "strings": "`ANSWER:` ve ardından, metinde yazıldığı biçimde ve geçtikleri sırayla, dizelerden oluşan bir JSON listesiyle bitirin.",
+ "abstain": "Görev verilen bilgilerle çözülemiyorsa `ANSWER: UNKNOWN` yanıtını verin.",
+ "done": "Tamamlandı.",
+ "err_action": "geçersiz eylem: bir araç çağırın veya nihai bir yanıt yazın",
+ "err_tool": "bilinmeyen araç: {name}",
+ "err_args_object": "bağımsız değişkenler bir JSON nesnesi olmalıdır",
+ "err_missing": "eksik bağımsız değişken: {key}",
+ "err_unknown_arg": "bilinmeyen bağımsız değişken: {key}",
+ "err_type": "{key} için yanlış tür: {expected} bekleniyordu",
+ "err_enum": "{key} için geçersiz değer"
+}

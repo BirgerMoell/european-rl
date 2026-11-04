@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Përfundoni me një rresht të formës `ANSWER: <shuma>`, për shembull `ANSWER: {example}`.",
+ "date": "Përfundoni me një rresht të formës `ANSWER: YYYY-MM-DD`.",
+ "datetime": "Përfundoni me një rresht të formës `ANSWER: YYYY-MM-DD HH:MM`.",
+ "integer": "Përfundoni me një rresht të formës `ANSWER: <numër i plotë>`.",
+ "text": "Përfundoni me një rresht të formës `ANSWER: <përgjigja>`.",
+ "mapping": "Përfundoni me `ANSWER:` të ndjekur nga një objekt JSON.",
+ "strings": "Përfundoni me `ANSWER:` të ndjekur nga një listë JSON vargjesh, saktësisht siç janë shkruar në tekst dhe në rendin në të cilin shfaqen.",
+ "abstain": "Nëse detyra nuk mund të zgjidhet me informacionin e dhënë, përgjigjuni `ANSWER: UNKNOWN`.",
+ "done": "U krye.",
+ "err_action": "veprim i pavlefshëm: thirrni një mjet ose shkruani një përgjigje përfundimtare",
+ "err_tool": "mjet i panjohur: {name}",
+ "err_args_object": "argumentet duhet të jenë një objekt JSON",
+ "err_missing": "mungon argumenti: {key}",
+ "err_unknown_arg": "argument i panjohur: {key}",
+ "err_type": "lloj i gabuar për {key}: pritej {expected}",
+ "err_enum": "vlerë e pavlefshme për {key}"
+}

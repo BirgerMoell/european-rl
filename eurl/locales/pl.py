@@ -32,7 +32,7 @@ LOCALE = Locale(
     company_id=ids.pl_nip, vat_id=lambda rng, nip: ids.pl_vat(nip), vat_id_valid=ids.pl_nip_valid,
     payment_reference=banking.rf_reference, payment_reference_name={"pol": "tytuł przelewu (referencja RF)"},
     company_suffixes=("sp. z o.o.", "S.A.", "sp.k."),
-    company_stems=("Wiślany", "Bursztyn", "Zielony Gaj", "Mazowsze", "Tatry", "Odra", "Kresowa", "Sosnowa",
+    company_stems=("Wiślany", "Bursztyn", "Zielony Gaj", "Mazowsze", "Tatry", "Odra", "Lipowa", "Sosnowa",
                    "Złoty Kłos", "Bałtyk"),
     first_names=("Anna", "Jakub", "Zofia", "Jan", "Maja", "Antoni", "Julia", "Szymon", "Natalia", "Piotr",
                  "Katarzyna", "Tomasz"),

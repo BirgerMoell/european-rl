@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Ljúktu svarinu með línu á forminu `ANSWER: <upphæð>`, til dæmis `ANSWER: {example}`.",
+ "date": "Ljúktu svarinu með línu á forminu `ANSWER: ÁÁÁÁ-MM-DD`.",
+ "datetime": "Ljúktu svarinu með línu á forminu `ANSWER: ÁÁÁÁ-MM-DD KK:MM`.",
+ "integer": "Ljúktu svarinu með línu á forminu `ANSWER: <heiltala>`.",
+ "text": "Ljúktu svarinu með línu á forminu `ANSWER: <svar>`.",
+ "mapping": "Ljúktu svarinu með `ANSWER:` og þar á eftir JSON-hlut.",
+ "strings": "Ljúktu svarinu með `ANSWER:` og þar á eftir JSON-lista af strengjum, nákvæmlega eins og þeir eru ritaðir í textanum og í þeirri röð sem þeir koma fyrir.",
+ "abstain": "Ef ekki er hægt að leysa verkefnið með þeim upplýsingum sem gefnar eru skaltu svara `ANSWER: UNKNOWN`.",
+ "done": "Lokið.",
+ "err_action": "ógild aðgerð: kallaðu á verkfæri eða skrifaðu lokasvar",
+ "err_tool": "óþekkt verkfæri: {name}",
+ "err_args_object": "viðföngin verða að vera JSON-hlutur",
+ "err_missing": "viðfang vantar: {key}",
+ "err_unknown_arg": "óþekkt viðfang: {key}",
+ "err_type": "röng tegund fyrir {key}: búist var við {expected}",
+ "err_enum": "ógilt gildi fyrir {key}"
+}

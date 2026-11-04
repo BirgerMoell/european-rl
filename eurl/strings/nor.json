@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Avslutt med en linje på formen `ANSWER: <beløp>`, for eksempel `ANSWER: {example}`.",
+ "date": "Avslutt med en linje på formen `ANSWER: ÅÅÅÅ-MM-DD`.",
+ "datetime": "Avslutt med en linje på formen `ANSWER: ÅÅÅÅ-MM-DD TT:MM`.",
+ "integer": "Avslutt med en linje på formen `ANSWER: <heltall>`.",
+ "text": "Avslutt med en linje på formen `ANSWER: <svar>`.",
+ "mapping": "Avslutt med `ANSWER:` etterfulgt av et JSON-objekt.",
+ "strings": "Avslutt med `ANSWER:` etterfulgt av en JSON-liste med strenger, nøyaktig slik de står i teksten og i den rekkefølgen de forekommer.",
+ "abstain": "Hvis oppgaven ikke kan løses med opplysningene som er gitt, svar `ANSWER: UNKNOWN`.",
+ "done": "Ferdig.",
+ "err_action": "ugyldig handling: kall et verktøy eller skriv et endelig svar",
+ "err_tool": "ukjent verktøy: {name}",
+ "err_args_object": "argumentene må være et JSON-objekt",
+ "err_missing": "manglende argument: {key}",
+ "err_unknown_arg": "ukjent argument: {key}",
+ "err_type": "feil type for {key}: {expected} forventet",
+ "err_enum": "ugyldig verdi for {key}"
+}

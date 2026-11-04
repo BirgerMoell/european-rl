@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Končajte z vrstico v obliki `ANSWER: <znesek>`, na primer `ANSWER: {example}`.",
+ "date": "Končajte z vrstico v obliki `ANSWER: LLLL-MM-DD`.",
+ "datetime": "Končajte z vrstico v obliki `ANSWER: LLLL-MM-DD UU:MM`.",
+ "integer": "Končajte z vrstico v obliki `ANSWER: <celo število>`.",
+ "text": "Končajte z vrstico v obliki `ANSWER: <odgovor>`.",
+ "mapping": "Končajte z `ANSWER:`, ki mu sledi objekt JSON.",
+ "strings": "Končajte z `ANSWER:`, ki mu sledi seznam nizov JSON, natanko tako, kot so zapisani v besedilu, in v vrstnem redu, v katerem se pojavijo.",
+ "abstain": "Če naloge z danimi podatki ni mogoče rešiti, odgovorite `ANSWER: UNKNOWN`.",
+ "done": "Končano.",
+ "err_action": "neveljavno dejanje: pokličite orodje ali napišite končni odgovor",
+ "err_tool": "neznano orodje: {name}",
+ "err_args_object": "argumenti morajo biti objekt JSON",
+ "err_missing": "manjkajoč argument: {key}",
+ "err_unknown_arg": "neznan argument: {key}",
+ "err_type": "napačen tip za {key}: pričakovan je {expected}",
+ "err_enum": "neveljavna vrednost za {key}"
+}
