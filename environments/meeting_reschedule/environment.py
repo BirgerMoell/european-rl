@@ -9,8 +9,10 @@ attend; the meeting must move to the earliest slot in the given week when every 
 Then every participant except the organiser gets an e-mail stating the new date and time in their own time zone. If
 no slot exists, the meeting stays and the requester gets a reply.
 
-Levels (meta.level): 1 one office; 2 two countries; 3 three countries, the week often contains a day off somewhere
-and calendars are busier.
+Levels (meta.level): 0 entry level (organiser + one colleague, one office, a week without days off, nearly empty
+calendars); 1 one office; 2 two countries; 3 three countries, the week often contains a day off somewhere and
+calendars are busier. The check also reports a partial `score` (moved correctly, share of participants notified)
+that RL curricula can use as a denser reward.
 
 Scoring is on the end state, all or nothing:
 - the event (same id, same attendees and length) starts at the expected UTC time, or is unchanged when no slot exists;
@@ -170,12 +172,12 @@ class MeetingReschedule(ToolEnvironment):
     def generate(self, rng, language=None) -> ToolTask:
         from eurl.locales import load as load_locale
         countries = _countries_with_text()
-        level = rng.choice([1, 2, 3])
+        level = rng.choice([0, 1, 1, 2, 3])   # level 0: entry level (two people, one office, quiet week)
         lang = language or rng.choice(self.languages)
         # English is the group office language: an English instruction may come from any office
         home = rng.choice(countries if lang == "eng" else [c for c in countries if lang in load_locale(c).languages])
         others = [c for c in countries if c != home]
-        chosen = [home] + rng.sample(others, min(level - 1, len(others)))
+        chosen = [home] + rng.sample(others, max(0, min(level - 1, len(others))))
         # from level 2, usually include an office in another UTC offset (the time-zone skill)
         def offset(c):
             from zoneinfo import ZoneInfo
@@ -194,10 +196,13 @@ class MeetingReschedule(ToolEnvironment):
         t = text(lang)
         organizer = world.people[0]
         pool = [p for p in world.people[1:]]
-        attendees = [organizer] + rng.sample(pool, min(len(pool), rng.randint(2, 2 + level)))
+        attendees = [organizer] + rng.sample(pool, 1 if level == 0 else min(len(pool), rng.randint(2, 2 + level)))
         # the target week: often one with a day off in a participant's country
         mondays = [dt.date(2026, 1, 5) + dt.timedelta(weeks=w) for w in range(48)]
-        if level == 3 and rng.random() < 0.7:
+        if level == 0:
+            week = rng.choice([m for m in mondays if not any(
+                m <= d < m + dt.timedelta(days=5) for d in days_off(organizer.office.locale.holidays, m.year))])
+        elif level == 3 and rng.random() < 0.7:
             holiday_weeks = [m for m in mondays if any(
                 m <= d < m + dt.timedelta(days=5) for p in attendees
                 for d in days_off(p.office.locale.holidays, m.year))]
@@ -212,7 +217,7 @@ class MeetingReschedule(ToolEnvironment):
         emails = [p.email for p in attendees]
         world.events.append(Event("evt-1", title, orig, minutes, emails, organizer.email))
         # busy calendars in the target week
-        n_busy = rng.randint(3 * level, 6 + 4 * level)
+        n_busy = rng.randint(0, 2) if level == 0 else rng.randint(3 * level, 6 + 4 * level)
         for i in range(n_busy):
             p = rng.choice(attendees)
             day = week + dt.timedelta(days=rng.randint(0, 4))
@@ -221,14 +226,14 @@ class MeetingReschedule(ToolEnvironment):
                                       rng.choice([30, 60, 90, 120]), [p.email], p.email))
         # the requester is away at the start of the week (travel, a course): the slot is rarely Monday morning
         requester = rng.choice(attendees[1:])
-        away_hours = rng.choice([0, 4, 10, 24, 28, 34, 48])
+        away_hours = 0 if level == 0 else rng.choice([0, 4, 10, 24, 28, 34, 48])
         if away_hours:
             start = dt.datetime.combine(week, dt.time(0), tzinfo=requester.office.tz)
             world.events.append(Event("evt-away", rng.choice(t["busy_titles"]), start.astimezone(dt.timezone.utc),
                                       away_hours * 60 + (14 * 60 if away_hours % 24 else 0), [requester.email],
                                       requester.email))
         # sometimes make the week impossible: one attendee is fully booked
-        impossible = rng.random() < 0.1
+        impossible = level > 0 and rng.random() < 0.1
         if impossible:
             p = rng.choice(attendees[1:])
             for d in range(5):
