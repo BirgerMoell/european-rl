@@ -298,7 +298,7 @@ class MeetingReschedule(ToolEnvironment):
         meta = {"level": level, "countries": chosen, "attendees": len(attendees), "week": week.isoformat(),
                 "no_slot": target is None, "target_utc": target and _fmt(target), "request_language": rlang}
         return ToolTask(instruction, world, _tools(lang), check, reference, lang, home,
-                        max_steps=12 + 2 * len(attendees), meta=meta)
+                        max_steps=10 + 6 * len(attendees), meta=meta)  # ~5 lookups per participant + overhead
 
 
 def _plan(env, slot, when_for) -> list:
