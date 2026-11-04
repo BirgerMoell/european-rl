@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Sie sind die Assistenz von {organizer} bei {company} und arbeiten mit den Kalender- und E-Mail-Werkzeugen des Konzerns. Bearbeiten Sie die neue E-Mail im Posteingang. Terminrichtlinie des Konzerns: Ein Termin wird auf den frühesten Beginn zur vollen oder halben Stunde in der gewünschten Woche verlegt, zu dem alle Teilnehmenden frei sind – innerhalb der Bürozeiten ihres eigenen Standorts und außerhalb der Mittagspause, jeweils in ihrer eigenen Ortszeit, und nicht am Wochenende oder an einem freien Tag in ihrem Land. Dauer und Teilnehmende bleiben gleich. Schreiben Sie danach allen Teilnehmenden außer {organizer} das neue Datum (JJJJ-MM-TT) und die Uhrzeit (HH:MM) in ihrer eigenen Ortszeit. Gibt es keinen passenden Termin, wird nichts verlegt; antworten Sie dann nur der anfragenden Person. Schreiben Sie niemand anderem. Schließen Sie mit einer kurzen Nachricht ohne Werkzeugaufruf ab.",
+  "Sie unterstützen {organizer} ({company}). Im Posteingang liegt eine neue E-Mail; bearbeiten Sie sie mit den Kalender- und E-Mail-Werkzeugen. Regeln für Terminverlegungen: Wählen Sie den frühesten Termin in der gewünschten Woche (Beginn zur vollen oder halben Stunde), der in den lokalen Bürozeiten aller Teilnehmenden liegt, ihre Mittagspause, Wochenenden und die freien Tage ihres Landes vermeidet und nicht mit ihren anderen Terminen kollidiert; Dauer und Teilnehmende bleiben gleich. Informieren Sie alle Teilnehmenden außer {organizer} über das neue Datum (JJJJ-MM-TT) und die Uhrzeit (HH:MM) in ihrer eigenen Zeitzone. Gibt es keinen solchen Termin, bleibt der Termin unverändert und Sie antworten nur dem Absender. Schließen Sie mit einer kurzen Nachricht ohne Werkzeugaufruf ab."
+ ],
+ "request": [
+  "Hallo {organizer},\n\nleider kann ich zum aktuellen Termin von „{title}“ ({original}) nicht. Könnten Sie den Termin auf den frühesten Zeitpunkt in der Woche vom {monday} bis {friday} verlegen, an dem alle können, und alle über die neue Zeit informieren?\n\nDanke,\n{name}",
+  "Liebe/r {organizer},\n\nmir ist etwas dazwischengekommen, und ich kann an „{title}“ am {original} nicht teilnehmen. Bitte verlegen Sie den Termin auf den ersten möglichen Zeitpunkt zwischen {monday} und {friday}, der allen passt, und informieren Sie alle.\n\nViele Grüße\n{name}"
+ ],
+ "request_subject": "Terminverschiebung: {title}",
+ "notice_subject": "Neuer Termin: {title}",
+ "notice": "Guten Tag,\n\n„{title}“ wurde auf den {date} um {time} Uhr ({tz}) verlegt.\n\nViele Grüße",
+ "no_slot_reply": "Guten Tag,\n\nleider gibt es in der gewünschten Woche keinen Zeitpunkt, an dem alle Teilnehmenden von „{title}“ können; der Termin bleibt daher wie geplant.\n\nViele Grüße",
+ "titles": [
+  "Quartalsbesprechung Budget",
+  "Lenkungsausschuss Projekt",
+  "Lieferantenverhandlung",
+  "Update IT-Sicherheit"
+ ],
+ "busy_titles": [
+  "Kundentelefonat",
+  "Interner Workshop",
+  "Mitarbeitergespräch"
+ ],
+ "done": "Der Termin ist erledigt."
+}

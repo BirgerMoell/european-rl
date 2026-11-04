@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Du är assistent åt {organizer} på {company} och arbetar med koncernens kalender- och e-postverktyg. Hantera det nya mejlet i inkorgen. Koncernens regler för mötesbokning: ett möte flyttas till den tidigaste starttiden, på hel- eller halvtimme, i den begärda veckan då alla deltagare är lediga – inom det egna kontorets arbetstid och utanför dess lunch, i deltagarens egen lokala tid, och inte på en helg eller en ledig dag i deltagarens land. Behåll mötets längd och deltagare. Mejla sedan alla deltagare utom {organizer} det nya datumet (ÅÅÅÅ-MM-DD) och klockslaget (TT:MM) i deras egen lokala tid. Om ingen tid fungerar ska mötet inte flyttas; svara då bara den som frågade. Mejla ingen annan. Avsluta med ett kort meddelande utan verktygsanrop.",
+  "Du assisterar {organizer} ({company}). Det har kommit ett nytt mejl i inkorgen; hantera det med kalender- och e-postverktygen. Regler för att flytta möten: välj den tidigaste tiden i den begärda veckan (start på hel- eller halvtimme) som ligger inom varje deltagares lokala arbetstid, undviker deras lunch, helger och deras lands lediga dagar och inte krockar med deras andra möten; behåll längd och deltagare. Meddela varje deltagare utom {organizer} det nya datumet (ÅÅÅÅ-MM-DD) och klockslaget (TT:MM) i deras egen tidszon. Finns ingen sådan tid lämnar du mötet som det är och svarar bara avsändaren. Avsluta med ett kort meddelande utan verktygsanrop."
+ ],
+ "request": [
+  "Hej {organizer},\n\ntyvärr kan jag inte delta i \"{title}\" på den nuvarande tiden ({original}). Kan du flytta mötet till den tidigaste tiden under veckan {monday}–{friday} då alla kan, och meddela alla den nya tiden?\n\nTack,\n{name}",
+  "Hej {organizer},\n\ndet har kommit något emellan och jag kan inte vara med på \"{title}\" {original}. Boka gärna om mötet till första möjliga tid mellan {monday} och {friday} som passar alla deltagare och informera alla.\n\nVänliga hälsningar,\n{name}"
+ ],
+ "request_subject": "Ombokning: {title}",
+ "notice_subject": "Ny tid: {title}",
+ "notice": "Hej,\n\n\"{title}\" är flyttat till {date} kl. {time} ({tz}).\n\nVänliga hälsningar",
+ "no_slot_reply": "Hej,\n\ntyvärr finns det ingen tid under den begärda veckan då alla deltagare i \"{title}\" kan, så mötet ligger kvar som planerat.\n\nVänliga hälsningar",
+ "titles": [
+  "Kvartalsgenomgång av budgeten",
+  "Projektets styrgrupp",
+  "Leverantörsförhandling",
+  "Lägesrapport IT-säkerhet"
+ ],
+ "busy_titles": [
+  "Kundsamtal",
+  "Intern workshop",
+  "Medarbetarsamtal"
+ ],
+ "done": "Mötet är hanterat."
+}

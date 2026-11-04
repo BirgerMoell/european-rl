@@ -27,6 +27,6 @@ for _path in sorted(_DIR.glob("*.json")):
     STRINGS[_path.stem] = _data
 
 
-def text(lang: str, key: str, **slots) -> str:
+def text(lang: str, key: str, /, **slots) -> str:
     table = STRINGS.get(lang, STRINGS["eng"])
     return table.get(key, STRINGS["eng"][key]).format(**slots)

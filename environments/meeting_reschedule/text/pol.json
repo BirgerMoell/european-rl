@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Jesteś asystentem {organizer} w {company} i korzystasz z narzędzi kalendarza i poczty grupy. Obsłuż nowego e-maila w skrzynce. Zasady grupy dotyczące spotkań: spotkanie przenosi się na najwcześniejszy początek, o pełnej godzinie lub o wpół, w wskazanym tygodniu, gdy wszyscy uczestnicy są wolni — w godzinach pracy ich własnego biura i poza przerwą obiadową, w ich czasie lokalnym, i nie w weekend ani w dzień wolny w ich kraju. Czas trwania i uczestnicy pozostają bez zmian. Następnie wyślij każdemu uczestnikowi oprócz {organizer} nową datę (RRRR-MM-DD) i godzinę (GG:MM) w jego własnym czasie lokalnym. Jeśli żaden termin nie pasuje, nie przenoś spotkania; odpowiedz wtedy tylko osobie, która prosiła. Nie pisz do nikogo innego. Zakończ krótką wiadomością bez wywołania narzędzia.",
+  "Wspierasz {organizer} ({company}). W skrzynce jest nowy e-mail; obsłuż go narzędziami kalendarza i poczty. Zasady przenoszenia spotkań: wybierz najwcześniejszy termin we wskazanym tygodniu (początek o pełnej godzinie lub o wpół), który mieści się w lokalnych godzinach pracy każdego uczestnika, omija jego przerwę obiadową, weekendy i dni wolne w jego kraju oraz nie koliduje z jego innymi spotkaniami; zachowaj czas trwania i uczestników. Powiadom każdego uczestnika oprócz {organizer} o nowej dacie (RRRR-MM-DD) i godzinie (GG:MM) w jego strefie czasowej. Jeśli takiego terminu nie ma, zostaw spotkanie bez zmian i odpowiedz tylko nadawcy. Zakończ krótką wiadomością bez wywołania narzędzia."
+ ],
+ "request": [
+  "Dzień dobry {organizer},\n\nniestety nie mogę uczestniczyć w „{title}” w obecnym terminie ({original}). Czy możesz przenieść spotkanie na najwcześniejszy termin w tygodniu od {monday} do {friday}, gdy wszyscy mogą, i poinformować wszystkich o nowej godzinie?\n\nDziękuję,\n{name}",
+  "Dzień dobry {organizer},\n\ncoś mi wypadło i nie mogę wziąć udziału w „{title}” {original}. Proszę przełożyć spotkanie na pierwszy możliwy termin między {monday} a {friday}, który pasuje wszystkim uczestnikom, i poinformować wszystkich.\n\nZ pozdrowieniami,\n{name}"
+ ],
+ "request_subject": "Przełożenie: {title}",
+ "notice_subject": "Nowy termin: {title}",
+ "notice": "Dzień dobry,\n\n„{title}” zostało przeniesione na {date}, godz. {time} ({tz}).\n\nZ pozdrowieniami",
+ "no_slot_reply": "Dzień dobry,\n\nniestety we wskazanym tygodniu nie ma terminu, w którym wszyscy uczestnicy „{title}” są dostępni, więc spotkanie odbędzie się zgodnie z planem.\n\nZ pozdrowieniami",
+ "titles": [
+  "Kwartalny przegląd budżetu",
+  "Komitet sterujący projektu",
+  "Negocjacje z dostawcą",
+  "Aktualizacja bezpieczeństwa IT"
+ ],
+ "busy_titles": [
+  "Rozmowa z klientem",
+  "Warsztat wewnętrzny",
+  "Rozmowa indywidualna"
+ ],
+ "done": "Spotkanie zostało obsłużone."
+}

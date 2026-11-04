@@ -223,6 +223,10 @@ class ToolEnvironment:
     def reference_actions(self) -> list:
         return copy.deepcopy(self._task.reference)
 
+    def extra_probe_plans(self) -> dict:
+        """Environment-specific shortcut plans: name -> function(env) returning an action list (or None)."""
+        return {}
+
     def ground_truth(self) -> dict:
         return {"env": self.id, "seed": self._seed, "split": self._split, "language": self._task.language,
                 "locale": self._task.locale}

@@ -1,0 +1,15 @@
+{
+  "id": "meeting_reschedule",
+  "title": "Reschedule a meeting across countries and notify everyone in their local time",
+  "family": "office_world",
+  "capability": "multi-step tool use, time zones, national days off, cross-lingual requests",
+  "languages": ["eng", "swe", "deu", "fra", "pol", "fin"],
+  "version": "0.1.0",
+  "contract": "0.3",
+  "interaction": "tool_episode",
+  "description": "A participant asks (in their own language) to move a meeting; the assistant finds the earliest common slot in every participant's local office hours, outside lunch, weekends and national days off, moves it and notifies each participant in their own time zone; ~10 % of weeks have no slot.",
+  "data_license": "Apache-2.0",
+  "data_source": "synthetic world (eurl.world) from the locale packs",
+  "text_review": {"eng": "author", "swe": "llm", "deu": "llm", "fra": "llm", "pol": "llm", "fin": "llm"},
+  "qualification": {"contract": "pending", "L1": "pending", "L2": "pending", "L3": "pending"}
+}

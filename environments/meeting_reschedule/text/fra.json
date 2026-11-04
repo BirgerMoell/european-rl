@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Vous êtes l'assistant·e de {organizer} chez {company} et utilisez les outils d'agenda et de messagerie du groupe. Traitez le nouvel e-mail de la boîte de réception. Règle du groupe pour les réunions : une réunion est déplacée au début le plus tôt, à l'heure pile ou à la demie, dans la semaine demandée, où tous les participants sont libres — pendant les heures de bureau de leur propre site et hors de sa pause déjeuner, dans leur heure locale, et ni le week-end ni un jour chômé de leur pays. La durée et les participants restent les mêmes. Écrivez ensuite à chaque participant, sauf {organizer}, la nouvelle date (AAAA-MM-JJ) et l'heure (HH:MM) dans sa propre heure locale. Si aucun créneau ne convient, ne déplacez pas la réunion et répondez uniquement à la personne qui a demandé. N'écrivez à personne d'autre. Terminez par un court message sans appel d'outil.",
+  "Vous assistez {organizer} ({company}). Un nouvel e-mail est arrivé ; traitez-le avec les outils d'agenda et de messagerie. Règles de déplacement : choisissez le créneau le plus tôt de la semaine demandée (début à l'heure pile ou à la demie) compris dans les heures de bureau locales de chaque participant, hors pause déjeuner, week-ends et jours chômés de son pays, et sans conflit avec ses autres réunions ; gardez la durée et les participants. Informez chaque participant, sauf {organizer}, de la nouvelle date (AAAA-MM-JJ) et de l'heure (HH:MM) dans son fuseau horaire. S'il n'existe aucun créneau, laissez la réunion telle quelle et répondez uniquement à l'expéditeur. Terminez par un court message sans appel d'outil."
+ ],
+ "request": [
+  "Bonjour {organizer},\n\nje ne pourrai malheureusement pas assister à « {title} » à l'horaire actuel ({original}). Pourriez-vous la déplacer au premier moment de la semaine du {monday} au {friday} où tout le monde est disponible, et prévenir chacun du nouvel horaire ?\n\nMerci,\n{name}",
+  "Bonjour {organizer},\n\nj'ai un empêchement et ne pourrai pas participer à « {title} » le {original}. Merci de la reprogrammer au premier créneau possible entre le {monday} et le {friday} qui convient à tous les participants, et d'informer tout le monde.\n\nCordialement,\n{name}"
+ ],
+ "request_subject": "Report : {title}",
+ "notice_subject": "Nouvel horaire : {title}",
+ "notice": "Bonjour,\n\n« {title} » est déplacée au {date} à {time} ({tz}).\n\nCordialement",
+ "no_slot_reply": "Bonjour,\n\nil n'existe malheureusement aucun créneau dans la semaine demandée où tous les participants de « {title} » sont disponibles ; la réunion reste donc prévue comme avant.\n\nCordialement",
+ "titles": [
+  "Revue budgétaire trimestrielle",
+  "Comité de pilotage du projet",
+  "Négociation fournisseur",
+  "Point sécurité informatique"
+ ],
+ "busy_titles": [
+  "Appel client",
+  "Atelier interne",
+  "Entretien individuel"
+ ],
+ "done": "La réunion est traitée."
+}

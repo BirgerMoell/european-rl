@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Olet henkilön {organizer} assistentti yrityksessä {company} ja käytät konsernin kalenteri- ja sähköpostityökaluja. Käsittele saapuneet-kansion uusi sähköposti. Konsernin kokouskäytäntö: kokous siirretään pyydetyn viikon varhaisimpaan alkuun tasalta tai puolelta, jolloin kaikki osallistujat ovat vapaina – oman toimipisteensä työaikana ja lounastauon ulkopuolella, omassa paikallisessa ajassaan, eikä viikonloppuna tai oman maansa vapaapäivänä. Kokouksen kesto ja osallistujat pysyvät samoina. Lähetä sitten jokaiselle osallistujalle paitsi henkilölle {organizer} uusi päivämäärä (VVVV-KK-PP) ja kellonaika (TT:MM) hänen omassa paikallisessa ajassaan. Jos mikään aika ei sovi, kokousta ei siirretä; vastaa silloin vain pyytäjälle. Älä lähetä viestiä kenellekään muulle. Lopeta lyhyellä viestillä ilman työkalukutsua.",
+  "Avustat henkilöä {organizer} ({company}). Saapuneisiin on tullut uusi sähköposti; käsittele se kalenteri- ja sähköpostityökaluilla. Kokousten siirtosäännöt: valitse pyydetyn viikon varhaisin aika (alku tasalta tai puolelta), joka osuu jokaisen osallistujan paikalliseen työaikaan, välttää hänen lounastaukonsa, viikonloput ja maansa vapaapäivät eikä mene päällekkäin hänen muiden kokoustensa kanssa; säilytä kesto ja osallistujat. Ilmoita jokaiselle osallistujalle paitsi henkilölle {organizer} uusi päivämäärä (VVVV-KK-PP) ja kellonaika (TT:MM) hänen omalla aikavyöhykkeellään. Jos sopivaa aikaa ei ole, jätä kokous ennalleen ja vastaa vain lähettäjälle. Lopeta lyhyellä viestillä ilman työkalukutsua."
+ ],
+ "request": [
+  "Hei {organizer},\n\nvalitettavasti en pääse kokoukseen \"{title}\" nykyisenä aikana ({original}). Voisitko siirtää sen varhaisimpaan aikaan viikolla {monday}–{friday}, jolloin kaikki pääsevät, ja ilmoittaa uuden ajan kaikille?\n\nKiitos,\n{name}",
+  "Hei {organizer},\n\nminulle tuli este, enkä voi osallistua kokoukseen \"{title}\" {original}. Siirräthän kokouksen ensimmäiseen mahdolliseen aikaan välillä {monday}–{friday}, joka sopii kaikille osallistujille, ja tiedotat kaikkia.\n\nYstävällisin terveisin\n{name}"
+ ],
+ "request_subject": "Ajan siirto: {title}",
+ "notice_subject": "Uusi aika: {title}",
+ "notice": "Hei,\n\n\"{title}\" on siirretty aikaan {date} klo {time} ({tz}).\n\nYstävällisin terveisin",
+ "no_slot_reply": "Hei,\n\nvalitettavasti pyydetyllä viikolla ei ole aikaa, jolloin kaikki kokouksen \"{title}\" osallistujat pääsisivät, joten kokous pidetään suunnitellusti.\n\nYstävällisin terveisin",
+ "titles": [
+  "Neljännesvuoden budjettikatsaus",
+  "Projektin ohjausryhmä",
+  "Toimittajaneuvottelu",
+  "Tietoturvakatsaus"
+ ],
+ "busy_titles": [
+  "Asiakaspuhelu",
+  "Sisäinen työpaja",
+  "Kehityskeskustelu"
+ ],
+ "done": "Kokous on käsitelty."
+}

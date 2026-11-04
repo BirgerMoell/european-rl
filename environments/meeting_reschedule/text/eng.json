@@ -1,0 +1,27 @@
+{
+ "_review": "author",
+ "instruction": [
+  "You are the assistant of {organizer} at {company} and work with the group's calendar and e-mail tools. Handle the new e-mail in the inbox. Group scheduling policy: a meeting is moved to the earliest start, on the hour or half hour, in the requested week when every participant is free — inside their own office's hours and outside its lunch break, in their own local time, and not on a weekend or a day off in their own country. Keep the meeting's length and participants. Then e-mail every participant except {organizer} the new date (YYYY-MM-DD) and time (HH:MM) in their own local time. If no time works, do not move the meeting; reply only to the person who asked. Do not e-mail anyone else. Finish with a short message without a tool call.",
+  "You assist {organizer} ({company}). There is a new e-mail in the inbox; deal with it using the calendar and e-mail tools. Rules for moving meetings: choose the earliest slot in the requested week (starting on the hour or half hour) that falls within every participant's local office hours, avoids their lunch break, weekends and their country's days off, and does not clash with their other meetings; keep length and participants. Notify each participant except {organizer} with the new date (YYYY-MM-DD) and time (HH:MM) in their own time zone. If there is no such slot, leave the meeting as it is and reply only to the sender. When you are done, write a short closing message without a tool call."
+ ],
+ "request": [
+  "Hi {organizer},\n\nI'm afraid I can't make \"{title}\" at the current time ({original}). Could you move it to the earliest time in the week {monday} to {friday} when all of us are free, and let everyone know the new time?\n\nThanks,\n{name}",
+  "Dear {organizer},\n\nsomething has come up and I cannot attend \"{title}\" on {original}. Please reschedule it to the first possible time between {monday} and {friday} that works for all participants and inform everyone.\n\nBest regards,\n{name}"
+ ],
+ "request_subject": "Rescheduling: {title}",
+ "notice_subject": "New time: {title}",
+ "notice": "Hello,\n\n\"{title}\" has been moved to {date} at {time} ({tz}).\n\nBest regards",
+ "no_slot_reply": "Hello,\n\nunfortunately there is no time in the requested week when all participants of \"{title}\" are free, so the meeting stays as planned.\n\nBest regards",
+ "titles": [
+  "Quarterly budget review",
+  "Project steering group",
+  "Supplier negotiation",
+  "IT security update"
+ ],
+ "busy_titles": [
+  "Customer call",
+  "Internal workshop",
+  "One-to-one"
+ ],
+ "done": "The meeting is handled."
+}

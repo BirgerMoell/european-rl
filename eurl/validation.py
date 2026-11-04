@@ -125,8 +125,86 @@ def validate_typed(environment_id: str, cases: int = 100, languages=None) -> dic
             "probe_mean_reward": {k: round(v, 3) for k, v in sorted(probe_means.items())}}
 
 
+def validate_tools(environment_id: str, cases: int = 40, languages=None) -> dict:
+    """Tool episodes, per language: determinism, the reference reaches 1.0, malformed actions are errors that do
+    not end the episode, the step limit holds, read-only spam earns nothing, dropping a required state change
+    costs the reward, and environment shortcut plans (`extra_probe_plans`) stay at or below 0.3."""
+    import hashlib
+    from eurl.contract import run_actions
+    env = load(environment_id)
+    languages = list(languages or env.languages)
+    probe_rewards, per_language = {}, {}
+    for language in languages:
+        split_tasks = {}
+        for split in ("train", "dev", "eval"):
+            tasks = set()
+            for seed in range(cases):
+                obs = env.reset(seed, split, language)
+                if obs != env.reset(seed, split, language):
+                    raise ValueError("reset is not deterministic")
+                result = run_actions(env, env.reference_actions())
+                if result["reward"] != 1.0 or not result["terminated"]:
+                    raise ValueError(f"reference not rewarded ({language}, seed {seed}, {split}): {result['info']}")
+                try:
+                    env.step({"final": "again"})
+                except RuntimeError:
+                    pass
+                else:
+                    raise ValueError("terminated episode accepted another action")
+                env.reset(seed, split, language)
+                probe_rewards.setdefault("finish_immediately", []).append(env.step({"final": "Done."})["reward"])
+                env.reset(seed, split, language)
+                names = sorted(t["function"]["name"] for t in obs["tools"])
+                for bad in ({"tool": "does_not_exist", "arguments": {}}, {"tool": names[0], "arguments": "x"},
+                            {"tool": names[0], "arguments": {"unknown_arg": 1}}, 17, {"x": 1},
+                            "<tool_call>{not json</tool_call>"):
+                    step = env.step(bad)
+                    if step["terminated"] or "error" not in step["observation"]:
+                        raise ValueError(f"malformed action not reported as an error: {bad!r}")
+                env.reset(seed, split, language)
+                reader = next(t for t in env._task.tools if not t.mutates and not t.parameters.get("required"))
+                step = {"terminated": False, "truncated": False}
+                for _ in range(env._task.max_steps + 1):
+                    step = env.step({"tool": reader.name, "arguments": {}})
+                    if step["terminated"] or step["truncated"]:
+                        break
+                if not step["truncated"]:
+                    raise ValueError("step limit not enforced")
+                probe_rewards.setdefault("read_until_limit", []).append(step["reward"])
+                ref = env.reference_actions()
+                mutating = [i for i, a in enumerate(ref) if "tool" in a and env._tools[a["tool"]].mutates]
+                if mutating:
+                    env.reset(seed, split, language)
+                    partial = run_actions(env, [a for i, a in enumerate(ref) if i != mutating[0]])
+                    if partial["reward"] >= 1.0:
+                        raise ValueError("dropping a required state change still earns full reward")
+                for name, plan in env.extra_probe_plans().items():
+                    env.reset(seed, split, language)
+                    plan_actions = plan(env)
+                    if plan_actions is None:
+                        continue
+                    probe_rewards.setdefault(name, []).append(run_actions(env, plan_actions)["reward"])
+                tasks.add(hashlib.sha256((obs["instruction"] + json.dumps(ref, sort_keys=True, ensure_ascii=False)
+                                          ).encode()).hexdigest())
+            if len(tasks) < cases * 0.9:
+                raise ValueError(f"insufficient task diversity ({language}, {split})")
+            split_tasks[split] = tasks
+        if any(split_tasks[x] & split_tasks[y] for x, y in (("train", "dev"), ("train", "eval"), ("dev", "eval"))):
+            raise ValueError(f"task overlap between splits ({language})")
+        per_language[language] = {"tasks": sum(len(v) for v in split_tasks.values())}
+    probe_means = {k: sum(v) / len(v) for k, v in probe_rewards.items()}
+    exploitable = {k: round(v, 3) for k, v in probe_means.items() if v > PROBE_MAX_MEAN}
+    if exploitable:
+        raise ValueError(f"shortcut probes earn too much reward: {exploitable}")
+    return {"status": "passed", "contract": "0.3", "interaction": "tool_episode", "cases_per_split": cases,
+            "languages": per_language, "reference_success": 1.0,
+            "probe_mean_reward": {k: round(v, 3) for k, v in sorted(probe_means.items())}}
+
+
 def qualify(environment_id: str, cases=None, languages=None) -> dict:
     env = load(environment_id)
     if env.interaction == "typed_answer":
         return validate_typed(environment_id, cases or 100, languages)
-    raise ValueError(f"qualification for {env.interaction} environments arrives with the office world (M2)")
+    if env.interaction == "tool_episode":
+        return validate_tools(environment_id, cases or 40, languages)
+    raise ValueError(f"unknown interaction: {env.interaction}")
