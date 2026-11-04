@@ -216,6 +216,26 @@ def check(c: dict, text: str) -> bool:
         lines = [l.strip() for l in text.strip().splitlines() if l.strip()]
         tail = " ".join(lines[-3:]) if lines else ""
         return any(norm(v) in norm(tail) for v in c["values"])
+    if kind == "name_stems":
+        # each name part must appear as a word starting with the part minus its last letter (min 2): case endings
+        # (vocative: Martin -> Martine, Novák -> Nováku, Олена -> Олено) pass, lost diacritics in the stem do not
+        tokens = re.findall(r"\w+(?:['’-]\w+)*", text)
+        return all(any(tok.startswith(part[:max(2, len(part) - 1)]) for tok in tokens) for part in c["parts"])
+    if kind == "local_amount":
+        # the amount with the locale's decimal separator, grouped with its group separator or ungrouped; spaces
+        # of any kind are equivalent; the currency marker (symbol, code or word) is not checked
+        t = re.sub(r"[\u00a0\u202f ]", " ", text)
+        whole, minor, dec, grp = c["whole"], c["minor"], c["decimal"], re.sub(r"[\u00a0\u202f ]", " ", c["group"])
+        groups = f"{int(whole):,}".replace(",", grp)
+        forms = {f"{groups}{dec}{minor}" if minor else groups, f"{whole}{dec}{minor}" if minor else str(whole)}
+        return any(re.search(rf"(?<![\d.,]){re.escape(f)}(?![\d])", t) for f in forms)
+    if kind == "local_date":
+        # the date in the locale's numeric style; leading zeros and a trailing dot are optional
+        y, m, d = c["date"].split("-")
+        pat = re.escape(c["style"]).replace("YYYY", y).replace("DD", f"0?{int(d)}").replace("MM", f"0?{int(m)}")
+        pat = re.sub(r"(?<![0?\w])D(?!\w)", f"0?{int(d)}", pat)
+        pat = re.sub(r"(?<![0?\w])M(?!\w)", f"0?{int(m)}", pat).rstrip("\\.") + r"\.?"
+        return re.search(rf"(?<!\d){pat}(?!\d)", text) is not None
     if kind == "bullets":
         n = len(re.findall(r"(?m)^\s*[-*•]\s+\S", text))
         return n == c["count"]

@@ -98,13 +98,17 @@ class FormalEmail(TypedEnvironment):
                 checks.append({"kind": "not_contains_word", "words": t["formal"]["informal"]})
                 req.append(t["req"]["formal"])
             elif key == "amount":
-                checks.append({"kind": "contains", "value": local_amount})
-                req.append(t["req"]["amount"])
+                major, minor_part = divmod(amount, 100) if loc.money.minor_digits else (amount // 100, 0)
+                checks.append({"kind": "local_amount", "whole": major,
+                               "minor": f"{minor_part:02d}" if loc.money.minor_digits else "",
+                               "decimal": loc.money.decimal, "group": loc.money.group})
+                # a neutral example of the local style (not the answer), so the requirement is well-defined
+                req.append(t["req"]["amount"] + f" ({format_money(123456 if loc.money.minor_digits else 1234, loc.money)})")
             elif key == "date":
-                checks.append({"kind": "contains", "value": local_date})
-                req.append(t["req"]["date"])
+                checks.append({"kind": "local_date", "date": date.isoformat(), "style": loc.date_style})
+                req.append(t["req"]["date"] + f" ({format_date(dt.date(2026, 1, 7), loc.date_style)})")
             elif key == "name":
-                checks.append({"kind": "contains", "value": name})
+                checks.append({"kind": "name_stems", "parts": name.split()})
                 req.append(t["req"]["name"])
             elif key == "no_english":
                 checks.append({"kind": "not_contains_word", "words": ENGLISH_MARKERS})
@@ -122,6 +126,7 @@ class FormalEmail(TypedEnvironment):
         spec = {"type": "constraints", "checks": checks}
         meta = {"chosen": chosen, "topic": topic_key, "locale": country,
                 "ref": {"name": name, "sender": sender, "amount": local_amount, "date": local_date,
+                        "iso_date": date.isoformat(), "neutral_amount": neutral_amount,
                         "bullets": bullets, "words": words, "topic": topic_key}}
         return TypedTask(instruction, spec, "text", lang, country, meta)
 
@@ -158,8 +163,15 @@ class FormalEmail(TypedEnvironment):
         probes = {"echo_prompt": prompt}
         if "formal" in chosen:
             probes["informal_register"] = ref + "\n" + t["formal"]["informal"][0]
-        if ("amount" in chosen and r["amount"] != "1234.50") or ("date" in chosen and r["date"] != "2026-01-01"):
-            probes["neutral_formats"] = ref.replace(r["amount"], "1234.50").replace(r["date"], "2026-01-01")
+        if "amount" in chosen or "date" in chosen:
+            iso = self._task.meta["ref"]["iso_date"]
+            neutral = self._task.meta["ref"]["neutral_amount"].split()[0]
+            probes["neutral_formats"] = ref.replace(r["amount"], neutral).replace(r["date"], iso)
+        if "name" in chosen:
+            import unicodedata
+            plain = unicodedata.normalize("NFKD", r["name"]).encode("ascii", "ignore").decode()
+            if plain != r["name"]:
+                probes["name_without_diacritics"] = ref.replace(r["name"], plain)
         probes["no_closing"] = "\n".join(ref.splitlines()[:-2])
         probes["english_email"] = "Subject: Invoice\n\nDear customer,\n\nplease pay the invoice.\n\nKind regards"
         return probes
