@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import importlib
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Callable, Dict, List, Tuple
 
 from eurl.calendar import Rule
@@ -46,6 +47,8 @@ class Locale:
     lunch: Tuple[str, str] = ("12:00", "13:00")
     weekend: Tuple[int, ...] = (5, 6)
     vat_verified: bool = False
+    eu_member: bool = True
+    price_scale: int = 1                  # rough euro-to-local factor for synthetic prices (the world is synthetic)
     notes: List[str] = field(default_factory=list)
 
     @property
@@ -57,14 +60,18 @@ class Locale:
         return f"{bp // 100}" if bp % 100 == 0 else f"{bp / 100:g}".replace(".", self.money.decimal)
 
 
-PACKS = ("se", "de", "fr", "pl", "fi")
+# A pack is a module eurl/locales/<cc>.py defining LOCALE; adding a country is adding one file.
+PACKS = tuple(sorted(p.stem for p in Path(__file__).parent.glob("[a-z][a-z].py")))
 
 
 def load(country: str) -> Locale:
     code = country.lower()
     if code not in PACKS:
         raise KeyError(f"no locale pack for {country!r}; available: {', '.join(PACKS)}")
-    return importlib.import_module(f"eurl.locales.{code}").LOCALE
+    locale = importlib.import_module(f"eurl.locales.{code}").LOCALE
+    if locale.country.lower() != code:
+        raise ValueError(f"pack {code} declares country {locale.country}")
+    return locale
 
 
 def all_packs() -> List[Locale]:

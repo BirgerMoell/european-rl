@@ -1,0 +1,19 @@
+{
+ "_review": "author",
+ "money": "End with a line of the form `ANSWER: <amount>`, for example `ANSWER: {example}`.",
+ "date": "End with a line of the form `ANSWER: YYYY-MM-DD`.",
+ "datetime": "End with a line of the form `ANSWER: YYYY-MM-DD HH:MM`.",
+ "integer": "End with a line of the form `ANSWER: <whole number>`.",
+ "text": "End with a line of the form `ANSWER: <answer>`.",
+ "mapping": "End with `ANSWER:` followed by a JSON object.",
+ "strings": "End with `ANSWER:` followed by a JSON list of strings, exactly as written in the text and in the order they appear.",
+ "abstain": "If the task cannot be solved with the information given, answer `ANSWER: UNKNOWN`.",
+ "done": "Done.",
+ "err_action": "invalid action: call a tool or write a final answer",
+ "err_tool": "unknown tool: {name}",
+ "err_args_object": "the arguments must be a JSON object",
+ "err_missing": "missing argument: {key}",
+ "err_unknown_arg": "unknown argument: {key}",
+ "err_type": "wrong type for {key}: {expected} expected",
+ "err_enum": "invalid value for {key}"
+}

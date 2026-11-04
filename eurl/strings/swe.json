@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Avsluta med en rad i formen `ANSWER: <belopp>`, till exempel `ANSWER: {example}`.",
+ "date": "Avsluta med en rad i formen `ANSWER: ÅÅÅÅ-MM-DD`.",
+ "datetime": "Avsluta med en rad i formen `ANSWER: ÅÅÅÅ-MM-DD TT:MM`.",
+ "integer": "Avsluta med en rad i formen `ANSWER: <heltal>`.",
+ "text": "Avsluta med en rad i formen `ANSWER: <svar>`.",
+ "mapping": "Avsluta med `ANSWER:` följt av ett JSON-objekt.",
+ "strings": "Avsluta med `ANSWER:` följt av en JSON-lista med strängar, exakt som de står i texten och i den ordning de förekommer.",
+ "abstain": "Om uppgiften inte går att lösa med den information som finns, svara `ANSWER: UNKNOWN`.",
+ "done": "Klart.",
+ "err_action": "ogiltig handling: anropa ett verktyg eller skriv ett slutsvar",
+ "err_tool": "okänt verktyg: {name}",
+ "err_args_object": "argumenten måste vara ett JSON-objekt",
+ "err_missing": "argument saknas: {key}",
+ "err_unknown_arg": "okänt argument: {key}",
+ "err_type": "fel typ för {key}: {expected} förväntas",
+ "err_enum": "ogiltigt värde för {key}"
+}

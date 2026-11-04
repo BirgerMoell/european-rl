@@ -39,5 +39,6 @@ LOCALE = Locale(
     last_names=("Nowak", "Kowalski", "Wiśniewski", "Wójcik", "Kowalczyk", "Kamiński", "Lewandowski",
                 "Zieliński", "Szymański", "Woźniak", "Dąbrowski", "Kozłowski"),
     cities=("Kraków", "Gdańsk", "Poznań", "Wrocław", "Łódź", "Lublin", "Katowice", "Warszawa"),
+    price_scale=4,
     office_hours=("08:00", "16:00"), lunch=("12:00", "12:30"),
 )

@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Termine par une ligne de la forme `ANSWER: <montant>`, par exemple `ANSWER: {example}`.",
+ "date": "Termine par une ligne de la forme `ANSWER: AAAA-MM-JJ`.",
+ "datetime": "Termine par une ligne de la forme `ANSWER: AAAA-MM-JJ HH:MM`.",
+ "integer": "Termine par une ligne de la forme `ANSWER: <nombre entier>`.",
+ "text": "Termine par une ligne de la forme `ANSWER: <réponse>`.",
+ "mapping": "Termine par `ANSWER:` suivi d'un objet JSON.",
+ "strings": "Termine par `ANSWER:` suivi d'une liste JSON de chaînes, exactement telles qu'elles figurent dans le texte et dans leur ordre d'apparition.",
+ "abstain": "Si la tâche ne peut pas être résolue avec les informations disponibles, réponds `ANSWER: UNKNOWN`.",
+ "done": "Terminé.",
+ "err_action": "action invalide : appelle un outil ou écris une réponse finale",
+ "err_tool": "outil inconnu : {name}",
+ "err_args_object": "les arguments doivent être un objet JSON",
+ "err_missing": "argument manquant : {key}",
+ "err_unknown_arg": "argument inconnu : {key}",
+ "err_type": "type incorrect pour {key} : {expected} attendu",
+ "err_enum": "valeur invalide pour {key}"
+}

@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Zakończ wierszem w formie `ANSWER: <kwota>`, na przykład `ANSWER: {example}`.",
+ "date": "Zakończ wierszem w formie `ANSWER: RRRR-MM-DD`.",
+ "datetime": "Zakończ wierszem w formie `ANSWER: RRRR-MM-DD GG:MM`.",
+ "integer": "Zakończ wierszem w formie `ANSWER: <liczba całkowita>`.",
+ "text": "Zakończ wierszem w formie `ANSWER: <odpowiedź>`.",
+ "mapping": "Zakończ `ANSWER:`, a po nim obiektem JSON.",
+ "strings": "Zakończ `ANSWER:`, a po nim listą JSON napisów, dokładnie w brzmieniu z tekstu i w kolejności występowania.",
+ "abstain": "Jeśli zadania nie da się rozwiązać na podstawie podanych informacji, odpowiedz `ANSWER: UNKNOWN`.",
+ "done": "Gotowe.",
+ "err_action": "nieprawidłowa akcja: wywołaj narzędzie albo napisz odpowiedź końcową",
+ "err_tool": "nieznane narzędzie: {name}",
+ "err_args_object": "argumenty muszą być obiektem JSON",
+ "err_missing": "brak argumentu: {key}",
+ "err_unknown_arg": "nieznany argument: {key}",
+ "err_type": "zły typ dla {key}: oczekiwano {expected}",
+ "err_enum": "nieprawidłowa wartość dla {key}"
+}

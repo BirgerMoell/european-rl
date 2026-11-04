@@ -42,5 +42,6 @@ LOCALE = Locale(
     last_names=("Andersson", "Johansson", "Karlsson", "Nilsson", "Eriksson", "Larsson", "Olsson", "Persson",
                 "Svensson", "Lindberg", "Holm", "Berg"),
     cities=("Stockholm", "Göteborg", "Malmö", "Uppsala", "Umeå", "Linköping", "Örebro", "Luleå"),
+    price_scale=11,
     office_hours=("08:00", "17:00"), lunch=("12:00", "13:00"),
 )

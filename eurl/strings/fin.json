@@ -1,0 +1,19 @@
+{
+ "_review": "llm",
+ "money": "Päätä rivillä muodossa `ANSWER: <summa>`, esimerkiksi `ANSWER: {example}`.",
+ "date": "Päätä rivillä muodossa `ANSWER: VVVV-KK-PP`.",
+ "datetime": "Päätä rivillä muodossa `ANSWER: VVVV-KK-PP TT:MM`.",
+ "integer": "Päätä rivillä muodossa `ANSWER: <kokonaisluku>`.",
+ "text": "Päätä rivillä muodossa `ANSWER: <vastaus>`.",
+ "mapping": "Päätä merkinnällä `ANSWER:` ja sen perään JSON-objektilla.",
+ "strings": "Päätä merkinnällä `ANSWER:` ja sen perään JSON-listalla merkkijonoja täsmälleen tekstin kirjoitusasussa ja esiintymisjärjestyksessä.",
+ "abstain": "Jos tehtävää ei voi ratkaista annettujen tietojen perusteella, vastaa `ANSWER: UNKNOWN`.",
+ "done": "Valmis.",
+ "err_action": "virheellinen toiminto: kutsu työkalua tai kirjoita lopullinen vastaus",
+ "err_tool": "tuntematon työkalu: {name}",
+ "err_args_object": "argumenttien on oltava JSON-objekti",
+ "err_missing": "argumentti puuttuu: {key}",
+ "err_unknown_arg": "tuntematon argumentti: {key}",
+ "err_type": "väärä tyyppi kentälle {key}: odotettiin {expected}",
+ "err_enum": "virheellinen arvo kentälle {key}"
+}
