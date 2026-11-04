@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Is tú cúntóir {organizer} ag {company} agus oibríonn tú le huirlisí féilire agus ríomhphoist an ghrúpa. Déileáil leis an ríomhphost nua sa bhosca isteach. Beartas sceidealaithe an ghrúpa: bogtar cruinniú chuig an tráth tosaithe is luaithe, ar an uair nó ar an leathuair, sa tseachtain a iarradh nuair a bhíonn gach rannpháirtí saor — laistigh d'uaireanta oifige a n-oifige féin agus taobh amuigh dá sos lóin, ina n-am áitiúil féin, agus ní ag an deireadh seachtaine ná ar lá saoire ina dtír féin. Coinnigh fad agus rannpháirtithe an chruinnithe. Ansin seol ríomhphost chuig gach rannpháirtí seachas {organizer} leis an dáta nua (YYYY-MM-DD) agus an t-am nua (HH:MM) ina am áitiúil féin. Mura n-oireann aon am, ná bog an cruinniú; freagair an duine a d'iarr é amháin. Ná seol ríomhphost chuig aon duine eile. Críochnaigh le teachtaireacht ghearr gan glao uirlise.",
+  "Tugann tú cúnamh do {organizer} ({company}). Tá ríomhphost nua sa bhosca isteach; déileáil leis leis na huirlisí féilire agus ríomhphoist. Rialacha chun cruinnithe a bhogadh: roghnaigh an tráth is luaithe sa tseachtain a iarradh (ag tosú ar an uair nó ar an leathuair) atá laistigh d'uaireanta oifige áitiúla gach rannpháirtí, a sheachnaíonn a sos lóin, deirí seachtaine agus laethanta saoire a dtíre, agus nach dtagann salach ar a gcruinnithe eile; coinnigh an fad agus na rannpháirtithe. Cuir an dáta nua (YYYY-MM-DD) agus an t-am nua (HH:MM) in iúl do gach rannpháirtí seachas {organizer} ina gcrios ama féin. Mura bhfuil a leithéid de thráth ann, fág an cruinniú mar atá agus freagair an seoltóir amháin. Nuair atá tú críochnaithe, scríobh teachtaireacht ghearr deiridh gan glao uirlise."
+ ],
+ "request": [
+  "Dia duit {organizer},\n\nní féidir liom freastal ar \"{title}\" ag an am reatha ({original}), faraor. An bhféadfá é a bhogadh chuig an am is luaithe sa tseachtain ó {monday} go {friday} nuair a bheidh gach duine againn saor, agus an t-am nua a chur in iúl do chách?\n\nGo raibh maith agat,\n{name}",
+  "A {organizer}, a chara,\n\ntharla rud éigin agus ní féidir liom freastal ar \"{title}\" ar {original}. Iarraim ort é a athsceidealú chuig an gcéad am is féidir idir {monday} agus {friday} a oireann do na rannpháirtithe go léir, agus gach duine a chur ar an eolas.\n\nLe meas,\n{name}"
+ ],
+ "request_subject": "Athsceidealú: {title}",
+ "notice_subject": "Am nua: {title}",
+ "notice": "Dia daoibh,\n\nTá \"{title}\" bogtha go {date} ag {time} ({tz}).\n\nLe meas",
+ "no_slot_reply": "Dia duit,\n\nFaraor, níl aon am sa tseachtain a iarradh nuair a bhíonn rannpháirtithe uile \"{title}\" saor, mar sin fanfaidh an cruinniú mar a beartaíodh.\n\nLe meas",
+ "titles": [
+  "Athbhreithniú ráithiúil ar an mbuiséad",
+  "Grúpa stiúrtha an tionscadail",
+  "Idirbheartaíocht le soláthraí",
+  "Nuashonrú ar shlándáil TF"
+ ],
+ "busy_titles": [
+  "Glao le custaiméir",
+  "Ceardlann inmheánach",
+  "Cruinniú duine le duine"
+ ],
+ "done": "Tá an cruinniú socraithe."
+}

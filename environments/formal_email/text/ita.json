@@ -1,0 +1,74 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Scriva un'e-mail a {name} presso {company} ({city}). {topic} Scrive per conto di {sender}.\nRequisiti:\n{requirements}\nScriva solo l'e-mail.",
+  "Prepari la seguente e-mail per conto di {sender}. Destinatario: {name}, {company}, {city}. {topic}\nL'e-mail deve soddisfare questi requisiti:\n{requirements}\nRisponda soltanto con il testo dell'e-mail."
+ ],
+ "topics": {
+  "payment_reminder": "Si tratta di un cortese promemoria: una fattura di {amount} era in scadenza il {date}.",
+  "order_confirmation": "Conferma un ordine del valore di {amount}, con consegna il {date}.",
+  "meeting_confirmation": "Conferma un incontro il {date} per discutere un contratto del valore di {amount}."
+ },
+ "req": {
+  "subject": "La prima riga è l'oggetto e inizia con \"{label}\".",
+  "closing": "Concluda con una formula di saluto usuale come {examples}, seguita dal nome del mittente.",
+  "formal": "Si rivolga al destinatario dando del Lei per tutta l'e-mail (Lei, Suo, Sua), mai del tu.",
+  "amount": "Scriva l'importo nel formato monetario locale del destinatario.",
+  "date": "Scriva la data nel formato di data locale del destinatario.",
+  "name": "Si rivolga al destinatario con il nome completo, scritto esattamente come indicato.",
+  "no_english": "Non usi parole inglesi.",
+  "words": "L'e-mail contiene tra {min} e {max} parole.",
+  "bullets": "Inserisca esattamente {n} elenchi puntati (righe che iniziano con \"- \")."
+ },
+ "subject_label": "Oggetto:",
+ "closings": [
+  "Cordiali saluti",
+  "Distinti saluti",
+  "Cordialmente"
+ ],
+ "formal": {
+  "formal": [
+   "Lei",
+   "Suo",
+   "Sua",
+   "Suoi"
+  ],
+  "informal": [
+   "tu",
+   "ti",
+   "te",
+   "tuo",
+   "tua",
+   "tuoi",
+   "tue"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Promemoria relativo alla Sua fattura in sospeso",
+  "order_confirmation": "Conferma del Suo ordine",
+  "meeting_confirmation": "Conferma del nostro incontro"
+ },
+ "ref_body": {
+  "payment_reminder": "con la presente Le ricordiamo cortesemente che l'importo di {amount} della Sua fattura era in scadenza il {date}.",
+  "order_confirmation": "con la presente confermiamo il Suo ordine di {amount}; la consegna è prevista per il {date}.",
+  "meeting_confirmation": "con la presente Le confermiamo il nostro incontro del {date} relativo al contratto del valore di {amount}, come da Sua richiesta."
+ },
+ "ref_greeting": "Gentile {name},",
+ "ref_bullets": [
+  "il numero di riferimento è indicato nel documento allegato",
+  "il nostro servizio clienti è disponibile nei giorni feriali",
+  "tutti i prezzi includono le imposte applicabili",
+  "La preghiamo di conservare questo messaggio"
+ ],
+ "ref_filler": [
+  "La ringraziamo per la buona collaborazione degli ultimi mesi.",
+  "Qualora qualcosa non fosse chiaro, non esiti a contattarci.",
+  "Il nostro ufficio è aperto dal lunedì al venerdì durante il consueto orario di lavoro.",
+  "Saremo lieti di rispondere a qualsiasi Sua domanda sui dettagli.",
+  "Una copia dei documenti pertinenti è stata archiviata nel nostro sistema.",
+  "Confidiamo di proseguire la nostra collaborazione anche nel prossimo anno.",
+  "Qualora avesse già provveduto, La preghiamo di non tenere conto del presente messaggio.",
+  "La ringraziamo anticipatamente per la Sua attenzione."
+ ],
+ "word_factor": 1.0
+}

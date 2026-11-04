@@ -44,7 +44,7 @@ def languages() -> tuple:
 def _countries_with_text() -> list:
     from eurl.locales import load
     langs = set(languages())
-    return [c.upper() for c in PACKS if load(c).language in langs]
+    return [c.upper() for c in PACKS if set(load(c).languages) & langs]
 
 
 def _fmt(d: dt.datetime) -> str:
@@ -163,8 +163,9 @@ class MeetingReschedule(ToolEnvironment):
     @property
     def languages(self) -> tuple:
         from eurl.locales import load
-        langs = {load(c).language for c in _countries_with_text()}
-        return tuple(sorted(langs | ({"eng"} if "eng" in languages() else set())))
+        have = set(languages())
+        langs = {lang for c in _countries_with_text() for lang in load(c).languages if lang in have}
+        return tuple(sorted(langs | ({"eng"} if "eng" in have else set())))
 
     def generate(self, rng, language=None) -> ToolTask:
         from eurl.locales import load as load_locale
@@ -172,7 +173,7 @@ class MeetingReschedule(ToolEnvironment):
         level = rng.choice([1, 2, 3])
         lang = language or rng.choice(self.languages)
         # English is the group office language: an English instruction may come from any office
-        home = rng.choice(countries if lang == "eng" else [c for c in countries if load_locale(c).language == lang])
+        home = rng.choice(countries if lang == "eng" else [c for c in countries if lang in load_locale(c).languages])
         others = [c for c in countries if c != home]
         chosen = [home] + rng.sample(others, min(level - 1, len(others)))
         # from level 2, usually include an office in another UTC offset (the time-zone skill)
@@ -183,6 +184,13 @@ class MeetingReschedule(ToolEnvironment):
         if level >= 2 and shifted and all(offset(c) == offset(home) for c in chosen) and rng.random() < 0.8:
             chosen[-1] = rng.choice(shifted)
         world = make_world(rng, chosen, staff_per_office=3)
+        have = set(languages())
+        for p in world.people:  # people speak one of their country's languages (Catalan, Basque, Swedish in FI, …)
+            spoken = [x for x in p.office.locale.languages if x in have]
+            if spoken:
+                p.language = rng.choice(spoken)
+        if lang != "eng":
+            world.people[0].language = lang   # the organiser reads the instruction in their own language
         t = text(lang)
         organizer = world.people[0]
         pool = [p for p in world.people[1:]]

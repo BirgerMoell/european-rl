@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "É o assistente de {organizer} na {company} e trabalha com as ferramentas de calendário e de correio eletrónico do grupo. Trate o novo e-mail na caixa de entrada. Política de agendamento do grupo: uma reunião é transferida para o início mais cedo possível, à hora certa ou à meia hora, na semana pedida em que todos os participantes estejam livres — dentro do horário de expediente do seu próprio escritório e fora da respetiva pausa para almoço, na sua própria hora local, e não ao fim de semana nem num dia de folga do seu país. Mantenha a duração e os participantes da reunião. Em seguida, envie a cada participante, exceto {organizer}, um e-mail com a nova data (AAAA-MM-DD) e hora (HH:MM) na sua própria hora local. Se nenhum horário for possível, não mova a reunião e responda apenas à pessoa que fez o pedido. Não envie e-mails a mais ninguém. Termine com uma mensagem curta sem chamar nenhuma ferramenta.",
+  "Presta assistência a {organizer} ({company}). Há um novo e-mail na caixa de entrada; trate-o com as ferramentas de calendário e de correio eletrónico. Regras para mudar reuniões: escolha o horário mais cedo da semana pedida (com início à hora certa ou à meia hora) que fique dentro do horário de expediente local de cada participante, evite a pausa para almoço, os fins de semana e os dias de folga do seu país e não coincida com as suas outras reuniões; mantenha a duração e os participantes. Informe cada participante, exceto {organizer}, da nova data (AAAA-MM-DD) e hora (HH:MM) no seu próprio fuso horário. Se não existir tal horário, deixe a reunião como está e responda apenas ao remetente. No fim, escreva uma mensagem curta de conclusão sem chamar nenhuma ferramenta."
+ ],
+ "request": [
+  "Olá {organizer},\n\ninfelizmente não consigo estar presente em \"{title}\" no horário atual ({original}). Podes mudá-la para o primeiro momento da semana de {monday} a {friday} em que estejamos todos livres e avisar todos do novo horário?\n\nObrigado,\n{name}",
+  "Caro/a {organizer},\n\nsurgiu um imprevisto e não poderei participar em \"{title}\" em {original}. Peço-lhe que a reagende para o primeiro horário possível entre {monday} e {friday} que convenha a todos os participantes e que informe todos.\n\nCom os melhores cumprimentos,\n{name}"
+ ],
+ "request_subject": "Reagendamento: {title}",
+ "notice_subject": "Novo horário: {title}",
+ "notice": "Bom dia,\n\n\"{title}\" foi transferida para {date} às {time} ({tz}).\n\nCom os melhores cumprimentos",
+ "no_slot_reply": "Bom dia,\n\ninfelizmente não existe nenhum horário na semana pedida em que todos os participantes de \"{title}\" estejam livres, pelo que a reunião se mantém como planeado.\n\nCom os melhores cumprimentos",
+ "titles": [
+  "Revisão trimestral do orçamento",
+  "Comité de direção do projeto",
+  "Negociação com fornecedor",
+  "Atualização sobre segurança informática"
+ ],
+ "busy_titles": [
+  "Chamada com cliente",
+  "Workshop interno",
+  "Reunião individual"
+ ],
+ "done": "A reunião está tratada."
+}

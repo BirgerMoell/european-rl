@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Usted es el asistente de {organizer} en {company} y trabaja con las herramientas de calendario y correo electrónico del grupo. Gestione el nuevo correo de la bandeja de entrada. Política de reuniones del grupo: una reunión se traslada al inicio más temprano, en punto o a la media, de la semana solicitada en el que todos los participantes estén libres — dentro del horario de oficina de su propia sede y fuera de su pausa para comer, en su propia hora local, y no en fin de semana ni en un día no laborable de su país. Mantenga la duración y los participantes de la reunión. Después envíe a cada participante, excepto a {organizer}, un correo con la nueva fecha (AAAA-MM-DD) y hora (HH:MM) en su propia hora local. Si ningún horario es posible, no traslade la reunión y responda solo a la persona que lo pidió. No envíe correos a nadie más. Termine con un mensaje breve sin llamar a ninguna herramienta.",
+  "Usted asiste a {organizer} ({company}). Hay un correo nuevo en la bandeja de entrada; gestiónelo con las herramientas de calendario y correo. Normas para trasladar reuniones: elija el primer hueco de la semana solicitada (con inicio en punto o a la media) que esté dentro del horario de oficina local de cada participante, evite su pausa para comer, los fines de semana y los días no laborables de su país, y no coincida con sus otras reuniones; mantenga la duración y los participantes. Comunique a cada participante, excepto a {organizer}, la nueva fecha (AAAA-MM-DD) y hora (HH:MM) en su propia zona horaria. Si no existe tal hueco, deje la reunión como está y responda solo al remitente. Al terminar, escriba un breve mensaje final sin llamar a ninguna herramienta."
+ ],
+ "request": [
+  "Hola, {organizer}:\n\nme temo que no puedo asistir a «{title}» en el horario actual ({original}). ¿Podrías moverla al primer momento de la semana del {monday} al {friday} en que estemos todos libres e informar a todos del nuevo horario?\n\nGracias,\n{name}",
+  "Estimado/a {organizer}:\n\nme ha surgido un imprevisto y no puedo asistir a «{title}» el {original}. Le ruego que la reprograme para el primer horario posible entre el {monday} y el {friday} que convenga a todos los participantes y que informe a todos.\n\nUn cordial saludo,\n{name}"
+ ],
+ "request_subject": "Cambio de fecha: {title}",
+ "notice_subject": "Nuevo horario: {title}",
+ "notice": "Buenos días:\n\n«{title}» se ha trasladado al {date} a las {time} ({tz}).\n\nUn cordial saludo",
+ "no_slot_reply": "Buenos días:\n\nlamentablemente no hay ningún horario en la semana solicitada en el que todos los participantes de «{title}» estén libres, por lo que la reunión se mantiene según lo previsto.\n\nUn cordial saludo",
+ "titles": [
+  "Revisión trimestral del presupuesto",
+  "Comité de dirección del proyecto",
+  "Negociación con proveedores",
+  "Actualización de seguridad informática"
+ ],
+ "busy_titles": [
+  "Llamada con cliente",
+  "Taller interno",
+  "Reunión individual"
+ ],
+ "done": "La reunión está gestionada."
+}

@@ -1,0 +1,72 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Escrigui un correu electrònic a {name} de {company} ({city}). {topic} Vostè escriu en nom de {sender}.\nRequisits:\n{requirements}\nEscrigui només el correu.",
+  "Redacti el correu electrònic següent en nom de {sender}. Destinatari: {name}, {company}, {city}. {topic}\nEl correu ha de complir aquests requisits:\n{requirements}\nRespongui només amb el text del correu."
+ ],
+ "topics": {
+  "payment_reminder": "És un recordatori amable que una factura de {amount} vencia el {date}.",
+  "order_confirmation": "Confirma una comanda per valor de {amount}, amb lliurament el {date}.",
+  "meeting_confirmation": "Confirma una reunió el {date} per tractar un contracte per valor de {amount}."
+ },
+ "req": {
+  "subject": "La primera línia és l'assumpte i comença amb «{label}».",
+  "closing": "Acabi amb una fórmula de comiat habitual com {examples}, seguida del nom del remitent.",
+  "formal": "Tracti el destinatari de vostè en tot el correu, mai de tu.",
+  "amount": "Escrigui l'import en el format monetari local del destinatari.",
+  "date": "Escrigui la data en el format de data local del destinatari.",
+  "name": "Adreci's al destinatari pel nom complet, escrit exactament com s'indica.",
+  "no_english": "No faci servir cap paraula en anglès.",
+  "words": "El correu té entre {min} i {max} paraules.",
+  "bullets": "Inclogui exactament {n} pics (línies que comencen amb «- »)."
+ },
+ "subject_label": "Assumpte:",
+ "closings": [
+  "Atentament",
+  "Cordialment",
+  "Salutacions cordials"
+ ],
+ "formal": {
+  "formal": [
+   "vostè",
+   "vostès",
+   "Vostè",
+   "Vostès"
+  ],
+  "informal": [
+   "tu",
+   "teu",
+   "teva",
+   "teus",
+   "teves"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Recordatori de la factura pendent",
+  "order_confirmation": "Confirmació de la comanda",
+  "meeting_confirmation": "Confirmació de la nostra reunió"
+ },
+ "ref_body": {
+  "payment_reminder": "per mitjà d'aquest correu li recordem a vostè amablement que l'import de {amount} vencia el {date}.",
+  "order_confirmation": "per mitjà d'aquest correu li confirmem a vostè la comanda de {amount}; el lliurament està previst per al {date}.",
+  "meeting_confirmation": "per mitjà d'aquest correu li confirmem a vostè la nostra reunió del {date} sobre el contracte per valor de {amount}."
+ },
+ "ref_greeting": "Benvolgut/da {name},",
+ "ref_bullets": [
+  "el número de referència figura en el document adjunt",
+  "el nostre servei d'atenció al client està disponible els dies feiners",
+  "tots els preus inclouen els impostos aplicables",
+  "li preguem que conservi aquest missatge"
+ ],
+ "ref_filler": [
+  "Li agraïm la bona col·laboració dels darrers mesos.",
+  "Si hi ha res que no quedi clar, no dubti a posar-se en contacte amb nosaltres.",
+  "La nostra oficina està oberta de dilluns a divendres en l'horari habitual.",
+  "Respondrem amb molt de gust qualsevol pregunta sobre els detalls.",
+  "Una còpia dels documents corresponents s'ha desat al nostre sistema.",
+  "Esperem continuar la nostra col·laboració durant l'any vinent.",
+  "Si vostè ja ha resolt aquest assumpte, li preguem que no tingui en compte aquest missatge.",
+  "Li agraïm per endavant la seva atenció."
+ ],
+ "word_factor": 1.0
+}

@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Lei è l'assistente di {organizer} presso {company} e utilizza gli strumenti di calendario e di posta elettronica del gruppo. Gestisca la nuova e-mail nella casella di posta. Regola del gruppo per le riunioni: una riunione viene spostata al primo orario di inizio possibile, all'ora esatta o alla mezz'ora, nella settimana richiesta in cui tutti i partecipanti sono liberi — entro l'orario d'ufficio della propria sede e al di fuori della relativa pausa pranzo, nella propria ora locale, e non nel fine settimana né in un giorno festivo del proprio paese. Mantenga la durata e i partecipanti della riunione. Poi invii a ogni partecipante tranne {organizer} un'e-mail con la nuova data (AAAA-MM-GG) e l'ora (HH:MM) nella sua ora locale. Se nessun orario è possibile, non sposti la riunione e risponda solo alla persona che ha fatto la richiesta. Non scriva a nessun altro. Concluda con un breve messaggio senza chiamare alcuno strumento.",
+  "Lei assiste {organizer} ({company}). Nella casella di posta c'è una nuova e-mail; la gestisca con gli strumenti di calendario e di posta elettronica. Regole per spostare le riunioni: scelga il primo orario disponibile nella settimana richiesta (con inizio all'ora esatta o alla mezz'ora) che rientri nell'orario d'ufficio locale di ogni partecipante, eviti la pausa pranzo, i fine settimana e i giorni festivi del suo paese e non si sovrapponga ad altre riunioni; mantenga durata e partecipanti. Comunichi a ogni partecipante tranne {organizer} la nuova data (AAAA-MM-GG) e l'ora (HH:MM) nel suo fuso orario. Se non esiste un tale orario, lasci la riunione invariata e risponda solo al mittente. Al termine, scriva un breve messaggio conclusivo senza chiamare alcuno strumento."
+ ],
+ "request": [
+  "Ciao {organizer},\n\npurtroppo non riesco a partecipare a \"{title}\" all'orario attuale ({original}). Potresti spostarla al primo momento della settimana dal {monday} al {friday} in cui siamo tutti liberi, e comunicare a tutti il nuovo orario?\n\nGrazie,\n{name}",
+  "Gentile {organizer},\n\nho avuto un imprevisto e non potrò partecipare a \"{title}\" il {original}. La prego di riprogrammarla al primo orario possibile tra il {monday} e il {friday} che vada bene a tutti i partecipanti e di informare tutti.\n\nCordiali saluti,\n{name}"
+ ],
+ "request_subject": "Spostamento: {title}",
+ "notice_subject": "Nuovo orario: {title}",
+ "notice": "Buongiorno,\n\n\"{title}\" è stata spostata al {date} alle {time} ({tz}).\n\nCordiali saluti",
+ "no_slot_reply": "Buongiorno,\n\npurtroppo nella settimana richiesta non c'è alcun orario in cui tutti i partecipanti di \"{title}\" siano liberi, quindi la riunione resta come previsto.\n\nCordiali saluti",
+ "titles": [
+  "Revisione trimestrale del budget",
+  "Comitato di pilotaggio del progetto",
+  "Trattativa con il fornitore",
+  "Aggiornamento sulla sicurezza informatica"
+ ],
+ "busy_titles": [
+  "Chiamata con un cliente",
+  "Workshop interno",
+  "Colloquio individuale"
+ ],
+ "done": "La riunione è stata gestita."
+}

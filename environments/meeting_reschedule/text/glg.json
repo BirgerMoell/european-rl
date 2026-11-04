@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Vostede é o asistente de {organizer} en {company} e traballa coas ferramentas de calendario e de correo electrónico do grupo. Xestione o correo novo da caixa de entrada. Política de reunións do grupo: unha reunión trasládase ao inicio máis temperán posible, á hora en punto ou á media, da semana solicitada no que todos os participantes estean libres — dentro do horario de oficina da súa propia sede e fóra da súa pausa para xantar, na súa propia hora local, e non na fin de semana nin nun día festivo do seu país. Manteña a duración e os participantes da reunión. Despois envíe a cada participante, agás {organizer}, un correo coa nova data (AAAA-MM-DD) e hora (HH:MM) na súa propia hora local. Se ningún horario é posible, non traslade a reunión e responda só á persoa que o pediu. Non envíe correos a ninguén máis. Remate cunha mensaxe breve sen chamar a ningunha ferramenta.",
+  "Vostede asiste a {organizer} ({company}). Hai un correo novo na caixa de entrada; xestióneo coas ferramentas de calendario e de correo. Normas para trasladar reunións: escolla a primeira franxa da semana solicitada (con inicio á hora en punto ou á media) que estea dentro do horario de oficina local de cada participante, evite a súa pausa para xantar, as fins de semana e os días festivos do seu país, e non coincida coas súas outras reunións; manteña a duración e os participantes. Comunique a cada participante, agás {organizer}, a nova data (AAAA-MM-DD) e hora (HH:MM) no seu propio fuso horario. Se non existe tal franxa, deixe a reunión como está e responda só ao remitente. Ao rematar, escriba unha breve mensaxe final sen chamar a ningunha ferramenta."
+ ],
+ "request": [
+  "Ola, {organizer}:\n\ntemo que non podo asistir a «{title}» no horario actual ({original}). Poderías movela ao primeiro momento da semana do {monday} ao {friday} no que esteamos todos libres e avisar a todos do novo horario?\n\nGrazas,\n{name}",
+  "Estimado/a {organizer}:\n\nxurdiume un imprevisto e non poderei asistir a «{title}» o {original}. Prégolle que a reprograme para o primeiro horario posible entre o {monday} e o {friday} que lles conveña a todos os participantes e que informe a todos.\n\nUn cordial saúdo,\n{name}"
+ ],
+ "request_subject": "Cambio de horario: {title}",
+ "notice_subject": "Novo horario: {title}",
+ "notice": "Bos días:\n\n«{title}» trasladouse ao {date} ás {time} ({tz}).\n\nUn cordial saúdo",
+ "no_slot_reply": "Bos días:\n\nlamentablemente non hai ningún horario na semana solicitada no que todos os participantes de «{title}» estean libres, polo que a reunión mantense tal como estaba prevista.\n\nUn cordial saúdo",
+ "titles": [
+  "Revisión trimestral do orzamento",
+  "Comité de dirección do proxecto",
+  "Negociación con provedores",
+  "Actualización de seguridade informática"
+ ],
+ "busy_titles": [
+  "Chamada con cliente",
+  "Obradoiro interno",
+  "Reunión individual"
+ ],
+ "done": "A reunión está xestionada."
+}

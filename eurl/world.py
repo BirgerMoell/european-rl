@@ -72,8 +72,26 @@ class World:
         return next(p for p in self.people if p.email == email)
 
 
+# Latin transliteration for e-mail local parts (Cyrillic incl. Serbian/Macedonian/Ukrainian letters, Greek, Georgian).
+_TRANSLIT = {
+    **dict(zip("абвгдезийклмнопрстуфхцчшщъьюяёіїєґђјљњћџѓќѕ",
+               ["a", "b", "v", "g", "d", "e", "z", "i", "y", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "f",
+                "h", "ts", "ch", "sh", "sht", "a", "", "yu", "ya", "yo", "i", "yi", "ye", "g", "dj", "j", "lj", "nj",
+                "c", "dz", "gj", "kj", "dz"])),
+    "ж": "zh", "ы": "y", "э": "e",
+    **dict(zip("αβγδεζηθικλμνξοπρσςτυφχψωάέήίόύώϊϋΐΰ",
+               ["a", "v", "g", "d", "e", "z", "i", "th", "i", "k", "l", "m", "n", "x", "o", "p", "r", "s", "s", "t",
+                "y", "f", "ch", "ps", "o", "a", "e", "i", "i", "o", "y", "o", "i", "y", "i", "y"])),
+    **dict(zip("აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ",
+               ["a", "b", "g", "d", "e", "v", "z", "t", "i", "k", "l", "m", "n", "o", "p", "zh", "r", "s", "t", "u",
+                "p", "k", "gh", "q", "sh", "ch", "ts", "dz", "ts", "ch", "kh", "j", "h"])),
+}
+
+
 def _slug(text: str) -> str:
     import unicodedata
+    text = text.lower().replace("ου", "ou").replace("ού", "ou")
+    text = "".join(_TRANSLIT.get(ch, ch) for ch in text)
     s = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
     return "".join(ch for ch in s if ch.isalnum() or ch == ".")
 
@@ -87,12 +105,13 @@ def make_world(rng: random.Random, countries: List[str], staff_per_office: int =
         office = Office(country, f"{group} {loc.name} {rng.choice(loc.company_suffixes)}", rng.choice(loc.cities), loc)
         offices.append(office)
         for _ in range(staff_per_office):
-            while True:
+            for attempt in range(50):
                 first, last = full_name(rng, loc)
-                email = f"{_slug(first)}.{_slug(last)}@{domain}"
+                local_part = f"{_slug(first)}.{_slug(last)}".strip(".") or "staff"
+                email = f"{local_part}{attempt // 10 or ''}@{domain}"   # a digit only after repeated collisions
                 if email not in used:
-                    used.add(email)
                     break
+            used.add(email)
             people.append(Person(f"{first} {last}", email, office, loc.language))
     return World(group, offices, people)
 

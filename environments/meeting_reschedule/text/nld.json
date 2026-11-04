@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "U bent de assistent van {organizer} bij {company} en werkt met de agenda- en e-mailtools van de groep. Behandel de nieuwe e-mail in de inbox. Planningsbeleid van de groep: een vergadering wordt verplaatst naar het vroegste begintijdstip, op het hele of halve uur, in de gevraagde week waarop alle deelnemers vrij zijn — binnen de kantooruren van hun eigen vestiging en buiten de lunchpauze daar, in hun eigen lokale tijd, en niet in het weekend of op een vrije dag in hun eigen land. Behoud de duur en de deelnemers van de vergadering. Stuur daarna iedere deelnemer behalve {organizer} een e-mail met de nieuwe datum (JJJJ-MM-DD) en tijd (UU:MM) in diens eigen lokale tijd. Als geen enkel tijdstip mogelijk is, verplaats de vergadering dan niet en antwoord alleen de persoon die het verzoek deed. Stuur niemand anders een e-mail. Sluit af met een kort bericht zonder toolaanroep.",
+  "U assisteert {organizer} ({company}). Er staat een nieuwe e-mail in de inbox; handel die af met de agenda- en e-mailtools. Regels voor het verplaatsen van vergaderingen: kies het vroegste tijdstip in de gevraagde week (begin op het hele of halve uur) dat binnen de lokale kantooruren van iedere deelnemer valt, hun lunchpauze, weekenden en de vrije dagen van hun land vermijdt en niet botst met hun andere afspraken; behoud duur en deelnemers. Informeer iedere deelnemer behalve {organizer} over de nieuwe datum (JJJJ-MM-DD) en tijd (UU:MM) in diens eigen tijdzone. Is er geen zo'n tijdstip, laat de vergadering dan ongewijzigd en antwoord alleen de afzender. Sluit af met een kort bericht zonder toolaanroep."
+ ],
+ "request": [
+  "Hoi {organizer},\n\nhelaas kan ik niet bij \"{title}\" op het huidige tijdstip ({original}). Zou je de vergadering kunnen verplaatsen naar het vroegste moment in de week van {monday} tot {friday} waarop we allemaal kunnen, en iedereen het nieuwe tijdstip laten weten?\n\nBedankt,\n{name}",
+  "Beste {organizer},\n\ner is iets tussengekomen en ik kan niet aanwezig zijn bij \"{title}\" op {original}. Wilt u de vergadering verplaatsen naar het eerst mogelijke tijdstip tussen {monday} en {friday} dat voor alle deelnemers past, en iedereen op de hoogte brengen?\n\nMet vriendelijke groet,\n{name}"
+ ],
+ "request_subject": "Verplaatsing: {title}",
+ "notice_subject": "Nieuw tijdstip: {title}",
+ "notice": "Goedendag,\n\n\"{title}\" is verplaatst naar {date} om {time} ({tz}).\n\nMet vriendelijke groet",
+ "no_slot_reply": "Goedendag,\n\nhelaas is er in de gevraagde week geen tijdstip waarop alle deelnemers van \"{title}\" vrij zijn; de vergadering blijft daarom zoals gepland.\n\nMet vriendelijke groet",
+ "titles": [
+  "Kwartaalbespreking budget",
+  "Stuurgroep project",
+  "Onderhandeling met leverancier",
+  "Update IT-beveiliging"
+ ],
+ "busy_titles": [
+  "Klantgesprek",
+  "Interne workshop",
+  "Een-op-eengesprek"
+ ],
+ "done": "De vergadering is afgehandeld."
+}

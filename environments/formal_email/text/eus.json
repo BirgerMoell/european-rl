@@ -1,0 +1,74 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Idatzi mezu elektroniko bat {name}(r)entzat, {company} enpresan ({city}). {topic} {sender}(r)en izenean idazten duzu.\nBaldintzak:\n{requirements}\nIdatzi mezua bakarrik.",
+  "Idatzi mezu elektroniko hau {sender}(r)en izenean. Hartzailea: {name}, {company}, {city}. {topic}\nMezuak baldintza hauek bete behar ditu:\n{requirements}\nErantzun mezuaren testuarekin bakarrik."
+ ],
+ "topics": {
+  "payment_reminder": "Oroigarri adeitsu bat da: {amount} zenbatekoko faktura bat {date} egunean iraungi zen.",
+  "order_confirmation": "{amount} balio duen eskaera bat berresten du, {date} egunean entregatzekoa.",
+  "meeting_confirmation": "{date} eguneko bilera bat berresten du, {amount} balio duen kontratu bat aztertzeko."
+ },
+ "req": {
+  "subject": "Lehen lerroa gaia da, eta \"{label}\" hitzarekin hasten da.",
+  "closing": "Amaitu ohiko agur-formula batekin, adibidez {examples}, eta ondoren bidaltzailearen izena.",
+  "formal": "Erabili zu tratamendua mezu osoan (zu, zuri, zure), inoiz ez hika.",
+  "amount": "Idatzi zenbatekoa hartzailearen tokiko diru-formatuan.",
+  "date": "Idatzi data hartzailearen tokiko data-formatuan.",
+  "name": "Zuzendu hartzaileari izen osoarekin, emandako moduan zehazki idatzita.",
+  "no_english": "Ez erabili ingelesezko hitzik.",
+  "words": "Mezuak {min} eta {max} hitz artean ditu.",
+  "bullets": "Sartu zehazki {n} buleta (\"- \" ikurrarekin hasten diren lerroak)."
+ },
+ "subject_label": "Gaia:",
+ "closings": [
+  "Adeitasunez",
+  "Agur bero bat",
+  "Begirunez"
+ ],
+ "formal": {
+  "formal": [
+   "zu",
+   "zuri",
+   "zuk",
+   "zure",
+   "zurekin",
+   "zuretzat"
+  ],
+  "informal": [
+   "hi",
+   "hik",
+   "hire",
+   "hiri",
+   "hirekin"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Ordaindu gabeko fakturaren oroigarria",
+  "order_confirmation": "Zure eskaeraren berrespena",
+  "meeting_confirmation": "Gure bileraren berrespena"
+ },
+ "ref_body": {
+  "payment_reminder": "Modu adeitsuan gogorarazten dizugu zure fakturako {amount} zenbatekoa {date} egunean iraungi zela.",
+  "order_confirmation": "Honen bidez zure eskaera berresten dizugu, {amount} balio duena; entrega {date} egunerako aurreikusita dago.",
+  "meeting_confirmation": "Honen bidez zurekin dugun bilera berresten dizugu, {date} egunean, {amount} balio duen kontratuari buruz."
+ },
+ "ref_greeting": "{name} agurgarria:",
+ "ref_bullets": [
+  "erreferentzia-zenbakia erantsitako dokumentuan dago",
+  "gure bezeroarentzako zerbitzua lanegunetan dago erabilgarri",
+  "prezio guztiek dagozkien zergak barne hartzen dituzte",
+  "mesedez, gorde mezu hau zure erregistroetarako"
+ ],
+ "ref_filler": [
+  "Eskerrik asko azken hilabeteetako lankidetza onagatik.",
+  "Zerbait argi ez badago, jar zaitez gurekin harremanetan edozein unetan.",
+  "Gure bulegoa astelehenetik ostiralera dago irekita, ohiko lan-orduetan.",
+  "Pozik erantzungo diegu xehetasunei buruzko zure galdera guztiei.",
+  "Dagozkion agirien kopia bat gure sisteman gorde da.",
+  "Datorren urtean gure lankidetzarekin jarraitzeko irrikaz gaude.",
+  "Gai hau dagoeneko konpondu baduzu, mesedez, ez egin kasurik mezu honi.",
+  "Aldez aurretik eskerrik asko zure arretagatik."
+ ],
+ "word_factor": 0.8
+}

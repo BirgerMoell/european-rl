@@ -1,0 +1,58 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Ikteb email lil {name} f'{company} ({city}). {topic} Qed tikteb f'isem {sender}.\nRekwiżiti:\n{requirements}\nIkteb l-email biss.",
+  "Jekk jogħġbok ipprepara din l-email f'isem {sender}. Destinatarju: {name}, {company}, {city}. {topic}\nL-email trid tissodisfa dawn ir-rekwiżiti:\n{requirements}\nWieġeb bit-test tal-email biss."
+ ],
+ "topics": {
+  "payment_reminder": "Hija tfakkira ħbiberija li fattura ta' {amount} kellha titħallas sa {date}.",
+  "order_confirmation": "Tikkonferma ordni ta' valur ta' {amount}, li għandha titwassal fi {date}.",
+  "meeting_confirmation": "Tikkonferma laqgħa fi {date} biex jiġi diskuss kuntratt ta' valur ta' {amount}."
+ },
+ "req": {
+  "subject": "L-ewwel linja hija s-suġġett u tibda b'\"{label}\".",
+  "closing": "Temm b'formula tal-għeluq standard bħal {examples}, segwita mill-isem tal-mittent.",
+  "formal": "Uża reġistru formali matul l-email kollha.",
+  "amount": "Ikteb l-ammont fil-format lokali tal-flus tad-destinatarju.",
+  "date": "Ikteb id-data fil-format lokali tad-data tad-destinatarju.",
+  "name": "Indirizza lid-destinatarju bl-isem sħiħ, miktub eżattament kif mogħti.",
+  "no_english": "Tużax kliem bl-Ingliż.",
+  "words": "L-email għandha bejn {min} u {max} kelma.",
+  "bullets": "Inkludi eżattament {n} punti elenkati (linji li jibdew b'\"- \")."
+ },
+ "subject_label": "Suġġett:",
+ "closings": [
+  "Tislijiet",
+  "Tislijiet kordjali",
+  "Dejjem tiegħek"
+ ],
+ "formal": null,
+ "ref_subject": {
+  "payment_reminder": "Tfakkira dwar fattura pendenti",
+  "order_confirmation": "Konferma tal-ordni",
+  "meeting_confirmation": "Konferma tal-laqgħa tagħna"
+ },
+ "ref_body": {
+  "payment_reminder": "b'din l-email nixtiequ nfakkruk bil-qalb li l-ammont ta' {amount} kellu jitħallas sa {date}.",
+  "order_confirmation": "b'din l-email nikkonfermaw l-ordni tiegħek ta' {amount}; il-kunsinna hija ppjanata għal {date}.",
+  "meeting_confirmation": "b'din l-email nikkonfermaw il-laqgħa tagħna ta' {date} dwar il-kuntratt ta' valur ta' {amount}."
+ },
+ "ref_greeting": "Għażiż/a {name},",
+ "ref_bullets": [
+  "in-numru ta' referenza jinsab fid-dokument mehmuż",
+  "is-servizz tal-klijenti tagħna huwa disponibbli fil-ġranet tax-xogħol",
+  "il-prezzijiet kollha jinkludu t-taxxi applikabbli",
+  "jekk jogħġbok żomm dan il-messaġġ għar-rekords tiegħek"
+ ],
+ "ref_filler": [
+  "Nirringrazzjawk għall-kooperazzjoni tajba matul l-aħħar xhur.",
+  "Jekk xi ħaġa mhix ċara, toqgħodx lura milli tikkuntattjana.",
+  "L-uffiċċju tagħna huwa miftuħ mit-Tnejn sal-Ġimgħa fil-ħinijiet tas-soltu.",
+  "Inwieġbu bil-pjaċir kwalunkwe mistoqsija dwar id-dettalji.",
+  "Kopja tad-dokumenti rilevanti ġiet maħżuna fis-sistema tagħna.",
+  "Nittamaw li nkomplu l-kooperazzjoni tagħna fis-sena li ġejja.",
+  "Jekk diġà ttrattajt din il-kwistjoni, jekk jogħġbok injora dan il-messaġġ.",
+  "Grazzi bil-quddiem għall-attenzjoni tiegħek."
+ ],
+ "word_factor": 0.75
+}

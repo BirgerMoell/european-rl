@@ -1,0 +1,58 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Scríobh ríomhphost chuig {name} ag {company} ({city}). {topic} Tá tú ag scríobh thar ceann {sender}.\nRiachtanais:\n{requirements}\nNá scríobh ach an ríomhphost.",
+  "Dréachtaigh an ríomhphost seo a leanas thar ceann {sender}. Faighteoir: {name}, {company}, {city}. {topic}\nCaithfidh an ríomhphost na riachtanais seo a chomhlíonadh:\n{requirements}\nFreagair le téacs an ríomhphoist amháin."
+ ],
+ "topics": {
+  "payment_reminder": "Is meabhrúchán cairdiúil é go raibh sonrasc ar {amount} dlite ar {date}.",
+  "order_confirmation": "Deimhníonn sé ordú ar luach {amount}, le seachadadh ar {date}.",
+  "meeting_confirmation": "Deimhníonn sé cruinniú ar {date} chun conradh ar luach {amount} a phlé."
+ },
+ "req": {
+  "subject": "Is é an chéad líne an t-ábhar, agus tosaíonn sé le \"{label}\".",
+  "closing": "Críochnaigh le foirmle scoir choitianta ar nós {examples}, agus ainm an tseoltóra ina dhiaidh.",
+  "formal": "Bain úsáid as réim fhoirmiúil ar fud an ríomhphoist.",
+  "amount": "Scríobh an tsuim i bhformáid airgid áitiúil an fhaighteora.",
+  "date": "Scríobh an dáta i bhformáid dáta áitiúil an fhaighteora.",
+  "name": "Labhair leis an bhfaighteoir faoina ainm iomlán, litrithe go díreach mar a tugadh é.",
+  "no_english": "Ná húsáid aon fhocal Béarla.",
+  "words": "Tá idir {min} agus {max} focal sa ríomhphost.",
+  "bullets": "Cuir isteach {n} phointe urchair go díreach (línte a thosaíonn le \"- \")."
+ },
+ "subject_label": "Ábhar:",
+ "closings": [
+  "Le meas",
+  "Is mise le meas",
+  "Le dea-mhéin"
+ ],
+ "formal": null,
+ "ref_subject": {
+  "payment_reminder": "Meabhrúchán faoi shonrasc gan íoc",
+  "order_confirmation": "Deimhniú ar d'ordú",
+  "meeting_confirmation": "Deimhniú ar ár gcruinniú"
+ },
+ "ref_body": {
+  "payment_reminder": "ba mhaith linn a mheabhrú duit go cairdiúil go raibh an tsuim {amount} dlite ar {date}.",
+  "order_confirmation": "deimhnímid leis seo d'ordú ar {amount}; tá an seachadadh beartaithe le haghaidh {date}.",
+  "meeting_confirmation": "deimhnímid leis seo ár gcruinniú ar {date} faoin gconradh ar luach {amount}."
+ },
+ "ref_greeting": "A {name}, a chara,",
+ "ref_bullets": [
+  "tá an uimhir thagartha ar an doiciméad faoi iamh",
+  "tá ár seirbhís do chustaiméirí ar fáil i rith na seachtaine oibre",
+  "áirítear na cánacha infheidhme sna praghsanna go léir",
+  "coinnigh an teachtaireacht seo do do thaifid, le do thoil"
+ ],
+ "ref_filler": [
+  "Gabhaimid buíochas leat as an gcomhoibriú maith le míonna anuas.",
+  "Má tá aon rud doiléir, ná bíodh drogall ort teagmháil a dhéanamh linn.",
+  "Bíonn ár n-oifig ar oscailt ó Luan go hAoine le linn gnáthuaireanta oibre.",
+  "Beimid sásta aon cheist faoi na sonraí a fhreagairt.",
+  "Tá cóip de na doiciméid ábhartha stóráilte inár gcóras.",
+  "Táimid ag tnúth leis an gcomhoibriú a leanúint sa bhliain atá romhainn.",
+  "Má tá an cheist seo réitithe agat cheana, ná tabhair aird ar an teachtaireacht seo.",
+  "Go raibh maith agat roimh ré as d'aird."
+ ],
+ "word_factor": 1.0
+}

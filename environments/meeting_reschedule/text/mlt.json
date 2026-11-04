@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Inti l-assistent ta' {organizer} f'{company} u taħdem bl-għodod tal-kalendarju u tal-email tal-grupp. Ittratta l-email il-ġdida fl-inbox. Politika tal-grupp dwar il-laqgħat: laqgħa tiġi mċaqalqa għall-ewwel ħin tal-bidu possibbli, fuq is-siegħa jew in-nofs siegħa, fil-ġimgħa mitluba meta l-parteċipanti kollha jkunu liberi — fil-ħinijiet tal-uffiċċju tal-uffiċċju tagħhom stess u barra mill-waqfa tal-ikel ta' nofsinhar, fil-ħin lokali tagħhom stess, u mhux fi tmiem il-ġimgħa jew f'jum ta' btala f'pajjiżhom. Żomm it-tul u l-parteċipanti tal-laqgħa. Imbagħad ibgħat email lil kull parteċipant ħlief lil {organizer} bid-data l-ġdida (YYYY-MM-DD) u l-ħin il-ġdid (HH:MM) fil-ħin lokali tiegħu. Jekk l-ebda ħin ma jaqbel, tiċċaqlaqx il-laqgħa u wieġeb biss lill-persuna li talbet. Tibgħatx emails lil ħadd ieħor. Temm b'messaġġ qasir mingħajr sejħa ta' għodda.",
+  "Inti tassisti lil {organizer} ({company}). Hemm email ġdida fl-inbox; ittrattaha bl-għodod tal-kalendarju u tal-email. Regoli biex tiċċaqlaq laqgħa: agħżel l-ewwel ħin fil-ġimgħa mitluba (li jibda fuq is-siegħa jew in-nofs siegħa) li jaqa' fil-ħinijiet lokali tal-uffiċċju ta' kull parteċipant, jevita l-waqfa tal-ikel tagħhom, tmiem il-ġimgħa u l-ġranet ta' btala ta' pajjiżhom, u ma jaħbatx mal-laqgħat l-oħra tagħhom; żomm it-tul u l-parteċipanti. Għarraf lil kull parteċipant ħlief lil {organizer} bid-data l-ġdida (YYYY-MM-DD) u l-ħin (HH:MM) fiż-żona tal-ħin tiegħu. Jekk ma jeżistix ħin bħal dan, ħalli l-laqgħa kif inhi u wieġeb biss lil min bagħat l-email. Meta tlesti, ikteb messaġġ qasir tal-għeluq mingħajr sejħa ta' għodda."
+ ],
+ "request": [
+  "Bonġu {organizer},\n\nskużani, imma ma nistax nattendi għal \"{title}\" fil-ħin attwali ({original}). Tista' tiċċaqlaqha għall-ewwel ħin fil-ġimgħa minn {monday} sa {friday} meta lkoll inkunu liberi, u tgħarraf lil kulħadd bil-ħin il-ġdid?\n\nGrazzi,\n{name}",
+  "Għażiż/a {organizer},\n\nqamet xi ħaġa u ma nistax nattendi għal \"{title}\" fi {original}. Jekk jogħġbok, ipprogrammaha mill-ġdid għall-ewwel ħin possibbli bejn {monday} u {friday} li jaqbel lill-parteċipanti kollha u għarraf lil kulħadd.\n\nTislijiet,\n{name}"
+ ],
+ "request_subject": "Bdil fil-ħin: {title}",
+ "notice_subject": "Ħin ġdid: {title}",
+ "notice": "Bonġu,\n\n\"{title}\" ġiet imċaqalqa għal {date} fil-{time} ({tz}).\n\nTislijiet",
+ "no_slot_reply": "Bonġu,\n\nsfortunatament fil-ġimgħa mitluba m'hemm l-ebda ħin meta l-parteċipanti kollha ta' \"{title}\" ikunu liberi, għalhekk il-laqgħa tibqa' kif kienet ippjanata.\n\nTislijiet",
+ "titles": [
+  "Reviżjoni trimestrali tal-baġit",
+  "Kumitat ta' tmexxija tal-proġett",
+  "Negozjati mal-fornitur",
+  "Aġġornament dwar is-sigurtà tal-IT"
+ ],
+ "busy_titles": [
+  "Telefonata ma' klijent",
+  "Workshop intern",
+  "Laqgħa waħda ma' waħda"
+ ],
+ "done": "Il-laqgħa ġiet ittrattata."
+}

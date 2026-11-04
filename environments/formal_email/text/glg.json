@@ -1,0 +1,76 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Escriba un correo electrónico a {name} en {company} ({city}). {topic} Vostede escribe en nome de {sender}.\nRequisitos:\n{requirements}\nEscriba só o correo.",
+  "Redacte o seguinte correo electrónico en nome de {sender}. Destinatario: {name}, {company}, {city}. {topic}\nO correo debe cumprir estes requisitos:\n{requirements}\nResponda unicamente co texto do correo."
+ ],
+ "topics": {
+  "payment_reminder": "É un recordatorio amable de que unha factura de {amount} vencía o {date}.",
+  "order_confirmation": "Confirma un pedido por valor de {amount}, con entrega o {date}.",
+  "meeting_confirmation": "Confirma unha reunión o {date} para tratar un contrato por valor de {amount}."
+ },
+ "req": {
+  "subject": "A primeira liña é o asunto e comeza por «{label}».",
+  "closing": "Remate cunha despedida habitual como {examples}, seguida do nome do remitente.",
+  "formal": "Trate o destinatario de vostede en todo o correo, nunca de ti.",
+  "amount": "Escriba o importe no formato monetario local do destinatario.",
+  "date": "Escriba a data no formato de data local do destinatario.",
+  "name": "Diríxase ao destinatario polo seu nome completo, escrito exactamente como se indica.",
+  "no_english": "Non use ningunha palabra en inglés.",
+  "words": "O correo ten entre {min} e {max} palabras.",
+  "bullets": "Inclúa exactamente {n} viñetas (liñas que comezan por «- »)."
+ },
+ "subject_label": "Asunto:",
+ "closings": [
+  "Atentamente",
+  "Cordialmente",
+  "Un cordial saúdo"
+ ],
+ "formal": {
+  "formal": [
+   "vostede",
+   "vostedes",
+   "Vostede",
+   "Vostedes"
+  ],
+  "informal": [
+   "ti",
+   "tu",
+   "te",
+   "che",
+   "contigo",
+   "teu",
+   "túa",
+   "teus",
+   "túas"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Recordatorio da súa factura pendente",
+  "order_confirmation": "Confirmación do seu pedido",
+  "meeting_confirmation": "Confirmación da nosa reunión"
+ },
+ "ref_body": {
+  "payment_reminder": "Por medio da presente lembrámoslle a vostede amablemente que o importe de {amount} vencía o {date}.",
+  "order_confirmation": "Por medio da presente confirmámoslle a vostede o seu pedido de {amount}; a entrega está prevista para o {date}.",
+  "meeting_confirmation": "Por medio da presente confirmámoslle a vostede a nosa reunión do {date} sobre o contrato por valor de {amount}."
+ },
+ "ref_greeting": "Estimado/a {name}:",
+ "ref_bullets": [
+  "o número de referencia figura no documento adxunto",
+  "o noso servizo de atención ao cliente está dispoñible os días laborables",
+  "todos os prezos inclúen os impostos aplicables",
+  "rogámoslle que conserve esta mensaxe"
+ ],
+ "ref_filler": [
+  "Agradecémoslle a boa colaboración dos últimos meses.",
+  "Se algo non estivese claro, non dubide en poñerse en contacto connosco.",
+  "A nosa oficina está aberta de luns a venres no horario habitual.",
+  "Con moito gusto responderemos a todas as súas preguntas sobre os detalles.",
+  "Unha copia dos documentos correspondentes gardouse no noso sistema.",
+  "Agardamos continuar a nosa colaboración durante o próximo ano.",
+  "Se vostede xa resolveu este asunto, rogámoslle que non teña en conta esta mensaxe.",
+  "Agradecémoslle de antemán a súa atención."
+ ],
+ "word_factor": 1.0
+}

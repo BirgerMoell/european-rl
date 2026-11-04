@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "{organizer}(r)en laguntzailea zara {company} enpresan, eta taldearen egutegi- eta posta elektroniko-tresnekin lan egiten duzu. Kudeatu sarrera-ontziko mezu berria. Taldearen bilera-araua: bilera bat eskatutako asteko hasiera-ordu goiztiarrenera eramaten da, ordu jakinean edo ordu eta erdietan, parte-hartzaile guztiak libre dauden unean — beren bulegoaren lan-ordutegiaren barruan eta bazkaltzeko atsedenaldiaz kanpo, beren tokiko orduan, eta ez asteburuan ez beren herrialdeko jai-egunetan. Mantendu bileraren iraupena eta parte-hartzaileak. Ondoren, bidali mezu bat parte-hartzaile bakoitzari, {organizer} izan ezik, data berriarekin (UUUU-HH-EE) eta ordu berriarekin (OO:MM), haren tokiko orduan. Ordurik ez badago, ez mugitu bilera eta erantzun eskaera egin zuen pertsonari bakarrik. Ez bidali mezurik beste inori. Amaitu mezu labur batekin, tresnarik deitu gabe.",
+  "{organizer}(r)i laguntzen diozu ({company}). Sarrera-ontzian mezu berri bat dago; kudeatu egutegi- eta posta-tresnekin. Bilerak mugitzeko arauak: aukeratu eskatutako asteko tarte goiztiarrena (ordu jakinean edo ordu eta erdietan hasita), parte-hartzaile bakoitzaren tokiko lan-ordutegiaren barruan dagoena, haren bazkaltzeko atsedenaldia, asteburuak eta haren herrialdeko jai-egunak saihesten dituena eta haren beste bilerekin bat egiten ez duena; mantendu iraupena eta parte-hartzaileak. Jakinarazi parte-hartzaile bakoitzari, {organizer} izan ezik, data berria (UUUU-HH-EE) eta ordua (OO:MM) haren ordu-eremuan. Halako tarterik ez badago, utzi bilera dagoen bezala eta erantzun bidaltzaileari bakarrik. Amaitzean, idatzi amaierako mezu labur bat tresnarik deitu gabe."
+ ],
+ "request": [
+  "Kaixo {organizer},\n\nsentitzen dut, baina ezin naiz \"{title}\" bilerara joan oraingo orduan ({original}). Mugi zenezake {monday} eta {friday} bitarteko asteko lehen unera, denok libre gauden unera, eta ordu berria guztiei jakinarazi?\n\nEskerrik asko,\n{name}",
+  "{organizer} agurgarria:\n\nustekabeko zerbait gertatu zait eta ezin izango naiz \"{title}\" bilerara joan {original}. Mesedez, programatu berriro {monday} eta {friday} bitarteko lehen ordu posiblean, parte-hartzaile guztiei ondo datorkienean, eta jakinarazi guztiei.\n\nAdeitasunez,\n{name}"
+ ],
+ "request_subject": "Ordu-aldaketa: {title}",
+ "notice_subject": "Ordu berria: {title}",
+ "notice": "Egun on:\n\n\"{title}\" bilera {date} egunera eraman da, {time}(e)tara ({tz}).\n\nAdeitasunez",
+ "no_slot_reply": "Egun on:\n\nzoritxarrez, eskatutako astean ez dago \"{title}\" bilerako parte-hartzaile guztiak libre dauden ordurik; beraz, bilerak aurreikusita zegoen bezala jarraitzen du.\n\nAdeitasunez",
+ "titles": [
+  "Hiruhileko aurrekontu-berrikuspena",
+  "Proiektuaren zuzendaritza-batzordea",
+  "Hornitzailearekin negoziazioa",
+  "Informatika-segurtasunari buruzko eguneraketa"
+ ],
+ "busy_titles": [
+  "Bezeroarekin deia",
+  "Barne-tailerra",
+  "Banakako elkarrizketa"
+ ],
+ "done": "Bilera kudeatuta dago."
+}

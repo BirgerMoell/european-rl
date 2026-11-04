@@ -1,0 +1,78 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Escriba un correo electrónico a {name} en {company} ({city}). {topic} Usted escribe en nombre de {sender}.\nRequisitos:\n{requirements}\nEscriba solo el correo.",
+  "Redacte el siguiente correo electrónico en nombre de {sender}. Destinatario: {name}, {company}, {city}. {topic}\nEl correo debe cumplir estos requisitos:\n{requirements}\nResponda únicamente con el texto del correo."
+ ],
+ "topics": {
+  "payment_reminder": "Es un recordatorio amable de que una factura de {amount} vencía el {date}.",
+  "order_confirmation": "Confirma un pedido por valor de {amount}, con entrega el {date}.",
+  "meeting_confirmation": "Confirma una reunión el {date} para tratar un contrato por valor de {amount}."
+ },
+ "req": {
+  "subject": "La primera línea es el asunto y empieza por «{label}».",
+  "closing": "Termine con una despedida habitual como {examples}, seguida del nombre del remitente.",
+  "formal": "Trate al destinatario de usted en todo el correo, nunca de tú.",
+  "amount": "Escriba el importe en el formato monetario local del destinatario.",
+  "date": "Escriba la fecha en el formato de fecha local del destinatario.",
+  "name": "Diríjase al destinatario por su nombre completo, escrito exactamente como se indica.",
+  "no_english": "No use ninguna palabra en inglés.",
+  "words": "El correo tiene entre {min} y {max} palabras.",
+  "bullets": "Incluya exactamente {n} viñetas (líneas que empiezan por «- »)."
+ },
+ "subject_label": "Asunto:",
+ "closings": [
+  "Atentamente",
+  "Un cordial saludo",
+  "Saludos cordiales"
+ ],
+ "formal": {
+  "formal": [
+   "usted",
+   "ustedes",
+   "Usted",
+   "Ustedes",
+   "Ud.",
+   "Vd."
+  ],
+  "informal": [
+   "tú",
+   "tu",
+   "tus",
+   "te",
+   "ti",
+   "contigo",
+   "vosotros",
+   "vuestro",
+   "vuestra"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Recordatorio de su factura pendiente",
+  "order_confirmation": "Confirmación de su pedido",
+  "meeting_confirmation": "Confirmación de nuestra reunión"
+ },
+ "ref_body": {
+  "payment_reminder": "Por la presente le recordamos a usted amablemente que el importe de {amount} vencía el {date}.",
+  "order_confirmation": "Por la presente le confirmamos a usted su pedido de {amount}; la entrega está prevista para el {date}.",
+  "meeting_confirmation": "Por la presente le confirmamos a usted nuestra reunión del {date} sobre el contrato por valor de {amount}."
+ },
+ "ref_greeting": "Estimado/a {name}:",
+ "ref_bullets": [
+  "el número de referencia figura en el documento adjunto",
+  "nuestro servicio de atención al cliente está disponible los días laborables",
+  "todos los precios incluyen los impuestos aplicables",
+  "le rogamos que conserve este mensaje"
+ ],
+ "ref_filler": [
+  "Le agradecemos la buena colaboración de los últimos meses.",
+  "Si algo no estuviera claro, no dude en ponerse en contacto con nosotros.",
+  "Nuestra oficina está abierta de lunes a viernes en el horario habitual.",
+  "Con mucho gusto responderemos a todas sus preguntas sobre los detalles.",
+  "Una copia de los documentos correspondientes se ha guardado en nuestro sistema.",
+  "Esperamos continuar nuestra colaboración durante el próximo año.",
+  "Si usted ya ha resuelto este asunto, le rogamos que no tenga en cuenta este mensaje.",
+  "Le agradecemos de antemano su atención."
+ ],
+ "word_factor": 1.0
+}

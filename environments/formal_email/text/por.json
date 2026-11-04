@@ -1,0 +1,78 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Escreva um e-mail a {name} da {company} ({city}). {topic} Escreve em nome de {sender}.\nRequisitos:\n{requirements}\nEscreva apenas o e-mail.",
+  "Redija o seguinte e-mail em nome de {sender}. Destinatário: {name}, {company}, {city}. {topic}\nO e-mail tem de cumprir estes requisitos:\n{requirements}\nResponda apenas com o texto do e-mail."
+ ],
+ "topics": {
+  "payment_reminder": "Trata-se de um lembrete cordial de que uma fatura de {amount} venceu em {date}.",
+  "order_confirmation": "Confirma uma encomenda no valor de {amount}, com entrega em {date}.",
+  "meeting_confirmation": "Confirma uma reunião em {date} para discutir um contrato no valor de {amount}."
+ },
+ "req": {
+  "subject": "A primeira linha é o assunto e começa por «{label}».",
+  "closing": "Termine com uma fórmula de despedida habitual, como {examples}, seguida do nome do remetente.",
+  "formal": "Trate o destinatário de forma formal em todo o e-mail (V. Exa., o senhor/a senhora), nunca por tu.",
+  "amount": "Escreva o montante no formato monetário local do destinatário.",
+  "date": "Escreva a data no formato de data local do destinatário.",
+  "name": "Dirija-se ao destinatário pelo nome completo, escrito exatamente como indicado.",
+  "no_english": "Não use palavras em inglês.",
+  "words": "O e-mail tem entre {min} e {max} palavras.",
+  "bullets": "Inclua exatamente {n} marcadores (linhas que começam por «- »)."
+ },
+ "subject_label": "Assunto:",
+ "closings": [
+  "Com os melhores cumprimentos",
+  "Melhores cumprimentos",
+  "Atenciosamente"
+ ],
+ "formal": {
+  "formal": [
+   "V. Exa.",
+   "V. Ex.ª",
+   "Vossa Excelência",
+   "o senhor",
+   "a senhora",
+   "os senhores",
+   "as senhoras"
+  ],
+  "informal": [
+   "tu",
+   "te",
+   "ti",
+   "contigo",
+   "teu",
+   "tua",
+   "teus",
+   "tuas"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Lembrete sobre a fatura em aberto",
+  "order_confirmation": "Confirmação da encomenda",
+  "meeting_confirmation": "Confirmação da nossa reunião"
+ },
+ "ref_body": {
+  "payment_reminder": "vimos por este meio lembrar V. Exa. de que o montante de {amount} venceu em {date}.",
+  "order_confirmation": "vimos por este meio confirmar a V. Exa. a encomenda de {amount}; a entrega está prevista para {date}.",
+  "meeting_confirmation": "vimos por este meio confirmar a V. Exa. a nossa reunião de {date} sobre o contrato no valor de {amount}."
+ },
+ "ref_greeting": "Exmo(a). Sr(a). {name},",
+ "ref_bullets": [
+  "o número de referência consta do documento em anexo",
+  "o nosso serviço de apoio ao cliente está disponível nos dias úteis",
+  "todos os preços incluem os impostos aplicáveis",
+  "solicitamos que guarde esta mensagem"
+ ],
+ "ref_filler": [
+  "Agradecemos a boa colaboração ao longo dos últimos meses.",
+  "Caso algo não esteja claro, não hesite em contactar-nos.",
+  "O nosso escritório está aberto de segunda a sexta-feira no horário habitual.",
+  "Teremos todo o gosto em responder a quaisquer questões sobre os pormenores.",
+  "Uma cópia dos documentos relevantes foi guardada no nosso sistema.",
+  "Esperamos continuar a nossa colaboração no próximo ano.",
+  "Caso V. Exa. já tenha tratado deste assunto, queira desconsiderar esta mensagem.",
+  "Agradecemos desde já a atenção dispensada."
+ ],
+ "word_factor": 1.0
+}

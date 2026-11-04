@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Vostè és l'assistent de {organizer} a {company} i treballa amb les eines d'agenda i de correu electrònic del grup. Gestioni el correu nou de la safata d'entrada. Política de reunions del grup: una reunió es trasllada a l'inici més aviat possible, a l'hora en punt o a dos quarts, de la setmana sol·licitada en què tots els participants estiguin lliures — dins de l'horari d'oficina de la seva pròpia seu i fora de la seva pausa per dinar, en la seva pròpia hora local, i no en cap de setmana ni en un dia festiu del seu país. Mantingui la durada i els participants de la reunió. Després enviï a cada participant, excepte {organizer}, un correu amb la nova data (AAAA-MM-DD) i hora (HH:MM) en la seva pròpia hora local. Si no hi ha cap horari possible, no traslladi la reunió i respongui només a la persona que ho va demanar. No enviï correus a ningú més. Acabi amb un missatge breu sense cridar cap eina.",
+  "Vostè dona suport a {organizer} ({company}). Hi ha un correu nou a la safata d'entrada; gestioni'l amb les eines d'agenda i de correu. Normes per traslladar reunions: triï la primera franja de la setmana sol·licitada (amb inici a l'hora en punt o a dos quarts) que sigui dins de l'horari d'oficina local de cada participant, eviti la seva pausa per dinar, els caps de setmana i els dies festius del seu país, i no coincideixi amb les seves altres reunions; mantingui la durada i els participants. Comuniqui a cada participant, excepte {organizer}, la nova data (AAAA-MM-DD) i hora (HH:MM) en la seva pròpia zona horària. Si no hi ha cap franja així, deixi la reunió com està i respongui només al remitent. En acabar, escrigui un missatge breu de tancament sense cridar cap eina."
+ ],
+ "request": [
+  "Hola, {organizer},\n\nem sap greu, però no puc assistir a «{title}» a l'horari actual ({original}). La podries moure al primer moment de la setmana del {monday} al {friday} en què tots estiguem lliures i avisar tothom del nou horari?\n\nGràcies,\n{name}",
+  "Benvolgut/da {organizer},\n\nm'ha sorgit un imprevist i no podré assistir a «{title}» el {original}. Li prego que la reprogrami per al primer horari possible entre el {monday} i el {friday} que vagi bé a tots els participants i que n'informi tothom.\n\nCordialment,\n{name}"
+ ],
+ "request_subject": "Canvi d'horari: {title}",
+ "notice_subject": "Nou horari: {title}",
+ "notice": "Bon dia,\n\n«{title}» s'ha traslladat al {date} a les {time} ({tz}).\n\nCordialment",
+ "no_slot_reply": "Bon dia,\n\nlamentablement no hi ha cap horari a la setmana sol·licitada en què tots els participants de «{title}» estiguin lliures, de manera que la reunió es manté tal com estava prevista.\n\nCordialment",
+ "titles": [
+  "Revisió trimestral del pressupost",
+  "Comitè de direcció del projecte",
+  "Negociació amb proveïdors",
+  "Actualització de seguretat informàtica"
+ ],
+ "busy_titles": [
+  "Trucada amb client",
+  "Taller intern",
+  "Reunió individual"
+ ],
+ "done": "La reunió està gestionada."
+}

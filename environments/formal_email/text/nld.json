@@ -1,0 +1,70 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Schrijf een e-mail aan {name} bij {company} ({city}). {topic} U schrijft namens {sender}.\nEisen:\n{requirements}\nSchrijf alleen de e-mail.",
+  "Stel namens {sender} de volgende e-mail op. Ontvanger: {name}, {company}, {city}. {topic}\nDe e-mail moet aan deze eisen voldoen:\n{requirements}\nAntwoord alleen met de tekst van de e-mail."
+ ],
+ "topics": {
+  "payment_reminder": "Het is een vriendelijke herinnering dat een factuur van {amount} op {date} betaald had moeten zijn.",
+  "order_confirmation": "Er wordt een bestelling ter waarde van {amount} bevestigd, met levering op {date}.",
+  "meeting_confirmation": "Er wordt een afspraak op {date} bevestigd om een contract ter waarde van {amount} te bespreken."
+ },
+ "req": {
+  "subject": "De eerste regel is de onderwerpregel en begint met \"{label}\".",
+  "closing": "Sluit af met een gebruikelijke slotformule zoals {examples}, gevolgd door de naam van de afzender.",
+  "formal": "Spreek de ontvanger in de hele e-mail formeel aan met u (niet met je of jij).",
+  "amount": "Schrijf het bedrag in de lokale geldnotatie van de ontvanger.",
+  "date": "Schrijf de datum in de lokale datumnotatie van de ontvanger.",
+  "name": "Spreek de ontvanger aan met de volledige naam, precies zo gespeld als opgegeven.",
+  "no_english": "Gebruik geen Engelse woorden.",
+  "words": "De e-mail telt tussen {min} en {max} woorden.",
+  "bullets": "Neem precies {n} opsommingstekens op (regels die beginnen met \"- \")."
+ },
+ "subject_label": "Onderwerp:",
+ "closings": [
+  "Met vriendelijke groet",
+  "Met vriendelijke groeten",
+  "Hoogachtend"
+ ],
+ "formal": {
+  "formal": [
+   "u",
+   "uw"
+  ],
+  "informal": [
+   "jij",
+   "jou",
+   "jouw",
+   "je",
+   "jullie"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Herinnering aan uw openstaande factuur",
+  "order_confirmation": "Bevestiging van uw bestelling",
+  "meeting_confirmation": "Bevestiging van onze afspraak"
+ },
+ "ref_body": {
+  "payment_reminder": "graag herinneren wij u eraan dat het bedrag van {amount} op {date} betaald had moeten zijn.",
+  "order_confirmation": "hierbij bevestigen wij uw bestelling van {amount}; de levering is gepland op {date}.",
+  "meeting_confirmation": "hierbij bevestigen wij u onze afspraak op {date} over het contract ter waarde van {amount}."
+ },
+ "ref_greeting": "Geachte {name},",
+ "ref_bullets": [
+  "het referentienummer staat op het bijgevoegde document",
+  "onze klantenservice is op werkdagen bereikbaar",
+  "alle prijzen zijn inclusief de geldende belastingen",
+  "bewaar dit bericht voor uw administratie"
+ ],
+ "ref_filler": [
+  "Wij danken u voor de goede samenwerking in de afgelopen maanden.",
+  "Mocht iets onduidelijk zijn, neem dan gerust contact met ons op.",
+  "Ons kantoor is van maandag tot en met vrijdag geopend tijdens de gebruikelijke kantooruren.",
+  "Wij beantwoorden graag al uw vragen over de details.",
+  "Een kopie van de betreffende documenten is in ons systeem opgeslagen.",
+  "Wij kijken ernaar uit de samenwerking in het komende jaar voort te zetten.",
+  "Indien u deze kwestie al heeft afgehandeld, kunt u dit bericht als niet verzonden beschouwen.",
+  "Bij voorbaat dank voor uw aandacht."
+ ],
+ "word_factor": 1.0
+}
