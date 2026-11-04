@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Paljonko on {p} % summasta {amount}?",
+ "add_vat": "Palvelu maksaa {amount} ilman arvonlisäveroa. Arvonlisävero on {p} %. Mikä on verollinen hinta?",
+ "line": "- {qty} × {price}",
+ "line_total": "Laskulla on nämä rivit (määrä × yksikköhinta):\n{lines}\nMikä on laskun loppusumma?",
+ "remove_vat": "Hinta {amount} sisältää {p} % arvonlisäveroa. Mikä on veroton hinta?",
+ "discount_chain": "Listahinnasta {amount} annetaan ensin {p1} % alennus ja sen jälkeen vielä {p2} % alennus alennetusta hinnasta. Mikä on lopullinen hinta?",
+ "convert": "Muunna {src} {cur} valuuttaan {local} kurssilla {rate} {local} / 1 {cur}.",
+ "convert_then_vat": "Toimittaja laskuttaa {src} {cur} ilman arvonlisäveroa. Muunna summa valuuttaan {local} kurssilla {rate} {local} / 1 {cur} (pyöristä muunnettu summa pienimpään yksikköön) ja lisää sitten {p} % arvonlisävero. Mikä on loppusumma valuutassa {local}?",
+ "split": "Lasku {amount} jaetaan {n} henkilön kesken. Kaikki maksavat saman summan kokonaisina pienimpinä yksikköinä (alaspäin pyöristettynä), ja ensimmäinen henkilö maksaa lisäksi jäännöksen, jotta osuudet täsmäävät. Paljonko ensimmäinen henkilö maksaa?",
+ "interest": "Lainalle {amount} maksetaan yksinkertaista korkoa {r} % vuodessa. Paljonko korkoa kertyy {months} kuukaudessa (korko = pääoma × korkokanta × kuukaudet / 12)?",
+ "margin_price": "Tuote maksaa {cost}. Myyntihinnan on tuotettava {m} % myyntikate myyntihinnasta. Mikä on myyntihinta?",
+ "discount_then_vat": "Verottomasta hinnasta {amount} annetaan {d} % alennus; pyöristä alennettu hinta pienimpään yksikköön ja lisää sitten {p} % arvonlisävero. Mikä on lopullinen hinta?",
+ "rounding": "Anna tarkka summa paikallisessa valuutassa kaupallisesti pyöristettynä (puolikkaat ylöspäin) pienimpään yksikköön."
+}

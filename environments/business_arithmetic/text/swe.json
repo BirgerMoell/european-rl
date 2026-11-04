@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Hur mycket är {p} % av {amount}?",
+ "add_vat": "En tjänst kostar {amount} exklusive moms. Momsen är {p} %. Vad är priset inklusive moms?",
+ "line": "- {qty} × {price}",
+ "line_total": "En faktura har dessa rader (antal × à-pris):\n{lines}\nVad är fakturans totalbelopp?",
+ "remove_vat": "Priset {amount} inkluderar {p} % moms. Vad är priset exklusive moms?",
+ "discount_chain": "Ett listpris på {amount} får först {p1} % rabatt och sedan ytterligare {p2} % rabatt på det sänkta priset. Vad blir slutpriset?",
+ "convert": "Räkna om {src} {cur} till {local} med växelkursen {rate} {local} per 1 {cur}.",
+ "convert_then_vat": "En leverantör fakturerar {src} {cur} exklusive moms. Räkna om beloppet till {local} med kursen {rate} {local} per 1 {cur} (avrunda det omräknade beloppet till minsta enhet) och lägg sedan på {p} % moms. Vad blir totalen i {local}?",
+ "split": "En nota på {amount} delas mellan {n} personer. Alla betalar samma belopp i hela minsta enheter (avrundat nedåt), och den första personen betalar dessutom det som blir över så att andelarna går jämnt upp. Hur mycket betalar den första personen?",
+ "interest": "Ett lån på {amount} har enkel ränta på {r} % per år. Hur mycket ränta löper på under {months} månader (ränta = kapital × räntesats × månader / 12)?",
+ "margin_price": "En produkt kostar {cost}. Försäljningspriset ska ge en bruttomarginal på {m} % av försäljningspriset. Vad är försäljningspriset?",
+ "discount_then_vat": "Ett nettopris på {amount} får {d} % rabatt; avrunda det rabatterade priset till minsta enhet och lägg sedan på {p} % moms. Vad blir slutpriset?",
+ "rounding": "Ange det exakta beloppet i den lokala valutan, avrundat på vanligt sätt (halvor uppåt) till minsta enhet."
+}

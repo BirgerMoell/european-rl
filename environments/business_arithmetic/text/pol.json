@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Ile wynosi {p} % z {amount}?",
+ "add_vat": "Usługa kosztuje {amount} netto. VAT wynosi {p} %. Jaka jest cena brutto?",
+ "line": "- {qty} × {price}",
+ "line_total": "Faktura ma następujące pozycje (ilość × cena jednostkowa):\n{lines}\nJaka jest łączna kwota faktury?",
+ "remove_vat": "Cena {amount} zawiera {p} % VAT. Jaka jest cena netto?",
+ "discount_chain": "Cena katalogowa {amount} otrzymuje najpierw rabat {p1} %, a następnie dodatkowy rabat {p2} % od obniżonej ceny. Jaka jest cena końcowa?",
+ "convert": "Przelicz {src} {cur} na {local} po kursie {rate} {local} za 1 {cur}.",
+ "convert_then_vat": "Dostawca fakturuje {src} {cur} netto. Przelicz kwotę na {local} po kursie {rate} {local} za 1 {cur} (zaokrąglij przeliczoną kwotę do najmniejszej jednostki), a następnie dolicz {p} % VAT. Jaka jest suma w {local}?",
+ "split": "Rachunek na {amount} dzieli się między {n} osób. Każdy płaci tę samą kwotę w pełnych najmniejszych jednostkach (zaokrągloną w dół), a pierwsza osoba dopłaca resztę, tak aby udziały sumowały się dokładnie. Ile płaci pierwsza osoba?",
+ "interest": "Pożyczka {amount} jest oprocentowana prostym oprocentowaniem {r} % rocznie. Ile odsetek narośnie w ciągu {months} miesięcy (odsetki = kapitał × stopa × miesiące / 12)?",
+ "margin_price": "Produkt kosztuje {cost}. Cena sprzedaży ma dawać marżę brutto {m} % ceny sprzedaży. Jaka jest cena sprzedaży?",
+ "discount_then_vat": "Cena netto {amount} otrzymuje rabat {d} %; zaokrąglij cenę po rabacie do najmniejszej jednostki, a następnie dolicz {p} % VAT. Jaka jest cena końcowa?",
+ "rounding": "Podaj dokładną kwotę w walucie lokalnej, zaokrągloną handlowo (połowa w górę) do najmniejszej jednostki."
+}

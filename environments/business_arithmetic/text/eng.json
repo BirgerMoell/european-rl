@@ -1,0 +1,16 @@
+{
+ "_review": "author",
+ "percent_of": "What is {p} % of {amount}?",
+ "add_vat": "A service costs {amount} excluding VAT. VAT is {p} %. What is the price including VAT?",
+ "line": "- {qty} × {price}",
+ "line_total": "An invoice has these lines (quantity × unit price):\n{lines}\nWhat is the invoice total?",
+ "remove_vat": "A price of {amount} includes {p} % VAT. What is the price excluding VAT?",
+ "discount_chain": "A list price of {amount} first gets a {p1} % discount, and then a further {p2} % discount on the reduced price. What is the final price?",
+ "convert": "Convert {src} {cur} to {local} at an exchange rate of {rate} {local} per 1 {cur}.",
+ "convert_then_vat": "A supplier invoices {src} {cur} excluding VAT. Convert it to {local} at {rate} {local} per 1 {cur} (round the converted amount to the minor unit), then add {p} % VAT. What is the total in {local}?",
+ "split": "A bill of {amount} is split between {n} people. Everyone pays the same whole minor-unit amount (rounded down), and the first person also pays whatever is left over so that the shares add up exactly. How much does the first person pay?",
+ "interest": "A loan of {amount} has simple interest of {r} % per year. How much interest accrues in {months} months (interest = principal × rate × months / 12)?",
+ "margin_price": "A product costs {cost}. The selling price must give a gross margin of {m} % of the selling price. What is the selling price?",
+ "discount_then_vat": "A net price of {amount} gets a {d} % discount; round the discounted price to the minor unit, then add {p} % VAT. What is the final price?",
+ "rounding": "Give the exact amount in the local currency, rounded commercially (half up) to the minor unit."
+}

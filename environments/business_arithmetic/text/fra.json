@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Combien font {p} % de {amount} ?",
+ "add_vat": "Une prestation coûte {amount} HT. La TVA est de {p} %. Quel est le prix TTC ?",
+ "line": "- {qty} × {price}",
+ "line_total": "Une facture comporte ces lignes (quantité × prix unitaire) :\n{lines}\nQuel est le montant total de la facture ?",
+ "remove_vat": "Un prix de {amount} inclut {p} % de TVA. Quel est le prix HT ?",
+ "discount_chain": "Un prix catalogue de {amount} reçoit d'abord une remise de {p1} %, puis une remise supplémentaire de {p2} % sur le prix réduit. Quel est le prix final ?",
+ "convert": "Convertissez {src} {cur} en {local} au taux de {rate} {local} pour 1 {cur}.",
+ "convert_then_vat": "Un fournisseur facture {src} {cur} HT. Convertissez le montant en {local} au taux de {rate} {local} pour 1 {cur} (arrondissez le montant converti à l'unité minimale), puis ajoutez {p} % de TVA. Quel est le total en {local} ?",
+ "split": "Une note de {amount} est partagée entre {n} personnes. Chacune paie le même montant en unités minimales entières (arrondi à l'inférieur), et la première personne paie en plus le reste afin que les parts tombent juste. Combien paie la première personne ?",
+ "interest": "Un prêt de {amount} porte un intérêt simple de {r} % par an. Combien d'intérêts courent sur {months} mois (intérêts = capital × taux × mois / 12) ?",
+ "margin_price": "Un produit coûte {cost}. Le prix de vente doit donner une marge brute de {m} % du prix de vente. Quel est le prix de vente ?",
+ "discount_then_vat": "Un prix HT de {amount} reçoit une remise de {d} % ; arrondissez le prix remisé à l'unité minimale, puis ajoutez {p} % de TVA. Quel est le prix final ?",
+ "rounding": "Donnez le montant exact dans la monnaie locale, arrondi commercialement (moitié vers le haut) à l'unité minimale."
+}

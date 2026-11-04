@@ -1,0 +1,16 @@
+{
+ "_review": "llm",
+ "percent_of": "Wie viel sind {p} % von {amount}?",
+ "add_vat": "Eine Leistung kostet {amount} netto. Die Umsatzsteuer beträgt {p} %. Wie hoch ist der Bruttopreis?",
+ "line": "- {qty} × {price}",
+ "line_total": "Eine Rechnung hat diese Positionen (Menge × Einzelpreis):\n{lines}\nWie hoch ist der Rechnungsbetrag?",
+ "remove_vat": "Ein Preis von {amount} enthält {p} % Umsatzsteuer. Wie hoch ist der Nettopreis?",
+ "discount_chain": "Ein Listenpreis von {amount} erhält zuerst {p1} % Rabatt und danach weitere {p2} % auf den reduzierten Preis. Wie hoch ist der Endpreis?",
+ "convert": "Rechnen Sie {src} {cur} in {local} um, zum Kurs von {rate} {local} je 1 {cur}.",
+ "convert_then_vat": "Ein Lieferant stellt {src} {cur} netto in Rechnung. Rechnen Sie den Betrag zum Kurs von {rate} {local} je 1 {cur} in {local} um (umgerechneten Betrag auf die kleinste Einheit runden) und schlagen Sie dann {p} % Umsatzsteuer auf. Wie hoch ist der Gesamtbetrag in {local}?",
+ "split": "Eine Rechnung über {amount} wird auf {n} Personen aufgeteilt. Alle zahlen denselben Betrag in ganzen kleinsten Einheiten (abgerundet), und die erste Person zahlt zusätzlich den Rest, damit die Anteile genau aufgehen. Wie viel zahlt die erste Person?",
+ "interest": "Ein Darlehen über {amount} wird mit {r} % pro Jahr einfach verzinst. Wie viel Zinsen fallen in {months} Monaten an (Zinsen = Kapital × Zinssatz × Monate / 12)?",
+ "margin_price": "Ein Produkt kostet {cost}. Der Verkaufspreis soll eine Bruttomarge von {m} % des Verkaufspreises ergeben. Wie hoch ist der Verkaufspreis?",
+ "discount_then_vat": "Ein Nettopreis von {amount} erhält {d} % Rabatt; runden Sie den rabattierten Preis auf die kleinste Einheit und schlagen Sie dann {p} % Umsatzsteuer auf. Wie hoch ist der Endpreis?",
+ "rounding": "Geben Sie den genauen Betrag in der Landeswährung an, kaufmännisch (Hälfte aufwärts) auf die kleinste Einheit gerundet."
+}
