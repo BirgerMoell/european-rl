@@ -1,0 +1,87 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Napíšte e-mail pre {name} zo spoločnosti {company} ({city}). {topic} Píšete v mene odosielateľa {sender}.\nPožiadavky:\n{requirements}\nNapíšte iba e-mail.",
+  "Pripravte, prosím, nasledujúci e-mail v mene odosielateľa {sender}. Príjemca: {name}, {company}, {city}. {topic}\nE-mail musí spĺňať tieto požiadavky:\n{requirements}\nOdpovedzte iba textom e-mailu."
+ ],
+ "topics": {
+  "payment_reminder": "Ide o zdvorilú upomienku, že faktúra na sumu {amount} bola splatná {date}.",
+  "order_confirmation": "Potvrdzuje objednávku v hodnote {amount} s dodaním {date}.",
+  "meeting_confirmation": "Potvrdzuje stretnutie {date} na prerokovanie zmluvy v hodnote {amount}."
+ },
+ "req": {
+  "subject": "Prvý riadok je predmet a začína sa slovom „{label}“.",
+  "closing": "Ukončite e-mail bežnou zdvorilostnou frázou, napríklad {examples}, a za ňou menom odosielateľa.",
+  "formal": "Počas celého e-mailu príjemcovi vykajte (Vy, Vás, Vám).",
+  "amount": "Napíšte sumu v miestnom peňažnom formáte príjemcu.",
+  "date": "Napíšte dátum v miestnom formáte dátumu príjemcu.",
+  "name": "Oslovte príjemcu celým menom, napísaným presne tak, ako je uvedené.",
+  "no_english": "Nepoužívajte žiadne anglické slová.",
+  "words": "E-mail má {min} až {max} slov.",
+  "bullets": "Uveďte presne {n} odrážky (riadky začínajúce sa „- “)."
+ },
+ "subject_label": "Predmet:",
+ "closings": [
+  "S pozdravom",
+  "S priateľským pozdravom",
+  "S úctou"
+ ],
+ "formal": {
+  "formal": [
+   "Vy",
+   "Vás",
+   "Vám",
+   "Vami",
+   "Váš",
+   "Vaša",
+   "Vaše",
+   "Vášho",
+   "Vašej",
+   "Vašu",
+   "Vašim",
+   "Vašom"
+  ],
+  "informal": [
+   "ty",
+   "teba",
+   "tebe",
+   "ťa",
+   "tebou",
+   "tvoj",
+   "tvoja",
+   "tvoje",
+   "tvojho",
+   "tvojej",
+   "tvoju",
+   "tvojím"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Upomienka na neuhradenú faktúru",
+  "order_confirmation": "Potvrdenie objednávky",
+  "meeting_confirmation": "Potvrdenie stretnutia"
+ },
+ "ref_body": {
+  "payment_reminder": "dovoľujeme si Vám pripomenúť, že suma {amount} bola splatná {date}.",
+  "order_confirmation": "týmto Vám potvrdzujeme Vašu objednávku v hodnote {amount}; dodanie je plánované na {date}.",
+  "meeting_confirmation": "týmto Vám potvrdzujeme naše stretnutie {date} k zmluve v hodnote {amount}."
+ },
+ "ref_greeting": "Dobrý deň, {name},",
+ "ref_bullets": [
+  "referenčné číslo nájdete v priloženom dokumente",
+  "náš zákaznícky servis je k dispozícii v pracovné dni",
+  "všetky ceny zahŕňajú platné dane",
+  "túto správu si, prosím, uschovajte"
+ ],
+ "ref_filler": [
+  "Ďakujeme Vám za dobrú spoluprácu v uplynulých mesiacoch.",
+  "Ak by Vám čokoľvek nebolo jasné, neváhajte nás kedykoľvek kontaktovať.",
+  "Naša kancelária je otvorená od pondelka do piatka v bežnom pracovnom čase.",
+  "Radi Vám zodpovieme všetky otázky k podrobnostiam.",
+  "Kópia príslušných dokumentov je uložená v našom systéme.",
+  "Tešíme sa na pokračovanie spolupráce v nasledujúcom roku.",
+  "Ak ste túto záležitosť už vybavili, považujte, prosím, túto správu za bezpredmetnú.",
+  "Vopred Vám ďakujeme za pozornosť."
+ ],
+ "word_factor": 0.8
+}

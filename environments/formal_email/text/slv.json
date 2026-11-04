@@ -1,0 +1,86 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Napišite e-sporočilo za {name} iz podjetja {company} ({city}). {topic} Pišete v imenu pošiljatelja {sender}.\nZahteve:\n{requirements}\nNapišite samo e-sporočilo.",
+  "Prosimo, pripravite naslednje e-sporočilo v imenu pošiljatelja {sender}. Prejemnik: {name}, {company}, {city}. {topic}\nE-sporočilo mora izpolnjevati te zahteve:\n{requirements}\nOdgovorite samo z besedilom e-sporočila."
+ ],
+ "topics": {
+  "payment_reminder": "Gre za prijazen opomin, da je račun v znesku {amount} zapadel v plačilo {date}.",
+  "order_confirmation": "Potrjuje naročilo v vrednosti {amount} z dobavo {date}.",
+  "meeting_confirmation": "Potrjuje sestanek {date} za obravnavo pogodbe v vrednosti {amount}."
+ },
+ "req": {
+  "subject": "Prva vrstica je zadeva in se začne z »{label}«.",
+  "closing": "Zaključite z običajnim pozdravom, na primer {examples}, ki mu sledi ime pošiljatelja.",
+  "formal": "Prejemnika ves čas vikajte (Vi, Vas, Vam).",
+  "amount": "Znesek zapišite v lokalni denarni obliki prejemnika.",
+  "date": "Datum zapišite v lokalni obliki datuma prejemnika.",
+  "name": "Prejemnika nagovorite s polnim imenom, zapisanim natanko tako, kot je podano.",
+  "no_english": "Ne uporabljajte nobenih angleških besed.",
+  "words": "E-sporočilo ima od {min} do {max} besed.",
+  "bullets": "Vključite natanko {n} alineje (vrstice, ki se začnejo z »- «)."
+ },
+ "subject_label": "Zadeva:",
+ "closings": [
+  "Lep pozdrav",
+  "S spoštovanjem",
+  "Prijazen pozdrav"
+ ],
+ "formal": {
+  "formal": [
+   "Vi",
+   "Vas",
+   "Vam",
+   "Vami",
+   "Vaš",
+   "Vaša",
+   "Vaše",
+   "Vašega",
+   "Vašemu",
+   "Vašo",
+   "Vaši",
+   "Vašim"
+  ],
+  "informal": [
+   "tebe",
+   "tebi",
+   "tabo",
+   "tvoj",
+   "tvoja",
+   "tvoje",
+   "tvojega",
+   "tvojemu",
+   "tvojo",
+   "tvoji",
+   "tvojim"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Opomin glede neplačanega računa",
+  "order_confirmation": "Potrditev naročila",
+  "meeting_confirmation": "Potrditev sestanka"
+ },
+ "ref_body": {
+  "payment_reminder": "prijazno Vas opominjamo, da je znesek {amount} zapadel v plačilo {date}.",
+  "order_confirmation": "s tem Vam potrjujemo Vaše naročilo v znesku {amount}; dobava je predvidena {date}.",
+  "meeting_confirmation": "s tem Vam potrjujemo naš sestanek {date} glede pogodbe v vrednosti {amount}."
+ },
+ "ref_greeting": "Spoštovani {name},",
+ "ref_bullets": [
+  "referenčna številka je navedena v priloženem dokumentu",
+  "naša služba za stranke je dosegljiva ob delavnikih",
+  "vse cene vključujejo veljavne davke",
+  "prosimo, shranite to sporočilo"
+ ],
+ "ref_filler": [
+  "Zahvaljujemo se Vam za dobro sodelovanje v zadnjih mesecih.",
+  "Če Vam kar koli ni jasno, nas lahko kadar koli kontaktirate.",
+  "Naša pisarna je odprta od ponedeljka do petka v običajnem delovnem času.",
+  "Z veseljem Vam odgovorimo na vsa vprašanja o podrobnostih.",
+  "Kopija ustreznih dokumentov je shranjena v našem sistemu.",
+  "Veselimo se nadaljevanja sodelovanja v prihodnjem letu.",
+  "Če ste zadevo že uredili, prosimo, ne upoštevajte tega sporočila.",
+  "Že vnaprej se Vam zahvaljujemo za pozornost."
+ ],
+ "word_factor": 0.85
+}

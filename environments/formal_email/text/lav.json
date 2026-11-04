@@ -1,0 +1,79 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Uzrakstiet e-pastu adresātam {name} uzņēmumā {company} ({city}). {topic} Jūs rakstāt sūtītāja {sender} vārdā.\nPrasības:\n{requirements}\nUzrakstiet tikai e-pastu.",
+  "Lūdzu, sagatavojiet šo e-pastu sūtītāja {sender} vārdā. Adresāts: {name}, {company}, {city}. {topic}\nE-pastam jāatbilst šīm prasībām:\n{requirements}\nAtbildiet tikai ar e-pasta tekstu."
+ ],
+ "topics": {
+  "payment_reminder": "Tas ir laipns atgādinājums, ka rēķins par summu {amount} bija jāapmaksā līdz {date}.",
+  "order_confirmation": "Tas apstiprina pasūtījumu {amount} vērtībā ar piegādi {date}.",
+  "meeting_confirmation": "Tas apstiprina tikšanos {date}, lai apspriestu līgumu {amount} vērtībā."
+ },
+ "req": {
+  "subject": "Pirmā rinda ir temats, un tā sākas ar “{label}”.",
+  "closing": "Noslēdziet ar ierastu noslēguma frāzi, piemēram, {examples}, un pēc tam sūtītāja vārdu.",
+  "formal": "Visā tekstā uzrunājiet adresātu pieklājības formā (Jūs).",
+  "amount": "Uzrakstiet summu adresāta vietējā naudas formātā.",
+  "date": "Uzrakstiet datumu adresāta vietējā datuma formātā.",
+  "name": "Uzrunājiet adresātu ar pilnu vārdu un uzvārdu, uzrakstītu tieši tā, kā norādīts.",
+  "no_english": "Neizmantojiet nevienu angļu vārdu.",
+  "words": "E-pastā ir no {min} līdz {max} vārdiem.",
+  "bullets": "Iekļaujiet tieši {n} aizzīmētus punktus (rindas, kas sākas ar “- ”)."
+ },
+ "subject_label": "Temats:",
+ "closings": [
+  "Ar cieņu",
+  "Ar labiem novēlējumiem",
+  "Ar sveicieniem"
+ ],
+ "formal": {
+  "formal": [
+   "Jūs",
+   "Jums",
+   "Jūsu",
+   "Jūsos"
+  ],
+  "informal": [
+   "tu",
+   "tev",
+   "tevi",
+   "tevis",
+   "tevī",
+   "tavs",
+   "tava",
+   "tavu",
+   "tavā",
+   "tavam",
+   "tavai",
+   "tavi"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Atgādinājums par neapmaksātu rēķinu",
+  "order_confirmation": "Pasūtījuma apstiprinājums",
+  "meeting_confirmation": "Tikšanās apstiprinājums"
+ },
+ "ref_body": {
+  "payment_reminder": "laipni atgādinām Jums, ka summa {amount} bija jāapmaksā līdz {date}.",
+  "order_confirmation": "ar šo apstiprinām Jūsu pasūtījumu par summu {amount}; piegāde plānota {date}.",
+  "meeting_confirmation": "ar šo apstiprinām mūsu tikšanos ar Jums {date} par līgumu {amount} vērtībā."
+ },
+ "ref_greeting": "Cienījamā/-ais {name},",
+ "ref_bullets": [
+  "atsauces numurs ir norādīts pievienotajā dokumentā",
+  "mūsu klientu apkalpošanas dienests strādā darba dienās",
+  "visās cenās ir iekļauti piemērojamie nodokļi",
+  "lūdzu, saglabājiet šo ziņojumu"
+ ],
+ "ref_filler": [
+  "Pateicamies Jums par labo sadarbību pēdējo mēnešu laikā.",
+  "Ja kaut kas nav skaidrs, lūdzu, sazinieties ar mums jebkurā laikā.",
+  "Mūsu birojs ir atvērts no pirmdienas līdz piektdienai parastajā darba laikā.",
+  "Labprāt atbildēsim uz visiem Jūsu jautājumiem par detaļām.",
+  "Attiecīgo dokumentu kopija ir saglabāta mūsu sistēmā.",
+  "Ar nepacietību gaidām sadarbības turpinājumu nākamajā gadā.",
+  "Ja šis jautājums jau ir nokārtots, lūdzu, neņemiet vērā šo ziņojumu.",
+  "Jau iepriekš pateicamies par Jūsu uzmanību."
+ ],
+ "word_factor": 0.8
+}

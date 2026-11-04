@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Vi ste asistent/ica osobe {organizer} u tvrtki {company} i radite s kalendarskim alatima i alatima za e-poštu grupe. Obradite novu poruku e-pošte u pristigloj pošti. Pravila grupe za zakazivanje sastanaka: sastanak se premješta na najraniji početak, na puni sat ili pola sata, u traženom tjednu kada su svi sudionici slobodni – unutar radnog vremena vlastitog ureda i izvan njegove pauze za ručak, prema vlastitom lokalnom vremenu, te ne vikendom ni na neradni dan u vlastitoj zemlji. Zadržite trajanje i sudionike sastanka. Zatim svim sudionicima osim osobe {organizer} pošaljite e-poruku s novim datumom (GGGG-MM-DD) i vremenom (SS:MM) prema njihovu lokalnom vremenu. Ako nijedan termin ne odgovara, ne premještajte sastanak; odgovorite samo osobi koja je tražila. Nikome drugome ne pišite. Završite kratkom porukom bez poziva alata.",
+  "Pomažete osobi {organizer} ({company}). U pristigloj pošti nalazi se nova poruka; obradite je kalendarskim alatima i alatima za e-poštu. Pravila za premještanje sastanaka: odaberite najraniji termin u traženom tjednu (početak na puni sat ili pola sata) koji je unutar lokalnog radnog vremena svakog sudionika, izbjegava njegovu pauzu za ručak, vikende i neradne dane u njegovoj zemlji te se ne preklapa s njegovim drugim sastancima; zadržite trajanje i sudionike. Obavijestite svakog sudionika osim osobe {organizer} o novom datumu (GGGG-MM-DD) i vremenu (SS:MM) u njegovoj vremenskoj zoni. Ako takvog termina nema, ostavite sastanak nepromijenjenim i odgovorite samo pošiljatelju. Kada završite, napišite kratku završnu poruku bez poziva alata."
+ ],
+ "request": [
+  "Bok {organizer},\n\nnažalost ne mogu sudjelovati na „{title}” u trenutačnom terminu ({original}). Možeš li sastanak premjestiti na najraniji termin u tjednu od {monday} do {friday} kada svi možemo i javiti svima novo vrijeme?\n\nHvala,\n{name}",
+  "Poštovani {organizer},\n\nnešto mi je iskrslo i ne mogu sudjelovati na „{title}” {original}. Molim Vas da sastanak premjestite na prvi mogući termin između {monday} i {friday} koji odgovara svim sudionicima te da obavijestite sve.\n\nS poštovanjem\n{name}"
+ ],
+ "request_subject": "Premještanje sastanka: {title}",
+ "notice_subject": "Novi termin: {title}",
+ "notice": "Poštovani,\n\nsastanak „{title}” premješten je na {date} u {time} ({tz}).\n\nS poštovanjem",
+ "no_slot_reply": "Poštovani,\n\nnažalost u traženom tjednu nema termina kada su svi sudionici sastanka „{title}” slobodni, pa sastanak ostaje prema planu.\n\nS poštovanjem",
+ "titles": [
+  "Tromjesečni pregled proračuna",
+  "Upravljački odbor projekta",
+  "Pregovori s dobavljačem",
+  "Novosti o IT sigurnosti"
+ ],
+ "busy_titles": [
+  "Poziv s klijentom",
+  "Interna radionica",
+  "Individualni razgovor"
+ ],
+ "done": "Sastanak je riješen."
+}

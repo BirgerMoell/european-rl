@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Þú ert aðstoðarmaður {organizer} hjá {company} og vinnur með dagatals- og tölvupóstverkfæri samstæðunnar. Afgreiddu nýja tölvupóstinn í innhólfinu. Reglur samstæðunnar um fundartíma: fundur er færður á fyrsta mögulega upphafstíma, á heilum eða hálfum tíma, í umbeðinni viku þegar allir þátttakendur eru lausir – innan vinnutíma eigin skrifstofu og utan hádegishlés hennar, í eigin staðartíma, og ekki um helgi eða á frídegi í eigin landi. Haltu lengd fundarins og þátttakendum óbreyttum. Sendu síðan öllum þátttakendum nema {organizer} tölvupóst með nýrri dagsetningu (ÁÁÁÁ-MM-DD) og tíma (KK:MM) í eigin staðartíma þeirra. Ef enginn tími hentar skal ekki færa fundinn; svaraðu þá aðeins þeim sem spurði. Ekki senda neinum öðrum tölvupóst. Ljúktu með stuttum skilaboðum án verkfærakalls.",
+  "Þú aðstoðar {organizer} ({company}). Nýr tölvupóstur er í innhólfinu; afgreiddu hann með dagatals- og tölvupóstverkfærunum. Reglur um færslu funda: veldu fyrsta tímann í umbeðinni viku (upphaf á heilum eða hálfum tíma) sem er innan staðbundins vinnutíma hvers þátttakanda, forðast hádegishlé þeirra, helgar og frídaga í landi þeirra og rekst ekki á aðra fundi þeirra; haltu lengd og þátttakendum. Láttu hvern þátttakanda nema {organizer} vita af nýrri dagsetningu (ÁÁÁÁ-MM-DD) og tíma (KK:MM) á hans eigin tímabelti. Ef enginn slíkur tími er til skaltu láta fundinn standa óbreyttan og svara aðeins sendandanum. Þegar þú ert búinn skaltu skrifa stutt lokaskilaboð án verkfærakalls."
+ ],
+ "request": [
+  "Sæl/l {organizer},\n\nþví miður kemst ég ekki á „{title}“ á núverandi tíma ({original}). Gætir þú fært fundinn á fyrsta tíma vikunnar {monday} til {friday} þegar við getum öll mætt, og látið alla vita af nýja tímanum?\n\nTakk,\n{name}",
+  "Kæri/Kæra {organizer},\n\nnokkuð hefur komið upp á og ég get ekki sótt „{title}“ {original}. Vinsamlegast færðu fundinn á fyrsta mögulega tíma milli {monday} og {friday} sem hentar öllum þátttakendum og láttu alla vita.\n\nKær kveðja,\n{name}"
+ ],
+ "request_subject": "Breyting á fundartíma: {title}",
+ "notice_subject": "Nýr tími: {title}",
+ "notice": "Góðan dag,\n\nfundurinn „{title}“ hefur verið færður til {date} kl. {time} ({tz}).\n\nKær kveðja",
+ "no_slot_reply": "Góðan dag,\n\nþví miður er enginn tími í umbeðinni viku þegar allir þátttakendur fundarins „{title}“ eru lausir, svo fundurinn stendur óbreyttur.\n\nKær kveðja",
+ "titles": [
+  "Ársfjórðungsyfirferð fjárhagsáætlunar",
+  "Stýrihópur verkefnisins",
+  "Samningaviðræður við birgja",
+  "Staða upplýsingaöryggis"
+ ],
+ "busy_titles": [
+  "Símtal við viðskiptavin",
+  "Innri vinnustofa",
+  "Einstaklingsviðtal"
+ ],
+ "done": "Fundurinn hefur verið afgreiddur."
+}

@@ -1,0 +1,86 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Napišite e-poruku za {name} iz tvrtke {company} ({city}). {topic} Pišete u ime pošiljatelja {sender}.\nZahtjevi:\n{requirements}\nNapišite samo e-poruku.",
+  "Molimo pripremite sljedeću e-poruku u ime pošiljatelja {sender}. Primatelj: {name}, {company}, {city}. {topic}\nE-poruka mora ispunjavati ove zahtjeve:\n{requirements}\nOdgovorite samo tekstom e-poruke."
+ ],
+ "topics": {
+  "payment_reminder": "Riječ je o ljubaznom podsjetniku da je račun na iznos od {amount} dospio na plaćanje {date}.",
+  "order_confirmation": "Potvrđuje narudžbu u vrijednosti od {amount} s isporukom {date}.",
+  "meeting_confirmation": "Potvrđuje sastanak {date} radi razgovora o ugovoru u vrijednosti od {amount}."
+ },
+ "req": {
+  "subject": "Prvi redak je predmet i počinje s „{label}”.",
+  "closing": "Završite uobičajenim pozdravom, primjerice {examples}, nakon kojeg slijedi ime pošiljatelja.",
+  "formal": "Primatelju se cijelo vrijeme obraćajte s Vi (persiranje).",
+  "amount": "Napišite iznos u lokalnom novčanom formatu primatelja.",
+  "date": "Napišite datum u lokalnom formatu datuma primatelja.",
+  "name": "Primatelju se obratite punim imenom, napisanim točno kako je navedeno.",
+  "no_english": "Nemojte upotrebljavati nijednu englesku riječ.",
+  "words": "E-poruka ima od {min} do {max} riječi.",
+  "bullets": "Uključite točno {n} stavke u popisu (retke koji počinju s „- ”)."
+ },
+ "subject_label": "Predmet:",
+ "closings": [
+  "S poštovanjem",
+  "Lijep pozdrav",
+  "Srdačan pozdrav"
+ ],
+ "formal": {
+  "formal": [
+   "Vi",
+   "Vas",
+   "Vam",
+   "Vama",
+   "Vaš",
+   "Vaša",
+   "Vaše",
+   "Vašeg",
+   "Vašem",
+   "Vašu",
+   "Vaši",
+   "Vašim"
+  ],
+  "informal": [
+   "tebe",
+   "tebi",
+   "tobom",
+   "tvoj",
+   "tvoja",
+   "tvoje",
+   "tvojeg",
+   "tvojega",
+   "tvojem",
+   "tvojim",
+   "tvoju"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Podsjetnik na nepodmireni račun",
+  "order_confirmation": "Potvrda narudžbe",
+  "meeting_confirmation": "Potvrda sastanka"
+ },
+ "ref_body": {
+  "payment_reminder": "ljubazno Vas podsjećamo da je iznos od {amount} dospio na plaćanje {date}.",
+  "order_confirmation": "ovime Vam potvrđujemo Vašu narudžbu u iznosu od {amount}; isporuka je planirana za {date}.",
+  "meeting_confirmation": "ovime Vam potvrđujemo naš sastanak {date} o ugovoru u vrijednosti od {amount}."
+ },
+ "ref_greeting": "Poštovani {name},",
+ "ref_bullets": [
+  "referentni broj nalazi se u priloženom dokumentu",
+  "naša korisnička služba dostupna je radnim danima",
+  "sve cijene uključuju važeće poreze",
+  "molimo Vas da sačuvate ovu poruku"
+ ],
+ "ref_filler": [
+  "Zahvaljujemo Vam na dobroj suradnji tijekom proteklih mjeseci.",
+  "Ako Vam nešto nije jasno, slobodno nam se obratite u bilo kojem trenutku.",
+  "Naš ured otvoren je od ponedjeljka do petka tijekom uobičajenog radnog vremena.",
+  "Rado ćemo odgovoriti na sva Vaša pitanja o pojedinostima.",
+  "Preslika relevantnih dokumenata pohranjena je u našem sustavu.",
+  "Veselimo se nastavku suradnje u idućoj godini.",
+  "Ako ste ovo pitanje već riješili, molimo Vas da zanemarite ovu poruku.",
+  "Unaprijed Vam zahvaljujemo na pažnji."
+ ],
+ "word_factor": 0.85
+}

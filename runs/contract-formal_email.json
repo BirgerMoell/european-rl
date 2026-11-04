@@ -1,0 +1,178 @@
+{
+  "environment": "formal_email",
+  "status": "passed",
+  "contract": "0.3",
+  "interaction": "typed_answer",
+  "cases_per_split": 40,
+  "languages": {
+    "bos": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "bul": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "cat": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "ces": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "dan": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "deu": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "ell": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "eng": {
+      "unique_prompts": 120,
+      "strings": "author"
+    },
+    "est": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "eus": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "fin": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "fra": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "gle": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "glg": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "hrv": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "hun": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "isl": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "ita": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "kat": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "lav": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "lit": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "mkd": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "mlt": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "nld": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "nor": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "pol": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "por": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "ron": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "slk": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "slv": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "spa": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "sqi": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "srp": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "swe": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "tur": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    },
+    "ukr": {
+      "unique_prompts": 120,
+      "strings": "llm"
+    }
+  },
+  "reference_success": 1.0,
+  "abstain_share": 0.0,
+  "missing_string_tables": [],
+  "probe_mean_reward": {
+    "abstain": 0.0,
+    "all_numbers": 0.0,
+    "bare_answer": 0.0,
+    "echo_prompt": 0.0,
+    "empty": 0.0,
+    "english_email": 0.0,
+    "first_date": 0.0,
+    "first_number": 0.0,
+    "informal_register": 0.0,
+    "json_empty_list": 0.0,
+    "json_empty_object": 0.0,
+    "largest_amount": 0.0,
+    "last_amount": 0.0,
+    "neutral_formats": 0.0,
+    "no_answer_line": 0.0,
+    "no_closing": 0.0,
+    "think_only": 0.0
+  },
+  "schema_version": 1,
+  "source_sha256": "b253b2fd4a806b27776435077b48b0f99aa6b81989440515dcf148a2f8bd23bf",
+  "created_at": "2026-11-04T11:32:26.255168+00:00"
+}

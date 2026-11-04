@@ -27,15 +27,20 @@ contract) and implements the design in
    wrong country's rules, wrong VAT treatment, …): each must earn ≤ 0.3 mean reward.
 5. **One answer convention in every language:** a final line `ANSWER: <value>`, abstention `ANSWER: UNKNOWN`.
 
-## Status (M0)
+## Status
 
 | Part | State |
 |---|---|
-| Language registry | the 36 OpenEuroLLM / EUROPA languages (`eurl/languages.py`) |
-| Payment identifiers | IBAN for 36 countries, ISO 11649 RF, Swedish OCR, Finnish viitenumero, Norwegian KID, Belgian structured communication; tested against python-stdnum |
-| Calendar | Western and Orthodox Easter, declarative holiday rules; tested against the `holidays` package |
-| Locale packs | SE, DE, FR, PL, FI (money format, holidays, VAT snapshot 2025, company and VAT IDs with check digits, names) |
-| Environments | `finance_amount_due` in eng, swe, deu, fra, pol, fin: 5 levels incl. handbook lookup and intra-EU reverse charge; contract passed; independent solver agrees on all tested tasks |
+| Languages | all 36 OpenEuroLLM / EUROPA languages (`eurl/languages.py`) |
+| Locale packs | 36 countries: EU-27 + IS, NO, AL, BA, RS, MK, TR, UA, GE (money format, local date style, holidays, VAT snapshot 2025, company and VAT IDs with check digits, payment references, names) |
+| Oracles | holidays vs the `holidays` package 2024–2030 (lunar and substitute-day calendars in `tests/test_locale_southeast.py`); identifiers and references vs python-stdnum |
+| Names | gender-consistent surnames (PL, CZ, SK, LT, LV, BG, MK, GR, Icelandic patronymics) (`eurl/names.py`) |
+| `finance_amount_due` | typed answer, 5 levels (national VAT, handbook lookup, discounts, credit notes, rounding, intra-EU reverse charge); contract passed in 36 languages |
+| `meeting_reschedule` | tool episode in the synthetic company group: time zones, local office hours and lunch, national days off, cross-lingual requests, notify each participant in their own local time; contract passed in 36 languages; a tools-only solver solves every tested task |
+| `formal_email` | instruction following: formal register (per-language pronoun lists), local money and date formats, exact names, local subject and closing, no code-switching, length, bullets; contract passed in 36 languages |
+
+Contract reports: `runs/contract-*.json`. First model baselines (finance, OpenEuroLLM 9B checkpoints): 6–11 % overall; levels 1–3
+at 8–25 %, levels 4–5 near 0, so training starts at levels 1–3.
 
 **Text review.** Interface strings and task templates outside English are LLM-written and marked `"llm"` in
 `eurl/i18n.py` and each manifest; they are not yet reviewed by native speakers. VAT rates are a dated policy
@@ -48,42 +53,42 @@ uses it.
 
 | Code | Language | Countries | Locale pack | Strings |
 |---|---|---|---|---|
-| bul | Bulgarian | BG | — | — |
-| ces | Czech | CZ | — | — |
-| dan | Danish | DK | — | — |
-| deu | German | DE, AT, LU, BE | ✓ DE | llm |
-| ell | Greek | GR, CY | — | — |
-| eng | English | IE, MT | — | author |
-| est | Estonian | EE | — | — |
+| bul | Bulgarian | BG | ✓ BG | llm |
+| ces | Czech | CZ | ✓ CZ | llm |
+| dan | Danish | DK | ✓ DK | llm |
+| deu | German | DE, AT, LU, BE | ✓ DE, AT, LU, BE | llm |
+| ell | Greek | GR, CY | ✓ GR, CY | llm |
+| eng | English | IE, MT | ✓ IE, MT | author |
+| est | Estonian | EE | ✓ EE | llm |
 | fin | Finnish | FI | ✓ FI | llm |
-| fra | French | FR, BE, LU | ✓ FR | llm |
-| gle | Irish | IE | — | — |
-| hrv | Croatian | HR | — | — |
-| hun | Hungarian | HU | — | — |
-| ita | Italian | IT | — | — |
-| lav | Latvian | LV | — | — |
-| lit | Lithuanian | LT | — | — |
-| mlt | Maltese | MT | — | — |
-| nld | Dutch | NL, BE | — | — |
+| fra | French | FR, BE, LU | ✓ FR, BE, LU | llm |
+| gle | Irish | IE | ✓ IE | llm |
+| hrv | Croatian | HR | ✓ HR | llm |
+| hun | Hungarian | HU | ✓ HU | llm |
+| ita | Italian | IT | ✓ IT | llm |
+| lav | Latvian | LV | ✓ LV | llm |
+| lit | Lithuanian | LT | ✓ LT | llm |
+| mlt | Maltese | MT | ✓ MT | llm |
+| nld | Dutch | NL, BE | ✓ NL, BE | llm |
 | pol | Polish | PL | ✓ PL | llm |
-| por | Portuguese | PT | — | — |
-| ron | Romanian | RO | — | — |
-| slk | Slovak | SK | — | — |
-| slv | Slovenian | SI | — | — |
-| spa | Spanish | ES | — | — |
+| por | Portuguese | PT | ✓ PT | llm |
+| ron | Romanian | RO | ✓ RO | llm |
+| slk | Slovak | SK | ✓ SK | llm |
+| slv | Slovenian | SI | ✓ SI | llm |
+| spa | Spanish | ES | ✓ ES | llm |
 | swe | Swedish | SE, FI | ✓ SE, FI | llm |
-| cat | Catalan | ES | — | — |
-| eus | Basque | ES | — | — |
-| glg | Galician | ES | — | — |
-| isl | Icelandic | IS | — | — |
-| nor | Norwegian | NO | — | — |
-| sqi | Albanian | AL | — | — |
-| bos | Bosnian | BA | — | — |
-| srp | Serbian | RS | — | — |
-| mkd | Macedonian | MK | — | — |
-| tur | Turkish | TR | — | — |
-| ukr | Ukrainian | UA | — | — |
-| kat | Georgian | GE | — | — |
+| cat | Catalan | ES | ✓ ES | llm |
+| eus | Basque | ES | ✓ ES | llm |
+| glg | Galician | ES | ✓ ES | llm |
+| isl | Icelandic | IS | ✓ IS | llm |
+| nor | Norwegian | NO | ✓ NO | llm |
+| sqi | Albanian | AL | ✓ AL | llm |
+| bos | Bosnian | BA | ✓ BA | llm |
+| srp | Serbian | RS | ✓ RS | llm |
+| mkd | Macedonian | MK | ✓ MK | llm |
+| tur | Turkish | TR | ✓ TR | llm |
+| ukr | Ukrainian | UA | ✓ UA | llm |
+| kat | Georgian | GE | ✓ GE | llm |
 
 ## Use
 

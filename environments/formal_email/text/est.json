@@ -1,0 +1,79 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Kirjutage e-kiri adressaadile {name} ettevõttes {company} ({city}). {topic} Kirjutate saatja {sender} nimel.\nNõuded:\n{requirements}\nKirjutage ainult e-kiri.",
+  "Palun koostage järgmine e-kiri saatja {sender} nimel. Adressaat: {name}, {company}, {city}. {topic}\nE-kiri peab vastama järgmistele nõuetele:\n{requirements}\nVastake ainult e-kirja tekstiga."
+ ],
+ "topics": {
+  "payment_reminder": "See on sõbralik meeldetuletus, et arve summas {amount} pidi olema tasutud {date}.",
+  "order_confirmation": "See kinnitab tellimust väärtusega {amount}, mis tarnitakse {date}.",
+  "meeting_confirmation": "See kinnitab kohtumist {date}, et arutada lepingut väärtusega {amount}."
+ },
+ "req": {
+  "subject": "Esimene rida on teemarida ja algab sõnaga „{label}“.",
+  "closing": "Lõpetage tavapärase lõputervitusega, näiteks {examples}, millele järgneb saatja nimi.",
+  "formal": "Pöörduge adressaadi poole läbivalt viisakusvormis (Teie).",
+  "amount": "Kirjutage summa adressaadi kohalikus rahavormingus.",
+  "date": "Kirjutage kuupäev adressaadi kohalikus kuupäevavormingus.",
+  "name": "Pöörduge adressaadi poole täisnimega, kirjutatuna täpselt nii, nagu see on antud.",
+  "no_english": "Ärge kasutage ühtegi ingliskeelset sõna.",
+  "words": "E-kirjas on {min} kuni {max} sõna.",
+  "bullets": "Lisage täpselt {n} loendipunkti (read, mis algavad märgiga „- “)."
+ },
+ "subject_label": "Teema:",
+ "closings": [
+  "Lugupidamisega",
+  "Parimate soovidega",
+  "Tervitades"
+ ],
+ "formal": {
+  "formal": [
+   "Teie",
+   "Teile",
+   "Teid",
+   "Teil",
+   "Teiega",
+   "Teilt"
+  ],
+  "informal": [
+   "sina",
+   "sa",
+   "sind",
+   "sinu",
+   "su",
+   "sulle",
+   "sinule",
+   "sul",
+   "sinul",
+   "sinuga"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Meeldetuletus tasumata arve kohta",
+  "order_confirmation": "Tellimuse kinnitus",
+  "meeting_confirmation": "Kohtumise kinnitus"
+ },
+ "ref_body": {
+  "payment_reminder": "tuletame Teile sõbralikult meelde, et summa {amount} tuli tasuda {date}.",
+  "order_confirmation": "kinnitame Teie tellimuse summas {amount}; tarne on planeeritud {date}.",
+  "meeting_confirmation": "kinnitame Teiega kokkulepitud kohtumist {date} lepingu üle väärtusega {amount}."
+ },
+ "ref_greeting": "Lugupeetud {name},",
+ "ref_bullets": [
+  "viitenumbri leiate lisatud dokumendist",
+  "meie klienditeenindus on avatud tööpäevadel",
+  "kõik hinnad sisaldavad kehtivaid makse",
+  "palun säilitage see kiri"
+ ],
+ "ref_filler": [
+  "Täname Teid hea koostöö eest viimastel kuudel.",
+  "Kui midagi jääb ebaselgeks, võtke meiega julgelt igal ajal ühendust.",
+  "Meie kontor on avatud esmaspäevast reedeni tavalisel tööajal.",
+  "Vastame hea meelega kõigile Teie küsimustele üksikasjade kohta.",
+  "Asjakohaste dokumentide koopia on salvestatud meie süsteemi.",
+  "Ootame koostöö jätkumist eelseisval aastal.",
+  "Kui olete selle küsimuse juba lahendanud, palun jätke see kiri tähelepanuta.",
+  "Täname Teid juba ette tähelepanu eest."
+ ],
+ "word_factor": 0.7
+}

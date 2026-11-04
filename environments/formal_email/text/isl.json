@@ -1,0 +1,58 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Skrifaðu tölvupóst til {name} hjá {company} ({city}). {topic} Þú skrifar fyrir hönd {sender}.\nKröfur:\n{requirements}\nSkrifaðu aðeins tölvupóstinn.",
+  "Vinsamlegast semdu eftirfarandi tölvupóst fyrir hönd {sender}. Viðtakandi: {name}, {company}, {city}. {topic}\nTölvupósturinn þarf að uppfylla þessar kröfur:\n{requirements}\nSvaraðu aðeins með texta tölvupóstsins."
+ ],
+ "topics": {
+  "payment_reminder": "Þetta er vinsamleg áminning um að reikningur að upphæð {amount} var á gjalddaga {date}.",
+  "order_confirmation": "Hann staðfestir pöntun að verðmæti {amount} sem verður afhent {date}.",
+  "meeting_confirmation": "Hann staðfestir fund {date} til að ræða samning að verðmæti {amount}."
+ },
+ "req": {
+  "subject": "Fyrsta línan er efnislínan og byrjar á „{label}“.",
+  "closing": "Ljúktu með hefðbundinni kveðju eins og {examples} og síðan nafni sendanda.",
+  "formal": "Notaðu formlegt ávarp allan tímann.",
+  "amount": "Skrifaðu upphæðina á staðbundnu peningasniði viðtakandans.",
+  "date": "Skrifaðu dagsetninguna á staðbundnu dagsetningarsniði viðtakandans.",
+  "name": "Ávarpaðu viðtakandann með fullu nafni, stafsettu nákvæmlega eins og gefið er upp.",
+  "no_english": "Ekki nota nein ensk orð.",
+  "words": "Tölvupósturinn er á bilinu {min} til {max} orð.",
+  "bullets": "Hafðu nákvæmlega {n} punkta í punktalista (línur sem byrja á „- “)."
+ },
+ "subject_label": "Efni:",
+ "closings": [
+  "Kær kveðja",
+  "Bestu kveðjur",
+  "Virðingarfyllst"
+ ],
+ "formal": null,
+ "ref_subject": {
+  "payment_reminder": "Áminning um ógreiddan reikning",
+  "order_confirmation": "Staðfesting á pöntun",
+  "meeting_confirmation": "Staðfesting á fundi okkar"
+ },
+ "ref_body": {
+  "payment_reminder": "við viljum vinsamlega minna á að upphæðin {amount} var á gjalddaga {date}.",
+  "order_confirmation": "hér með staðfestum við pöntun þína að upphæð {amount}; afhending er áætluð {date}.",
+  "meeting_confirmation": "hér með staðfestum við fund okkar {date} um samninginn að verðmæti {amount}."
+ },
+ "ref_greeting": "Góðan dag, {name},",
+ "ref_bullets": [
+  "tilvísunarnúmerið kemur fram í meðfylgjandi skjali",
+  "þjónustuver okkar er opið á virkum dögum",
+  "öll verð eru með gildandi sköttum",
+  "vinsamlegast geymdu þessi skilaboð"
+ ],
+ "ref_filler": [
+  "Við þökkum gott samstarf á undanförnum mánuðum.",
+  "Ef eitthvað er óljóst er þér velkomið að hafa samband við okkur hvenær sem er.",
+  "Skrifstofa okkar er opin frá mánudegi til föstudags á venjulegum skrifstofutíma.",
+  "Við svörum gjarnan öllum spurningum um smáatriðin.",
+  "Afrit af viðkomandi skjölum hefur verið vistað í kerfinu okkar.",
+  "Við hlökkum til áframhaldandi samstarfs á komandi ári.",
+  "Ef málið hefur þegar verið afgreitt máttu líta fram hjá þessum skilaboðum.",
+  "Fyrirfram þökk fyrir athyglina."
+ ],
+ "word_factor": 0.9
+}

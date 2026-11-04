@@ -1,0 +1,58 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Skriv en e-mail til {name} hos {company} ({city}). {topic} Du skriver på vegne af {sender}.\nKrav:\n{requirements}\nSkriv kun e-mailen.",
+  "Udarbejd følgende e-mail på vegne af {sender}. Modtager: {name}, {company}, {city}. {topic}\nE-mailen skal opfylde disse krav:\n{requirements}\nSvar kun med e-mailens tekst."
+ ],
+ "topics": {
+  "payment_reminder": "Det er en venlig påmindelse om, at en faktura på {amount} forfaldt til betaling {date}.",
+  "order_confirmation": "Den bekræfter en ordre til en værdi af {amount} med levering {date}.",
+  "meeting_confirmation": "Den bekræfter et møde {date} om en kontrakt til en værdi af {amount}."
+ },
+ "req": {
+  "subject": "Første linje er emnelinjen og begynder med »{label}«.",
+  "closing": "Afslut med en almindelig hilsen som {examples}, efterfulgt af afsenderens navn.",
+  "formal": "Brug den høflige tiltaleform hele vejen igennem.",
+  "amount": "Skriv beløbet i modtagerens lokale pengeformat.",
+  "date": "Skriv datoen i modtagerens lokale datoformat.",
+  "name": "Tiltal modtageren med fulde navn, stavet nøjagtigt som angivet.",
+  "no_english": "Brug ingen engelske ord.",
+  "words": "E-mailen har mellem {min} og {max} ord.",
+  "bullets": "Medtag præcis {n} punkter i en punktopstilling (linjer, der begynder med »- «)."
+ },
+ "subject_label": "Emne:",
+ "closings": [
+  "Med venlig hilsen",
+  "Venlig hilsen",
+  "Med venlige hilsner"
+ ],
+ "formal": null,
+ "ref_subject": {
+  "payment_reminder": "Påmindelse om ubetalt faktura",
+  "order_confirmation": "Bekræftelse af ordre",
+  "meeting_confirmation": "Bekræftelse af vores møde"
+ },
+ "ref_body": {
+  "payment_reminder": "vi vil venligst minde om, at beløbet {amount} forfaldt til betaling {date}.",
+  "order_confirmation": "hermed bekræfter vi din ordre på {amount}; leveringen er planlagt til {date}.",
+  "meeting_confirmation": "hermed bekræfter vi vores møde {date} om kontrakten til en værdi af {amount}."
+ },
+ "ref_greeting": "Kære {name},",
+ "ref_bullets": [
+  "referencenummeret fremgår af det vedhæftede dokument",
+  "vores kundeservice har åbent på hverdage",
+  "alle priser er inklusive gældende afgifter",
+  "gem venligst denne besked"
+ ],
+ "ref_filler": [
+  "Vi takker for det gode samarbejde i de seneste måneder.",
+  "Hvis noget er uklart, er du velkommen til at kontakte os når som helst.",
+  "Vores kontor har åbent mandag til fredag i almindelig kontortid.",
+  "Vi besvarer gerne alle spørgsmål om detaljerne.",
+  "En kopi af de relevante dokumenter er gemt i vores system.",
+  "Vi ser frem til at fortsætte samarbejdet i det kommende år.",
+  "Hvis sagen allerede er ordnet, kan du se bort fra denne besked.",
+  "På forhånd tak for din opmærksomhed."
+ ],
+ "word_factor": 1.0
+}

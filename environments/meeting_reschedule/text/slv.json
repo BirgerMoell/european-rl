@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Ste asistent/ka osebe {organizer} v podjetju {company} in delate s koledarskimi in e-poštnimi orodji skupine. Obdelajte novo e-sporočilo v nabiralniku. Pravila skupine za načrtovanje sestankov: sestanek se prestavi na najzgodnejši začetek, ob celi uri ali ob pol, v želenem tednu, ko so vsi udeleženci prosti – znotraj delovnega časa lastne pisarne in zunaj njenega odmora za kosilo, po lastnem lokalnem času, ter ne ob koncu tedna ali na dela prost dan v lastni državi. Ohranite trajanje in udeležence sestanka. Nato vsem udeležencem razen osebi {organizer} pošljite e-sporočilo z novim datumom (LLLL-MM-DD) in uro (UU:MM) po njihovem lokalnem času. Če noben termin ne ustreza, sestanka ne prestavite; odgovorite le osebi, ki je prosila. Nikomur drugemu ne pišite. Zaključite s kratkim sporočilom brez klica orodja.",
+  "Pomagate osebi {organizer} ({company}). V nabiralniku je novo e-sporočilo; obdelajte ga s koledarskimi in e-poštnimi orodji. Pravila za prestavljanje sestankov: izberite najzgodnejši termin v želenem tednu (z začetkom ob celi uri ali ob pol), ki je znotraj lokalnega delovnega časa vsakega udeleženca, se izogne njegovemu odmoru za kosilo, koncem tedna in dela prostim dnevom v njegovi državi ter se ne prekriva z njegovimi drugimi sestanki; ohranite trajanje in udeležence. Vsakega udeleženca razen osebe {organizer} obvestite o novem datumu (LLLL-MM-DD) in uri (UU:MM) v njegovem časovnem pasu. Če takega termina ni, pustite sestanek nespremenjen in odgovorite le pošiljatelju. Ko končate, napišite kratko zaključno sporočilo brez klica orodja."
+ ],
+ "request": [
+  "Živjo {organizer},\n\nžal se ne morem udeležiti sestanka »{title}« ob trenutnem terminu ({original}). Bi ga lahko prestavil/a na najzgodnejši termin v tednu od {monday} do {friday}, ko lahko vsi, in vsem sporočil/a novi čas?\n\nHvala,\n{name}",
+  "Spoštovani {organizer},\n\nprišlo je nekaj nepredvidenega in se ne morem udeležiti sestanka »{title}« {original}. Prosim, prestavite sestanek na prvi možni termin med {monday} in {friday}, ki ustreza vsem udeležencem, in obvestite vse.\n\nLep pozdrav\n{name}"
+ ],
+ "request_subject": "Prestavitev sestanka: {title}",
+ "notice_subject": "Nov termin: {title}",
+ "notice": "Pozdravljeni,\n\nsestanek »{title}« je prestavljen na {date} ob {time} ({tz}).\n\nLep pozdrav",
+ "no_slot_reply": "Pozdravljeni,\n\nžal v želenem tednu ni termina, ko bi bili prosti vsi udeleženci sestanka »{title}«, zato sestanek ostane, kot je bil načrtovan.\n\nLep pozdrav",
+ "titles": [
+  "Četrtletni pregled proračuna",
+  "Usmerjevalna skupina projekta",
+  "Pogajanja z dobaviteljem",
+  "Novosti o varnosti IT"
+ ],
+ "busy_titles": [
+  "Klic s stranko",
+  "Interna delavnica",
+  "Individualni razgovor"
+ ],
+ "done": "Sestanek je urejen."
+}

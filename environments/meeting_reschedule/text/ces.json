@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Jste asistent/ka {organizer} ve společnosti {company} a pracujete s kalendářními a e-mailovými nástroji skupiny. Zpracujte nový e-mail ve schránce. Pravidla skupiny pro plánování schůzek: schůzka se přesouvá na nejdřívější začátek, vždy v celou nebo v půl, v požadovaném týdnu, kdy jsou všichni účastníci volní – v pracovní době vlastní kanceláře a mimo její polední přestávku, podle vlastního místního času, a ne o víkendu ani v den volna ve vlastní zemi. Zachovejte délku schůzky i účastníky. Poté pošlete všem účastníkům kromě {organizer} e-mail s novým datem (RRRR-MM-DD) a časem (HH:MM) v jejich místním čase. Pokud se žádný termín nehodí, schůzku nepřesouvejte; odpovězte pouze tomu, kdo žádal. Nikomu jinému nepište. Na závěr napište krátkou zprávu bez volání nástroje.",
+  "Pomáháte {organizer} ({company}). Ve schránce je nový e-mail; vyřiďte ho pomocí kalendářních a e-mailových nástrojů. Pravidla pro přesun schůzek: zvolte nejdřívější termín v požadovaném týdnu (začátek v celou nebo v půl), který spadá do místní pracovní doby každého účastníka, vyhýbá se jeho polední přestávce, víkendům a dnům volna v jeho zemi a nekoliduje s jeho dalšími schůzkami; zachovejte délku a účastníky. Oznamte každému účastníkovi kromě {organizer} nové datum (RRRR-MM-DD) a čas (HH:MM) v jeho vlastním časovém pásmu. Pokud takový termín neexistuje, ponechte schůzku beze změny a odpovězte pouze odesílateli. Až budete hotovi, napište krátkou závěrečnou zprávu bez volání nástroje."
+ ],
+ "request": [
+  "Ahoj {organizer},\n\nbohužel se nemohu zúčastnit „{title}“ v současném termínu ({original}). Mohl/a bys schůzku přesunout na nejdřívější termín v týdnu {monday} až {friday}, kdy můžeme všichni, a dát všem vědět nový čas?\n\nDíky,\n{name}",
+  "Dobrý den, {organizer},\n\nněco mi do toho vstoupilo a nemohu se zúčastnit „{title}“ {original}. Prosím přesuňte schůzku na první možný termín mezi {monday} a {friday}, který vyhovuje všem účastníkům, a všechny informujte.\n\nS pozdravem\n{name}"
+ ],
+ "request_subject": "Přesunutí schůzky: {title}",
+ "notice_subject": "Nový termín: {title}",
+ "notice": "Dobrý den,\n\nschůzka „{title}“ byla přesunuta na {date} v {time} ({tz}).\n\nS pozdravem",
+ "no_slot_reply": "Dobrý den,\n\nbohužel v požadovaném týdnu není žádný termín, kdy by byli volní všichni účastníci schůzky „{title}“, a schůzka proto zůstává podle plánu.\n\nS pozdravem",
+ "titles": [
+  "Čtvrtletní kontrola rozpočtu",
+  "Řídicí výbor projektu",
+  "Jednání s dodavatelem",
+  "Aktuality k bezpečnosti IT"
+ ],
+ "busy_titles": [
+  "Hovor se zákazníkem",
+  "Interní workshop",
+  "Individuální schůzka"
+ ],
+ "done": "Schůzka je vyřízena."
+}

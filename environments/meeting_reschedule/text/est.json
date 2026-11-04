@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Oled ettevõttes {company} töötava kasutaja {organizer} assistent ning kasutad kontserni kalendri- ja e-posti tööriistu. Käsitle postkasti saabunud uut e-kirja. Kontserni koosolekute ajastamise reeglid: koosolek viiakse soovitud nädalal kõige varasemale algusajale, täis- või pooltunnil, mil kõik osalejad on vabad – nende oma kontori tööaja sees ja väljaspool selle lõunapausi, nende oma kohaliku aja järgi, ning mitte nädalavahetusel ega nende oma riigi vabal päeval. Säilita koosoleku kestus ja osalejad. Seejärel saada kõigile osalejatele peale {organizer} e-kiri uue kuupäeva (AAAA-KK-PP) ja kellaajaga (TT:MM) nende oma kohaliku aja järgi. Kui ükski aeg ei sobi, ära koosolekut liiguta; vasta siis ainult küsijale. Ära saada e-kirja kellelegi teisele. Lõpeta lühikese sõnumiga ilma tööriistakutseta.",
+  "Abistad kasutajat {organizer} ({company}). Postkasti on saabunud uus e-kiri; käsitle seda kalendri- ja e-posti tööriistadega. Koosolekute ümberpaigutamise reeglid: vali soovitud nädalal kõige varasem aeg (algusega täis- või pooltunnil), mis jääb iga osaleja kohaliku tööaja sisse, väldib tema lõunapausi, nädalavahetusi ja tema riigi vabu päevi ning ei kattu tema teiste koosolekutega; säilita kestus ja osalejad. Teavita iga osalejat peale {organizer} uuest kuupäevast (AAAA-KK-PP) ja kellaajast (TT:MM) tema enda ajavööndis. Kui sellist aega pole, jäta koosolek nii, nagu see on, ja vasta ainult saatjale. Kui oled valmis, kirjuta lühike lõpusõnum ilma tööriistakutseta."
+ ],
+ "request": [
+  "Tere, {organizer}!\n\nKahjuks ei saa ma koosolekul „{title}“ praegusel ajal ({original}) osaleda. Kas saaksid koosoleku viia nädalal {monday} kuni {friday} kõige varasemale ajale, mil kõik saavad, ja teavitada kõiki uuest ajast?\n\nAitäh\n{name}",
+  "Lugupeetud {organizer}\n\nMul tuli midagi ootamatut vahele ja ma ei saa koosolekul „{title}“ {original} osaleda. Palun viige koosolek esimesele võimalikule ajale vahemikus {monday} kuni {friday}, mis sobib kõigile osalejatele, ja teavitage kõiki.\n\nLugupidamisega\n{name}"
+ ],
+ "request_subject": "Koosoleku ümberplaneerimine: {title}",
+ "notice_subject": "Uus aeg: {title}",
+ "notice": "Tere\n\nKoosolek „{title}“ on viidud uuele ajale: {date} kell {time} ({tz}).\n\nLugupidamisega",
+ "no_slot_reply": "Tere\n\nKahjuks ei ole soovitud nädalal ühtegi aega, mil kõik koosoleku „{title}“ osalejad on vabad, seega jääb koosolek plaanitud ajale.\n\nLugupidamisega",
+ "titles": [
+  "Eelarve kvartaliülevaade",
+  "Projekti juhtrühm",
+  "Läbirääkimised tarnijaga",
+  "IT-turbe ülevaade"
+ ],
+ "busy_titles": [
+  "Kliendikõne",
+  "Sisekoolitus",
+  "Arenguvestlus"
+ ],
+ "done": "Koosolek on korraldatud."
+}

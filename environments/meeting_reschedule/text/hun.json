@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Ön {organizer} asszisztense a(z) {company} cégnél, és a vállalatcsoport naptár- és e-mail-eszközeivel dolgozik. Kezelje a beérkezett új e-mailt. A vállalatcsoport értekezlet-ütemezési szabályai: az értekezletet a kért héten arra a legkorábbi kezdési időpontra kell áthelyezni (egész vagy fél órakor), amikor minden résztvevő szabad – a saját irodája munkaidején belül és annak ebédszünetén kívül, a saját helyi ideje szerint, és nem hétvégén vagy a saját országában munkaszüneti napon. Az értekezlet hossza és résztvevői maradjanak változatlanok. Ezután küldjön e-mailt minden résztvevőnek {organizer} kivételével az új dátummal (ÉÉÉÉ-HH-NN) és időponttal (ÓÓ:PP) a saját helyi idejük szerint. Ha egyik időpont sem megfelelő, ne helyezze át az értekezletet; ilyenkor csak a kérelmezőnek válaszoljon. Senki másnak ne írjon. Végül írjon egy rövid üzenetet eszközhívás nélkül.",
+  "Ön {organizer} munkáját segíti ({company}). A beérkezett üzenetek között új e-mail van; intézze el a naptár- és e-mail-eszközökkel. Az értekezletek áthelyezésének szabályai: válassza a kért hét legkorábbi időpontját (egész vagy fél órai kezdéssel), amely minden résztvevő helyi munkaidejébe esik, elkerüli az ebédszünetét, a hétvégéket és az országa munkaszüneti napjait, és nem ütközik más értekezleteivel; a hossz és a résztvevők maradjanak változatlanok. Értesítsen minden résztvevőt {organizer} kivételével az új dátumról (ÉÉÉÉ-HH-NN) és időpontról (ÓÓ:PP) a saját időzónája szerint. Ha nincs ilyen időpont, hagyja változatlanul az értekezletet, és csak a feladónak válaszoljon. Ha végzett, írjon egy rövid záró üzenetet eszközhívás nélkül."
+ ],
+ "request": [
+  "Szia {organizer}!\n\nSajnos nem tudok részt venni a(z) „{title}” értekezleten a jelenlegi időpontban ({original}). Át tudnád tenni a(z) {monday}–{friday} hét legkorábbi olyan időpontjára, amikor mindannyian ráérünk, és értesítenéd mindenkit az új időpontról?\n\nKöszönöm,\n{name}",
+  "Kedves {organizer}!\n\nKözbejött valami, és nem tudok részt venni a(z) „{title}” értekezleten ({original}). Kérem, helyezze át az értekezletet {monday} és {friday} között az első olyan időpontra, amely minden résztvevőnek megfelel, és értesítsen mindenkit.\n\nÜdvözlettel\n{name}"
+ ],
+ "request_subject": "Értekezlet áthelyezése: {title}",
+ "notice_subject": "Új időpont: {title}",
+ "notice": "Tisztelt Címzett!\n\nA(z) „{title}” értekezlet új időpontja: {date} {time} ({tz}).\n\nÜdvözlettel",
+ "no_slot_reply": "Tisztelt Címzett!\n\nSajnos a kért héten nincs olyan időpont, amikor a(z) „{title}” értekezlet minden résztvevője ráér, ezért az értekezlet a tervezett időpontban marad.\n\nÜdvözlettel",
+ "titles": [
+  "Negyedéves költségvetési áttekintés",
+  "Projektirányító bizottság",
+  "Beszállítói tárgyalás",
+  "Informatikai biztonsági tájékoztató"
+ ],
+ "busy_titles": [
+  "Ügyfélhívás",
+  "Belső műhelymunka",
+  "Egyéni megbeszélés"
+ ],
+ "done": "Az értekezlet ügye elintézve."
+}

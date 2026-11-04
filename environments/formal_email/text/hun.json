@@ -1,0 +1,83 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Írjon e-mailt {name} részére ({company}, {city}). {topic} Ön {sender} nevében ír.\nKövetelmények:\n{requirements}\nCsak az e-mailt írja meg.",
+  "Kérjük, fogalmazza meg a következő e-mailt {sender} nevében. Címzett: {name}, {company}, {city}. {topic}\nAz e-mailnek meg kell felelnie az alábbi követelményeknek:\n{requirements}\nCsak az e-mail szövegével válaszoljon."
+ ],
+ "topics": {
+  "payment_reminder": "Ez egy udvarias emlékeztető arról, hogy egy {amount} összegű számla {date} napján esedékes volt.",
+  "order_confirmation": "Megerősít egy {amount} értékű megrendelést, amelynek szállítása {date} napján történik.",
+  "meeting_confirmation": "Megerősít egy {date} napján tartandó megbeszélést egy {amount} értékű szerződésről."
+ },
+ "req": {
+  "subject": "Az első sor a tárgy, és a(z) „{label}” szóval kezdődik.",
+  "closing": "Egy szokásos elköszönéssel zárjon, például {examples}, majd a feladó nevével.",
+  "formal": "Végig magázó formában (Ön) szólítsa meg a címzettet.",
+  "amount": "Az összeget a címzett helyi pénzformátumában írja.",
+  "date": "A dátumot a címzett helyi dátumformátumában írja.",
+  "name": "A címzettet teljes nevén szólítsa meg, pontosan a megadott írásmóddal.",
+  "no_english": "Ne használjon angol szavakat.",
+  "words": "Az e-mail {min}–{max} szóból áll.",
+  "bullets": "Pontosan {n} felsorolási pontot tartalmazzon („- ” jellel kezdődő sorok)."
+ },
+ "subject_label": "Tárgy:",
+ "closings": [
+  "Üdvözlettel",
+  "Tisztelettel",
+  "Szívélyes üdvözlettel"
+ ],
+ "formal": {
+  "formal": [
+   "Ön",
+   "Önnek",
+   "Önt",
+   "Önnel",
+   "Öntől",
+   "Önnél",
+   "Önhöz",
+   "Önök",
+   "Önöknek",
+   "Önöket",
+   "Önökkel"
+  ],
+  "informal": [
+   "te",
+   "téged",
+   "neked",
+   "veled",
+   "tőled",
+   "nálad",
+   "hozzád",
+   "rólad",
+   "tiéd"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Emlékeztető a kiegyenlítetlen számláról",
+  "order_confirmation": "Megrendelés visszaigazolása",
+  "meeting_confirmation": "Megbeszélés megerősítése"
+ },
+ "ref_body": {
+  "payment_reminder": "Szeretnénk udvariasan emlékeztetni Önt, hogy a(z) {amount} összeg {date} napján esedékes volt.",
+  "order_confirmation": "Ezúton visszaigazoljuk az Ön {amount} értékű megrendelését; a szállítás {date} napjára van tervezve.",
+  "meeting_confirmation": "Ezúton megerősítjük az Önnel tartandó megbeszélésünket {date} napján a(z) {amount} értékű szerződésről."
+ },
+ "ref_greeting": "Tisztelt {name}!",
+ "ref_bullets": [
+  "a hivatkozási szám a csatolt dokumentumban található",
+  "ügyfélszolgálatunk munkanapokon érhető el",
+  "minden ár tartalmazza a vonatkozó adókat",
+  "kérjük, őrizze meg ezt az üzenetet"
+ ],
+ "ref_filler": [
+  "Köszönjük az elmúlt hónapok jó együttműködését.",
+  "Ha bármi nem egyértelmű, kérjük, forduljon hozzánk bizalommal bármikor.",
+  "Irodánk hétfőtől péntekig a szokásos munkaidőben tart nyitva.",
+  "Szívesen válaszolunk az Ön részletekkel kapcsolatos kérdéseire.",
+  "A vonatkozó dokumentumok másolatát rendszerünkben tároltuk.",
+  "Bízunk benne, hogy együttműködésünk a következő évben is folytatódik.",
+  "Amennyiben az ügyet már rendezte, kérjük, tekintse ezt az üzenetet tárgytalannak.",
+  "Előre is köszönjük szíves figyelmét."
+ ],
+ "word_factor": 0.75
+}

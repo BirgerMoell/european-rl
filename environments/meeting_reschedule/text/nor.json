@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Du er assistent for {organizer} i {company} og arbeider med konsernets kalender- og e-postverktøy. Behandle den nye e-posten i innboksen. Konsernets regler for møteplanlegging: et møte flyttes til det tidligste starttidspunktet, på hel eller halv time, i den ønskede uken da alle deltakerne er ledige – innenfor arbeidstiden til sitt eget kontor og utenfor lunsjpausen der, i sin egen lokale tid, og ikke i en helg eller på en fridag i sitt eget land. Behold møtets varighet og deltakere. Send deretter en e-post til alle deltakerne unntatt {organizer} med den nye datoen (ÅÅÅÅ-MM-DD) og klokkeslettet (TT:MM) i deres egen lokale tid. Hvis ingen tid passer, skal møtet ikke flyttes; svar da bare personen som spurte. Ikke send e-post til noen andre. Avslutt med en kort melding uten verktøykall.",
+  "Du assisterer {organizer} ({company}). Det har kommet en ny e-post i innboksen; behandle den med kalender- og e-postverktøyene. Regler for flytting av møter: velg det tidligste tidspunktet i den ønskede uken (start på hel eller halv time) som ligger innenfor hver deltakers lokale kontortid, unngår lunsjpausen deres, helger og fridager i landet deres, og ikke kolliderer med deres andre møter; behold varighet og deltakere. Gi hver deltaker unntatt {organizer} beskjed om den nye datoen (ÅÅÅÅ-MM-DD) og klokkeslettet (TT:MM) i deres egen tidssone. Finnes det ikke noe slikt tidspunkt, lar du møtet stå som det er og svarer bare avsenderen. Når du er ferdig, skriver du en kort avsluttende melding uten verktøykall."
+ ],
+ "request": [
+  "Hei {organizer},\n\ndessverre kan jeg ikke delta på «{title}» på det nåværende tidspunktet ({original}). Kan du flytte møtet til det tidligste tidspunktet i uken {monday}–{friday} da alle kan, og gi alle beskjed om det nye tidspunktet?\n\nTakk,\n{name}",
+  "Kjære {organizer},\n\ndet har kommet noe i veien, og jeg kan ikke delta på «{title}» {original}. Vennligst flytt møtet til første mulige tidspunkt mellom {monday} og {friday} som passer for alle deltakerne, og informer alle.\n\nMed vennlig hilsen\n{name}"
+ ],
+ "request_subject": "Flytting av møte: {title}",
+ "notice_subject": "Nytt tidspunkt: {title}",
+ "notice": "Hei,\n\n«{title}» er flyttet til {date} kl. {time} ({tz}).\n\nMed vennlig hilsen",
+ "no_slot_reply": "Hei,\n\ndessverre finnes det ikke noe tidspunkt i den ønskede uken da alle deltakerne i «{title}» er ledige, så møtet blir stående som planlagt.\n\nMed vennlig hilsen",
+ "titles": [
+  "Kvartalsgjennomgang av budsjettet",
+  "Prosjektets styringsgruppe",
+  "Leverandørforhandling",
+  "Status for IT-sikkerhet"
+ ],
+ "busy_titles": [
+  "Kundesamtale",
+  "Intern workshop",
+  "Medarbeidersamtale"
+ ],
+ "done": "Møtet er behandlet."
+}

@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Ste asistent/ka {organizer} v spoločnosti {company} a pracujete s kalendárovými a e-mailovými nástrojmi skupiny. Spracujte nový e-mail v schránke. Pravidlá skupiny pre plánovanie stretnutí: stretnutie sa presúva na najskorší začiatok, vždy o celej alebo o pol, v požadovanom týždni, keď sú všetci účastníci voľní – v pracovnom čase vlastnej kancelárie a mimo jej obedňajšej prestávky, podľa vlastného miestneho času, a nie cez víkend ani v deň voľna vo vlastnej krajine. Zachovajte dĺžku stretnutia aj účastníkov. Potom pošlite všetkým účastníkom okrem {organizer} e-mail s novým dátumom (RRRR-MM-DD) a časom (HH:MM) v ich miestnom čase. Ak sa nehodí žiadny termín, stretnutie nepresúvajte; odpovedzte iba tomu, kto žiadal. Nikomu inému nepíšte. Na záver napíšte krátku správu bez volania nástroja.",
+  "Pomáhate {organizer} ({company}). V schránke je nový e-mail; vybavte ho pomocou kalendárových a e-mailových nástrojov. Pravidlá pre presun stretnutí: zvoľte najskorší termín v požadovanom týždni (začiatok o celej alebo o pol), ktorý spadá do miestneho pracovného času každého účastníka, vyhýba sa jeho obedňajšej prestávke, víkendom a dňom voľna v jeho krajine a nekoliduje s jeho ďalšími stretnutiami; zachovajte dĺžku a účastníkov. Oznámte každému účastníkovi okrem {organizer} nový dátum (RRRR-MM-DD) a čas (HH:MM) v jeho vlastnom časovom pásme. Ak taký termín neexistuje, ponechajte stretnutie bez zmeny a odpovedzte iba odosielateľovi. Keď budete hotoví, napíšte krátku záverečnú správu bez volania nástroja."
+ ],
+ "request": [
+  "Ahoj {organizer},\n\nžiaľ, nemôžem sa zúčastniť na „{title}“ v súčasnom termíne ({original}). Mohol/a by si stretnutie presunúť na najskorší termín v týždni {monday} až {friday}, keď môžeme všetci, a dať všetkým vedieť nový čas?\n\nVďaka,\n{name}",
+  "Dobrý deň, {organizer},\n\nniečo mi do toho vstúpilo a nemôžem sa zúčastniť na „{title}“ {original}. Prosím, presuňte stretnutie na prvý možný termín medzi {monday} a {friday}, ktorý vyhovuje všetkým účastníkom, a informujte všetkých.\n\nS pozdravom\n{name}"
+ ],
+ "request_subject": "Presun stretnutia: {title}",
+ "notice_subject": "Nový termín: {title}",
+ "notice": "Dobrý deň,\n\nstretnutie „{title}“ bolo presunuté na {date} o {time} ({tz}).\n\nS pozdravom",
+ "no_slot_reply": "Dobrý deň,\n\nžiaľ, v požadovanom týždni nie je žiadny termín, keď by boli voľní všetci účastníci stretnutia „{title}“, preto stretnutie zostáva podľa plánu.\n\nS pozdravom",
+ "titles": [
+  "Štvrťročná kontrola rozpočtu",
+  "Riadiaci výbor projektu",
+  "Rokovanie s dodávateľom",
+  "Novinky v oblasti IT bezpečnosti"
+ ],
+ "busy_titles": [
+  "Hovor so zákazníkom",
+  "Interný workshop",
+  "Individuálny rozhovor"
+ ],
+ "done": "Stretnutie je vybavené."
+}

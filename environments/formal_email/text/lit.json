@@ -1,0 +1,75 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Parašykite el. laišką gavėjui {name} įmonėje {company} ({city}). {topic} Rašote siuntėjo {sender} vardu.\nReikalavimai:\n{requirements}\nParašykite tik el. laišką.",
+  "Prašome parengti šį el. laišką siuntėjo {sender} vardu. Gavėjas: {name}, {company}, {city}. {topic}\nEl. laiškas turi atitikti šiuos reikalavimus:\n{requirements}\nAtsakykite tik el. laiško tekstu."
+ ],
+ "topics": {
+  "payment_reminder": "Tai mandagus priminimas, kad {amount} sąskaitą reikėjo apmokėti iki {date}.",
+  "order_confirmation": "Juo patvirtinamas {amount} vertės užsakymas, kurio pristatymas numatytas {date}.",
+  "meeting_confirmation": "Juo patvirtinamas susitikimas {date} aptarti {amount} vertės sutartį."
+ },
+ "req": {
+  "subject": "Pirmoji eilutė yra tema ir prasideda žodžiu „{label}“.",
+  "closing": "Užbaikite įprasta mandagumo fraze, pvz., {examples}, o po jos – siuntėjo vardu ir pavarde.",
+  "formal": "Visame laiške į gavėją kreipkitės mandagumo forma (Jūs).",
+  "amount": "Sumą parašykite gavėjo vietiniu pinigų formatu.",
+  "date": "Datą parašykite gavėjo vietiniu datos formatu.",
+  "name": "Į gavėją kreipkitės visu vardu ir pavarde, parašytais tiksliai taip, kaip nurodyta.",
+  "no_english": "Nevartokite jokių angliškų žodžių.",
+  "words": "El. laiške yra nuo {min} iki {max} žodžių.",
+  "bullets": "Įtraukite lygiai {n} sąrašo punktus (eilutes, prasidedančias „- “)."
+ },
+ "subject_label": "Tema:",
+ "closings": [
+  "Pagarbiai",
+  "Su pagarba",
+  "Geriausi linkėjimai"
+ ],
+ "formal": {
+  "formal": [
+   "Jūs",
+   "Jums",
+   "Jūsų",
+   "Jus",
+   "Jumis"
+  ],
+  "informal": [
+   "tu",
+   "tau",
+   "tave",
+   "tavo",
+   "tavęs",
+   "tavimi",
+   "tavyje"
+  ]
+ },
+ "ref_subject": {
+  "payment_reminder": "Priminimas apie neapmokėtą sąskaitą",
+  "order_confirmation": "Užsakymo patvirtinimas",
+  "meeting_confirmation": "Susitikimo patvirtinimas"
+ },
+ "ref_body": {
+  "payment_reminder": "maloniai primename Jums, kad {amount} suma turėjo būti apmokėta iki {date}.",
+  "order_confirmation": "šiuo laišku patvirtiname Jūsų užsakymą, kurio vertė {amount}; pristatymas numatytas {date}.",
+  "meeting_confirmation": "šiuo laišku patvirtiname mūsų susitikimą su Jumis {date} dėl {amount} vertės sutarties."
+ },
+ "ref_greeting": "Laba diena, {name},",
+ "ref_bullets": [
+  "nuorodos numeris nurodytas pridėtame dokumente",
+  "mūsų klientų aptarnavimo skyrius dirba darbo dienomis",
+  "visos kainos nurodytos su taikomais mokesčiais",
+  "prašome išsaugoti šį pranešimą"
+ ],
+ "ref_filler": [
+  "Dėkojame Jums už gerą bendradarbiavimą per pastaruosius mėnesius.",
+  "Jei kas nors neaišku, nedvejodami susisiekite su mumis bet kuriuo metu.",
+  "Mūsų biuras dirba nuo pirmadienio iki penktadienio įprastomis darbo valandomis.",
+  "Mielai atsakysime į visus Jūsų klausimus dėl išsamesnės informacijos.",
+  "Susijusių dokumentų kopija išsaugota mūsų sistemoje.",
+  "Tikimės tęsti bendradarbiavimą ir ateinančiais metais.",
+  "Jei šį klausimą jau išsprendėte, prašome į šį pranešimą neatsižvelgti.",
+  "Iš anksto dėkojame už Jūsų dėmesį."
+ ],
+ "word_factor": 0.8
+}

@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Esi {organizer} asistentas bendrovėje {company} ir dirbi su grupės kalendoriaus ir el. pašto įrankiais. Apdorok naują laišką gautųjų aplanke. Grupės susitikimų planavimo taisyklės: susitikimas perkeliamas į anksčiausią pradžios laiką (sveiką valandą arba pusvalandį) prašomą savaitę, kai visi dalyviai yra laisvi – savo biuro darbo valandomis ir ne per jo pietų pertrauką, savo vietos laiku, ir ne savaitgalį ar ne savo šalies poilsio dieną. Išlaikyk susitikimo trukmę ir dalyvius. Tada išsiųsk el. laišką visiems dalyviams, išskyrus {organizer}, su nauja data (YYYY-MM-DD) ir laiku (HH:MM) jų vietos laiku. Jei netinka joks laikas, susitikimo neperkelk; tada atsakyk tik tam, kas prašė. Niekam kitam el. laiškų nesiųsk. Baik trumpa žinute be įrankio iškvietimo.",
+  "Padedi {organizer} ({company}). Gautųjų aplanke yra naujas laiškas; apdorok jį kalendoriaus ir el. pašto įrankiais. Susitikimų perkėlimo taisyklės: pasirink anksčiausią laiką prašomą savaitę (pradžia sveiką valandą arba pusvalandį), kuris patenka į kiekvieno dalyvio vietos darbo valandas, nesutampa su jo pietų pertrauka, savaitgaliais ir jo šalies poilsio dienomis bei nesikerta su kitais jo susitikimais; išlaikyk trukmę ir dalyvius. Pranešk kiekvienam dalyviui, išskyrus {organizer}, naują datą (YYYY-MM-DD) ir laiką (HH:MM) jo laiko juostoje. Jei tokio laiko nėra, palik susitikimą nepakeistą ir atsakyk tik siuntėjui. Baigęs parašyk trumpą baigiamąją žinutę be įrankio iškvietimo."
+ ],
+ "request": [
+  "Labas, {organizer},\n\ndeja, negaliu dalyvauti susitikime „{title}“ dabartiniu laiku ({original}). Ar galėtum jį perkelti į anksčiausią laiką savaitę nuo {monday} iki {friday}, kai visi galime, ir pranešti visiems naują laiką?\n\nAčiū,\n{name}",
+  "Gerb. {organizer},\n\niškilo nenumatytų aplinkybių, todėl negaliu dalyvauti susitikime „{title}“ {original}. Prašau perkelti susitikimą į pirmą galimą laiką nuo {monday} iki {friday}, kuris tinka visiems dalyviams, ir informuoti visus.\n\nPagarbiai\n{name}"
+ ],
+ "request_subject": "Susitikimo perkėlimas: {title}",
+ "notice_subject": "Naujas laikas: {title}",
+ "notice": "Laba diena,\n\nsusitikimas „{title}“ perkeltas į {date} {time} ({tz}).\n\nPagarbiai",
+ "no_slot_reply": "Laba diena,\n\ndeja, prašomą savaitę nėra laiko, kai visi susitikimo „{title}“ dalyviai būtų laisvi, todėl susitikimas lieka suplanuotu laiku.\n\nPagarbiai",
+ "titles": [
+  "Ketvirčio biudžeto peržiūra",
+  "Projekto valdymo grupė",
+  "Derybos su tiekėju",
+  "IT saugumo naujienos"
+ ],
+ "busy_titles": [
+  "Skambutis klientui",
+  "Vidinės dirbtuvės",
+  "Individualus pokalbis"
+ ],
+ "done": "Susitikimas sutvarkytas."
+}

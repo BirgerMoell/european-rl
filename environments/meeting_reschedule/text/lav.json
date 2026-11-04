@@ -1,0 +1,27 @@
+{
+ "_review": "llm",
+ "instruction": [
+  "Tu esi {organizer} asistents uzņēmumā {company} un strādā ar koncerna kalendāra un e-pasta rīkiem. Apstrādā jauno e-pastu iesūtnē. Koncerna sanāksmju plānošanas noteikumi: sanāksme tiek pārcelta uz agrāko sākuma laiku (pilnā stundā vai pusstundā) pieprasītajā nedēļā, kad visi dalībnieki ir brīvi – sava biroja darba laikā un ārpus tā pusdienu pārtraukuma, katrs savā vietējā laikā, un ne nedēļas nogalē vai brīvdienā savā valstī. Saglabā sanāksmes ilgumu un dalībniekus. Pēc tam nosūti e-pastu visiem dalībniekiem, izņemot {organizer}, ar jauno datumu (GGGG-MM-DD) un laiku (SS:MM) viņu vietējā laikā. Ja neviens laiks neder, sanāksmi nepārcel; tad atbildi tikai tam, kurš jautāja. Nesūti e-pastu nevienam citam. Noslēdz ar īsu ziņu bez rīka izsaukuma.",
+  "Tu palīdzi {organizer} ({company}). Iesūtnē ir jauns e-pasts; apstrādā to ar kalendāra un e-pasta rīkiem. Sanāksmju pārcelšanas noteikumi: izvēlies agrāko laiku pieprasītajā nedēļā (sākums pilnā stundā vai pusstundā), kas ir katra dalībnieka vietējā darba laikā, neiekrīt viņa pusdienu pārtraukumā, nedēļas nogalē vai viņa valsts brīvdienā un nepārklājas ar viņa citām sanāksmēm; saglabā ilgumu un dalībniekus. Paziņo katram dalībniekam, izņemot {organizer}, jauno datumu (GGGG-MM-DD) un laiku (SS:MM) viņa paša laika joslā. Ja šāda laika nav, atstāj sanāksmi, kā tā ir, un atbildi tikai sūtītājam. Kad esi pabeidzis, uzraksti īsu noslēguma ziņu bez rīka izsaukuma."
+ ],
+ "request": [
+  "Sveiks, {organizer}!\n\nDiemžēl nevaru piedalīties sanāksmē “{title}” pašreizējā laikā ({original}). Vai vari pārcelt sanāksmi uz agrāko laiku nedēļā no {monday} līdz {friday}, kad visi varam, un paziņot visiem jauno laiku?\n\nPaldies,\n{name}",
+  "Cienījamais(-ā) {organizer}!\n\nKaut kas ir gadījies, un es nevaru piedalīties sanāksmē “{title}” {original}. Lūdzu, pārceliet sanāksmi uz pirmo iespējamo laiku no {monday} līdz {friday}, kas der visiem dalībniekiem, un informējiet visus.\n\nAr cieņu\n{name}"
+ ],
+ "request_subject": "Sanāksmes pārcelšana: {title}",
+ "notice_subject": "Jauns laiks: {title}",
+ "notice": "Labdien!\n\nSanāksme “{title}” ir pārcelta uz {date} plkst. {time} ({tz}).\n\nAr cieņu",
+ "no_slot_reply": "Labdien!\n\nDiemžēl pieprasītajā nedēļā nav neviena laika, kad visi sanāksmes “{title}” dalībnieki ir brīvi, tāpēc sanāksme notiks, kā plānots.\n\nAr cieņu",
+ "titles": [
+  "Budžeta ceturkšņa pārskats",
+  "Projekta vadības grupa",
+  "Sarunas ar piegādātāju",
+  "IT drošības aktualitātes"
+ ],
+ "busy_titles": [
+  "Klienta zvans",
+  "Iekšējā darbnīca",
+  "Individuāla saruna"
+ ],
+ "done": "Sanāksme ir nokārtota."
+}
